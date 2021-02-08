@@ -220,6 +220,12 @@ http://www.templatemo.com/tm-515-eatery
     font-weight: bold;
   }
 
+.custom-navbar .navbar-brand-black {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
   .custom-navbar .navbar-brand span {
     color: #ce3232;
   }
