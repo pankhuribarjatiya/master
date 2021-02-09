@@ -62,8 +62,57 @@
         return openerElement.is('img') ? openerElement : openerElement.find('img');
         }
       }
-    });  
+    });
 
+    // $("#role_dd").change(function(){
+    //     stateChange($(this).val());
+    // });
+    //
+    // function stateChange(stateValue){
+    //     $("form").hide();
+    //     switch(stateValue){
+    //         case 'se':
+    //             $("#contact_form_student").show();
+    //             break;
+    //         case 'pa':
+    //             $("#contact_form_partner").show();
+    //             break;
+    //         case 'dp':
+    //             $("#contact_form_delivery_person").show();
+    //             break;
+    //     }
+    // }
+
+    $('#role_dd').on('change',function(){
+        if( $(this).val()==="Student/Employee"){
+            $("#contact_form_student").show()
+        }
+        else{
+            $("#contact_form_student").hide()
+        }
+        if( $(this).val()==="Partner"){
+            $("#contact_form_partner").show()
+        }
+        else{
+            $("#contact_form_partner").hide()
+        }
+        if( $(this).val()==="Delivery Person"){
+            $("#contact_form_delivery_person").show()
+        }
+        else{
+            $("#contact_form_delivery_person").hide()
+        }
+    });
+
+    // $("#role_dd").on('change',function() {
+    //     $("form").hide();
+    //     if($(this).val() === "se")
+    //         console.log("Reached here");
+    //         $("#contact_form_Student").show();
+    //     else if($(this).val()==="pa")
+    //         console.log("Reached here aswell");
+    //         $("#contact_form_partner").show();
+    // });
 /*
     // CONTACT FORM
     $("#contact-form").submit(function (e) {
