@@ -1,11 +1,11 @@
 import Mongoose = require("mongoose");
-import {DataAccess} from './../DataAccess';
-import {IListModel} from '../interfaces/IListModel';
+import {DataAccess} from '../DataAccess';
+import {IRestaurant} from '../interfaces/IRestaurant';
 
 let mongooseConnection = DataAccess.mongooseConnection;
 let mongooseObj = DataAccess.mongooseInstance;
 
-class ListModel {
+class RestaurantController{
     public schema:any;
     public model:any;
 
@@ -17,25 +17,23 @@ class ListModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                name: String,
-                description: String,
-                listId: Number,
-                due: String,
-                state: String,
-                owner: String
-            }, {collection: 'lists'}
+                restaurantName: String,
+                restaurantId: Number,
+                restaurantAddress: String,
+                phoneNumber: String,
+            }, {collection: 'restaurantList'}
         );
     }
 
     public createModel(): void {
-        this.model = mongooseConnection.model<IListModel>("Lists", this.schema);
+        this.model = mongooseConnection.model<IRestaurant>("Restaurant", this.schema);
     }
 
-    public retrieveAllLists(response:any): any {
+    public retrieveAllRestaurantLists(response:any): any {
         var query = this.model.find({});
         query.exec( (err, itemArray) => {
             response.json(itemArray) ;
         });
     }
 }
-export {ListModel};
+export {RestaurantController}

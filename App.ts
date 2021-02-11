@@ -7,8 +7,8 @@ import * as bodyParser from 'body-parser';
 //var MongoClient = require('mongodb').MongoClient;
 //var Q = require('q');
 
-import {ListModel} from './model/ListModel';
-import {TaskModel} from './model/TaskModel';
+import {RestaurantController} from './controller/RestaurantController';
+import {RestaurantMenuController} from './controller/RestaurantMenuController';
 import {DataAccess} from './DataAccess';
 
 // Creates and configures an ExpressJS web server.
@@ -16,8 +16,8 @@ class App {
 
   // ref to Express instance
   public expressApp: express.Application;
-  public Lists:ListModel;
-  public Tasks:TaskModel;
+  public Restaurant:RestaurantController;
+  public RestaurantMenu:RestaurantMenuController;
   public idGenerator:number;
 
   //Run configuration methods on the Express instance.
@@ -26,8 +26,8 @@ class App {
     this.middleware();
     this.routes();
     this.idGenerator = 100;
-    this.Lists = new ListModel();
-    this.Tasks = new TaskModel();
+    this.Restaurant = new RestaurantController();
+    this.RestaurantMenu = new RestaurantMenuController();
   }
 
   // Configure Express middleware.
@@ -40,17 +40,17 @@ class App {
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
-    router.get('/app/list/:listId/count', (req, res) => {
-        var id = req.params.listId;
-        console.log('Query single list with id: ' + id);
-        this.Tasks.retrieveTasksCount(res, {listId: id});
-    });
+    // router.get('/app/list/:listId/count', (req, res) => {
+    //     var id = req.params.listId;
+    //     console.log('Query single list with id: ' + id);
+    //     this.RestaurantMenu.retrieveRestaurantMenuCount(res, {listId: id});
+    // });
 
-    router.post('/app/list/', (req, res) => {
+    router.post('/app/restaurantList/', (req, res) => {
         console.log(req.body);
         var jsonObj = req.body;
         jsonObj.listId = this.idGenerator;
-        this.Lists.model.create([jsonObj], (err) => {
+        this.Restaurant.model.create([jsonObj], (err) => {
             if (err) {
                 console.log('object creation failed');
             }
@@ -59,15 +59,15 @@ class App {
         this.idGenerator++;
     });
 
-    router.get('/app/list/:listId', (req, res) => {
+    router.get('/app/restaurantList/:restaurantMenu', (req, res) => {
         var id = req.params.listId;
-        console.log('Query single list with id: ' + id);
-        this.Tasks.retrieveTasksDetails(res, {listId: id});
+        console.log('Query single restaurant with id: ' + id);
+        this.RestaurantMenu.retrieveMenuDetails(res, {listId: id});
     });
 
-    router.get('/app/list/', (req, res) => {
-        console.log('Query All list');
-        this.Lists.retrieveAllLists(res);
+    router.get('/app/restaurantList/', (req, res) => {
+        console.log('Query All Restaurants');
+        this.Restaurant.retrieveAllRestaurantLists(res);
     });
 
     this.expressApp.use('/', router);
