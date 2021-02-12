@@ -8,9 +8,6 @@ restaurantsCollection.insert(
 	  restaurantId: 1,
 	  restaurantAddress: "Seattle University, Seattle, WA 98109",
 	  phoneNumber: "+1-2035674567"
-
-
-	  
 }
 )
 restaurantsCollection.insert(
@@ -32,9 +29,9 @@ restaurantsCollection.insert(
 }
 )
 db.createCollection('restaurantMenu')
-tasksCollection = db.getCollection("restaurantMenu")
-tasksCollection.remove({})
-tasksCollection.insert(
+menuCollection = db.getCollection("restaurantMenu")
+menuCollection.remove({})
+menuCollection.insert(
 {
 	restaurantId : 1,
 	restaurantMenu : [
@@ -65,7 +62,7 @@ tasksCollection.insert(
 	]
 }
 )
-tasksCollection.insert(
+menuCollection.insert(
 {
 	restaurantId : 2,
 	restaurantMenu : [
@@ -96,7 +93,7 @@ tasksCollection.insert(
 	]	
 }
 )
-tasksCollection.insert(
+menuCollection.insert(
 {
 	restaurantId : 3,
 	restaurantMenu : [
