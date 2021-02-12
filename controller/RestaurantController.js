@@ -9,18 +9,18 @@ var RestaurantController = /** @class */ (function () {
         this.createSchema();
         this.createModel();
     }
-    RestaurantControllerprototype.createSchema = function () {
+    RestaurantController.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
-            restaurantName: string,
-            restaurantId: number,
-            restaurantAddress: string,
-            phoneNumber: string,
+            restaurantName: String,
+            restaurantId: Number,
+            restaurantAddress: String,
+            phoneNumber: String,
         }, { collection: 'restaurantList' });
     };
-    RestaurantControllerprototype.createModel = function () {
+    RestaurantController.prototype.createModel = function () {
         this.model = mongooseConnection.model("Restaurant", this.schema);
     };
-    RestaurantControllerprototype.retrieveAllLists = function (response) {
+    RestaurantController.prototype.retrieveAllLists = function (response) {
         var query = this.model.find({});
         query.exec(function (err, itemArray) {
             response.json(itemArray);

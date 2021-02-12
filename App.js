@@ -6,7 +6,7 @@ var bodyParser = require("body-parser");
 //var MongoClient = require('mongodb').MongoClient;
 //var Q = require('q');
 var RestaurantList = require("./controller/RestaurantController");
-var MenuList = require("./controller/RestaurantMenuListController");
+var MenuList = require("./controller/RestaurantMenuController");
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
     //Run configuration methods on the Express instance.
