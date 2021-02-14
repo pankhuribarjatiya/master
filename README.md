@@ -39,3 +39,29 @@ To test server #3, try the following URL on the browser, while the server is run
 * http://localhost:8080/
 * http://localhost:8080/app/list
 * http://localhost:8080/app/list/1
+
+
+
+//For Mac users use following commands:
+
+Mkdir db
+
+mongod -port 3000 -dbpath “./db"
+
+mongo --port 3000 --authenticationDatabase admin
+load('createDB/createAdminUser.js');
+load ('createDB/createRestaurantData.js’);
+load ('createDB/restaurantList.js');
+exit
+
+node AppServer.js
+
+Go to local host on postman
+
+//TroubleShooting
+If port already in use error comes execute below command:  
+sof -i tcp:3000
+Kill -9 <pid>
+
+
+
