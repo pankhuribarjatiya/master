@@ -1,12 +1,13 @@
 "use strict";
 exports.__esModule = true;
+exports.App = void 0;
 var express = require("express");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
 //var MongoClient = require('mongodb').MongoClient;
 //var Q = require('q');
-var RestaurantList = require("./controller/RestaurantController");
-var MenuList = require("./controller/RestaurantMenuController");
+var RestaurantController_1 = require("./controller/RestaurantController");
+var RestaurantMenuController_1 = require("./controller/RestaurantMenuController");
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
     //Run configuration methods on the Express instance.
@@ -15,8 +16,8 @@ var App = /** @class */ (function () {
         this.middleware();
         this.routes();
         this.idGenerator = 100;
-        this.Lists = new RestaurantList.RestaurantController();
-        this.Menu = new MenuList.RestaurantMenuController();
+        this.Restaurant = new RestaurantController_1.RestaurantController();
+        this.RestaurantMenu = new RestaurantMenuController_1.RestaurantMenuController();
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {
@@ -28,17 +29,16 @@ var App = /** @class */ (function () {
     App.prototype.routes = function () {
         var _this = this;
         var router = express.Router();
-        // router.get('/app/list/:listId/count', function (req, res) {
+        // router.get('/app/list/:listId/count', (req, res) => {
         //     var id = req.params.listId;
         //     console.log('Query single list with id: ' + id);
-        //     _this.Menu.retrieveTasksCount(res, { listId: id });
+        //     this.RestaurantMenu.retrieveRestaurantMenuCount(res, {listId: id});
         // });
-
         router.post('/app/restaurantList/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
             jsonObj.listId = _this.idGenerator;
-            _this.Lists.model.create([jsonObj], function (err) {
+            _this.Restaurant.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('object creation failed');
                 }
@@ -46,14 +46,15 @@ var App = /** @class */ (function () {
             res.send(_this.idGenerator.toString());
             _this.idGenerator++;
         });
-        router.get('/app/restaurantList/:restaurantId', function (req, res) {
-            var id = req.params.listId;
+        // Retrives the complete menu for a given restaurant id
+        router.get('/app/restaurantList/:restaurantId/menuList', function (req, res) {
+            var id = req.params.restaurantId;
             console.log('Query single restaurant with id: ' + id);
-            _this.Menu.retrieveMenuDetails(res, { listId: id });
+            _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
         });
         router.get('/app/restaurantList/', function (req, res) {
-            console.log('Query All list');
-            _this.Lists.retrieveAllRestaurantLists(res);
+            console.log('Query All Restaurants');
+            _this.Restaurant.retrieveAllRestaurantLists(res);
         });
         this.expressApp.use('/', router);
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));

@@ -59,10 +59,11 @@ class App {
         this.idGenerator++;
     });
 
-    router.get('/app/restaurantList/:restaurantMenu', (req, res) => {
-        var id = req.params.listId;
+    // Retrives the complete menu for a given restaurant id
+    router.get('/app/restaurantList/:restaurantId/menuList', (req, res) => {
+        var id = req.params.restaurantId;
         console.log('Query single restaurant with id: ' + id);
-        this.RestaurantMenu.retrieveMenuDetails(res, {listId: id});
+        this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
     });
 
     router.get('/app/restaurantList/', (req, res) => {

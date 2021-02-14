@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.RestaurantMenuController = void 0;
 var Mongoose = require("mongoose");
 var DataAccess_1 = require("../DataAccess");
 var mongooseConnection = DataAccess_1.DataAccess.mongooseConnection;
@@ -11,12 +12,13 @@ var RestaurantMenuController = /** @class */ (function () {
     }
     RestaurantMenuController.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
-            itemId: Number,
+            restaurantId: Number,
             restaurantMenu: [{
-                itemName: String,
-                itemDescription: String,
-                itemPrice: Number,
-            }]
+                    itemId: Number,
+                    itemName: String,
+                    itemDescription: String,
+                    itemPrice: Number
+                }]
         }, { collection: 'restaurantMenu' });
     };
     RestaurantMenuController.prototype.createModel = function () {
@@ -28,13 +30,6 @@ var RestaurantMenuController = /** @class */ (function () {
             response.json(itemArray);
         });
     };
-    // RestaurantMenuController.prototype.retrieveTasksCount = function (response, filter) {
-    //     var query = this.model.find(filter).select('tasks').count();
-    //     query.exec(function (err, numberOfTasks) {
-    //         console.log('number of tasks: ' + numberOfTasks);
-    //         response.json(numberOfTasks);
-    //     });
-    // };
     return RestaurantMenuController;
 }());
 exports.RestaurantMenuController = RestaurantMenuController;

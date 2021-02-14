@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.RestaurantController = void 0;
 var Mongoose = require("mongoose");
 var DataAccess_1 = require("../DataAccess");
 var mongooseConnection = DataAccess_1.DataAccess.mongooseConnection;
@@ -14,18 +15,18 @@ var RestaurantController = /** @class */ (function () {
             restaurantName: String,
             restaurantId: Number,
             restaurantAddress: String,
-            phoneNumber: String,
+            phoneNumber: String
         }, { collection: 'restaurantList' });
     };
     RestaurantController.prototype.createModel = function () {
         this.model = mongooseConnection.model("Restaurant", this.schema);
     };
-    RestaurantController.prototype.retrieveAllLists = function (response) {
+    RestaurantController.prototype.retrieveAllRestaurantLists = function (response) {
         var query = this.model.find({});
         query.exec(function (err, itemArray) {
             response.json(itemArray);
         });
     };
-    return RestaurantController
+    return RestaurantController;
 }());
-exports.RestaurantController= RestaurantController
+exports.RestaurantController = RestaurantController;
