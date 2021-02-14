@@ -56,6 +56,16 @@ var App = /** @class */ (function () {
             console.log('Query All Restaurants');
             _this.Restaurant.retrieveAllRestaurantLists(res);
         });
+        router.post('/app/addRestaurant/', function (req, res) {
+            console.log(req.body);
+            var jsonObj = req.body;
+            _this.Restaurant.model.create([jsonObj], function (err) {
+                if (err) {
+                    console.log('object creation failed');
+                }
+            });
+            res.send(_this.idGenerator.toString());
+        });
         this.expressApp.use('/', router);
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));
         this.expressApp.use('/images', express.static(__dirname + '/img'));

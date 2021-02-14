@@ -35,5 +35,15 @@ class RestaurantController{
             response.json(itemArray) ;
         });
     }
+
+    public addRestaurant(response:any, request:JSON): any {
+        console.log("inserting payload:" + request);
+        this.model.create([request], (err) => {
+            if (err) {
+                console.log('object creation failed');
+            }
+        });
+        console.log("payload added successfully:" + request);
+    }
 }
 export {RestaurantController}

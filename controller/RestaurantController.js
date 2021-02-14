@@ -27,6 +27,15 @@ var RestaurantController = /** @class */ (function () {
             response.json(itemArray);
         });
     };
+    RestaurantController.prototype.addRestaurant = function (response, request) {
+        console.log("inserting payload:" + request);
+        this.model.create([request], function (err) {
+            if (err) {
+                console.log('object creation failed');
+            }
+        });
+        console.log("payload added successfully:" + request);
+    };
     return RestaurantController;
 }());
 exports.RestaurantController = RestaurantController;

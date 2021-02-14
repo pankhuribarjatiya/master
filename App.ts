@@ -71,6 +71,17 @@ class App {
         this.Restaurant.retrieveAllRestaurantLists(res);
     });
 
+    router.post('/app/addRestaurant/', (req, res) => {
+      console.log(req.body);
+      let jsonObj = req.body;
+      this.Restaurant.model.create([jsonObj], (err) => {
+        if (err) {
+            console.log('object creation failed');
+        }
+      });
+      res.send(this.idGenerator.toString());
+    });
+
     this.expressApp.use('/', router);
 
     this.expressApp.use('/app/json/', express.static(__dirname+'/app/json'));
