@@ -16,11 +16,7 @@ var App = /** @class */ (function () {
         this.expressApp = express();
         this.middleware();
         this.routes();
-<<<<<<< Updated upstream
-        this.idGenerator = 100;
-=======
         //this.idGenerator = 100;
->>>>>>> Stashed changes
         this.Restaurant = new RestaurantController_1.RestaurantController();
         this.RestaurantMenu = new RestaurantMenuController_1.RestaurantMenuController();
     }
@@ -39,14 +35,9 @@ var App = /** @class */ (function () {
         //     console.log('Query single list with id: ' + id);
         //     this.RestaurantMenu.retrieveRestaurantMenuCount(res, {listId: id});
         // });
-        router.post('/app/restaurantList/', function (req, res) {
+        router.post('/app/addRestaurant/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
-<<<<<<< Updated upstream
-            jsonObj.listId = _this.idGenerator;
-=======
-            //jsonObj.listId = this.idGenerator;
->>>>>>> Stashed changes
             _this.Restaurant.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('Restaurant not added');
@@ -55,34 +46,15 @@ var App = /** @class */ (function () {
             res.send(jsonObj);
             //this.idGenerator++;
         });
-<<<<<<< Updated upstream
-        // Retrives the complete menu for a given restaurant id
-        router.get('/app/restaurantList/:restaurantId/menuList', function (req, res) {
-            var id = req.params.restaurantId;
-            console.log('Query single restaurant with id: ' + id);
-            _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
-=======
         router.get('/app/restaurantList/:restaurantId', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Query single restaurant with id: ' + id);
             _this.Restaurant.retrieveRestaurantDetails(res, { _id: id });
->>>>>>> Stashed changes
         });
         router.get('/app/restaurantList/', function (req, res) {
             console.log('Query All Restaurants');
             _this.Restaurant.retrieveAllRestaurantLists(res);
         });
-<<<<<<< Updated upstream
-        router.post('/app/addRestaurant/', function (req, res) {
-            console.log(req.body);
-            var jsonObj = req.body;
-            _this.Restaurant.model.create([jsonObj], function (err) {
-                if (err) {
-                    console.log('object creation failed');
-                }
-            });
-            res.send(_this.idGenerator.toString());
-=======
         router.get('/app/restaurantMenu/:restaurantId', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Query single restaurant menu with id: ' + id);
@@ -105,7 +77,6 @@ var App = /** @class */ (function () {
         router["delete"]('/app/restaurantMenuItem/:itemId', function (req, res) {
             var id = req.params.itemId;
             _this.RestaurantMenu.deleteMenuItem(res, { _id: id });
->>>>>>> Stashed changes
         });
         this.expressApp.use('/', router);
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));
