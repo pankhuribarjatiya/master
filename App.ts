@@ -50,12 +50,15 @@ class App {
     router.post('/app/addRestaurant/', (req, res) => {
         console.log(req.body);
         var jsonObj = req.body;
-        this.Restaurant.model.create([jsonObj], (err) => {
+        this.Restaurant.model.create([jsonObj], (err, response) => {
             if (err) {
                 console.log('Restaurant not added');
             }
+
+            console.log(response);
+            res.send(response);
         });
-        res.send(jsonObj);
+        
         //this.idGenerator++;
     });
 
@@ -84,11 +87,12 @@ class App {
 router.post('/app/restaurantMenuItem/', (req, res) => {
   console.log(req.body);
   var jsonObj = req.body;
-  this.RestaurantMenu.model.create([jsonObj], (err) => {
+  this.RestaurantMenu.model.create([jsonObj], (err, response) => {
       if (err) {
           console.log('Restaurant not added');
       }
-      res.send(jsonObj);
+      
+      res.send(response);
   });
   
 });

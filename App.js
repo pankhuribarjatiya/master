@@ -38,12 +38,13 @@ var App = /** @class */ (function () {
         router.post('/app/addRestaurant/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
-            _this.Restaurant.model.create([jsonObj], function (err) {
+            _this.Restaurant.model.create([jsonObj], function (err, response) {
                 if (err) {
                     console.log('Restaurant not added');
                 }
+                console.log(response);
+                res.send(response);
             });
-            res.send(jsonObj);
             //this.idGenerator++;
         });
         router.get('/app/restaurantList/:restaurantId', function (req, res) {
@@ -67,11 +68,11 @@ var App = /** @class */ (function () {
         router.post('/app/restaurantMenuItem/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
-            _this.RestaurantMenu.model.create([jsonObj], function (err) {
+            _this.RestaurantMenu.model.create([jsonObj], function (err, response) {
                 if (err) {
                     console.log('Restaurant not added');
                 }
-                res.send(jsonObj);
+                res.send(response);
             });
         });
         router["delete"]('/app/restaurantMenuItem/:itemId', function (req, res) {
