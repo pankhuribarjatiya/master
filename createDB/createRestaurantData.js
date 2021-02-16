@@ -1,6 +1,6 @@
 db = db.getSiblingDB('EatEZ')
 db.createCollection('restaurants')
-restaurantsCollection = db.getCollection("restaurants")
+restaurantsCollection = db.getCollection('restaurants')
 restaurantsCollection.remove({})
 restaurantsCollection.insert(
 {

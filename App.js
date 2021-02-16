@@ -10,12 +10,17 @@ var RestaurantController_1 = require("./controller/RestaurantController");
 var RestaurantMenuController_1 = require("./controller/RestaurantMenuController");
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
+    // public idGenerator:number;
     //Run configuration methods on the Express instance.
     function App() {
         this.expressApp = express();
         this.middleware();
         this.routes();
+<<<<<<< Updated upstream
         this.idGenerator = 100;
+=======
+        //this.idGenerator = 100;
+>>>>>>> Stashed changes
         this.Restaurant = new RestaurantController_1.RestaurantController();
         this.RestaurantMenu = new RestaurantMenuController_1.RestaurantMenuController();
     }
@@ -37,25 +42,37 @@ var App = /** @class */ (function () {
         router.post('/app/restaurantList/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
+<<<<<<< Updated upstream
             jsonObj.listId = _this.idGenerator;
+=======
+            //jsonObj.listId = this.idGenerator;
+>>>>>>> Stashed changes
             _this.Restaurant.model.create([jsonObj], function (err) {
                 if (err) {
-                    console.log('object creation failed');
+                    console.log('Restaurant not added');
                 }
             });
-            res.send(_this.idGenerator.toString());
-            _this.idGenerator++;
+            res.send(jsonObj);
+            //this.idGenerator++;
         });
+<<<<<<< Updated upstream
         // Retrives the complete menu for a given restaurant id
         router.get('/app/restaurantList/:restaurantId/menuList', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Query single restaurant with id: ' + id);
             _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
+=======
+        router.get('/app/restaurantList/:restaurantId', function (req, res) {
+            var id = req.params.restaurantId;
+            console.log('Query single restaurant with id: ' + id);
+            _this.Restaurant.retrieveRestaurantDetails(res, { _id: id });
+>>>>>>> Stashed changes
         });
         router.get('/app/restaurantList/', function (req, res) {
             console.log('Query All Restaurants');
             _this.Restaurant.retrieveAllRestaurantLists(res);
         });
+<<<<<<< Updated upstream
         router.post('/app/addRestaurant/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
@@ -65,6 +82,30 @@ var App = /** @class */ (function () {
                 }
             });
             res.send(_this.idGenerator.toString());
+=======
+        router.get('/app/restaurantMenu/:restaurantId', function (req, res) {
+            var id = req.params.restaurantId;
+            console.log('Query single restaurant menu with id: ' + id);
+            _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
+        });
+        router.get('/app/restaurantMenuItem/:itemId', function (req, res) {
+            var id = req.params.itemId;
+            _this.RestaurantMenu.retrieveMenuDetails(res, { _id: id });
+        });
+        router.post('/app/restaurantMenuItem/', function (req, res) {
+            console.log(req.body);
+            var jsonObj = req.body;
+            _this.RestaurantMenu.model.create([jsonObj], function (err) {
+                if (err) {
+                    console.log('Restaurant not added');
+                }
+                res.send(jsonObj);
+            });
+        });
+        router["delete"]('/app/restaurantMenuItem/:itemId', function (req, res) {
+            var id = req.params.itemId;
+            _this.RestaurantMenu.deleteMenuItem(res, { _id: id });
+>>>>>>> Stashed changes
         });
         this.expressApp.use('/', router);
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));

@@ -13,7 +13,6 @@ var RestaurantController = /** @class */ (function () {
     RestaurantController.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
             restaurantName: String,
-            restaurantId: Number,
             restaurantAddress: String,
             phoneNumber: String
         }, { collection: 'restaurantList' });
@@ -27,14 +26,11 @@ var RestaurantController = /** @class */ (function () {
             response.json(itemArray);
         });
     };
-    RestaurantController.prototype.addRestaurant = function (response, request) {
-        console.log("inserting payload:" + request);
-        this.model.create([request], function (err) {
-            if (err) {
-                console.log('object creation failed');
-            }
+    RestaurantController.prototype.retrieveRestaurantDetails = function (response, filter) {
+        var query = this.model.find(filter);
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
         });
-        console.log("payload added successfully:" + request);
     };
     return RestaurantController;
 }());

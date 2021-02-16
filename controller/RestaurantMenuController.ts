@@ -14,16 +14,26 @@ class RestaurantMenuController {
         this.createModel();
     }
 
+    // public createSchema(): void {
+    //     this.schema = new Mongoose.Schema(
+    //         {
+    //             restaurantId: Number,
+    //             restaurantMenu: [ {
+    //                 itemId: Number,
+    //                 itemName: String,
+    //                 itemDescription: String,
+    //                 itemPrice: Number,
+    //             }]
+    //         }, {collection: 'restaurantMenu'}
+    //     );
+    // }
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                restaurantId: Number,
-                restaurantMenu: [ {
-                    itemId: Number,
-                    itemName: String,
-                    itemDescription: String,
-                    itemPrice: Number,
-                }]
+                restaurantId: String,
+                itemName: String,
+                itemDescription: String,
+                itemPrice: Number
             }, {collection: 'restaurantMenu'}
         );
     }
@@ -33,7 +43,15 @@ class RestaurantMenuController {
     }
     
     public retrieveMenuDetails(response:any, filter:Object) {
-        var query = this.model.findOne(filter);
+        var query = this.model.find(filter);
+        query.exec( (err, itemArray) => {
+            response.json(itemArray);
+        });
+    }
+
+    public deleteMenuItem(response:any, filter:Object) {
+        //db.mycol.remove({'title':'MongoDB Overview'})
+        var query = this.model.remove(filter);
         query.exec( (err, itemArray) => {
             response.json(itemArray);
         });

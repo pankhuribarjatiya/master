@@ -10,6 +10,7 @@ import * as bodyParser from 'body-parser';
 import {RestaurantController} from './controller/RestaurantController';
 import {RestaurantMenuController} from './controller/RestaurantMenuController';
 import {DataAccess} from './DataAccess';
+import { isThisTypeNode } from 'typescript';
 
 // Creates and configures an ExpressJS web server.
 class App {
@@ -18,14 +19,14 @@ class App {
   public expressApp: express.Application;
   public Restaurant:RestaurantController;
   public RestaurantMenu:RestaurantMenuController;
-  public idGenerator:number;
+ // public idGenerator:number;
 
   //Run configuration methods on the Express instance.
   constructor() {
     this.expressApp = express();
     this.middleware();
     this.routes();
-    this.idGenerator = 100;
+    //this.idGenerator = 100;
     this.Restaurant = new RestaurantController();
     this.RestaurantMenu = new RestaurantMenuController();
   }
@@ -46,24 +47,22 @@ class App {
     //     this.RestaurantMenu.retrieveRestaurantMenuCount(res, {listId: id});
     // });
 
-    router.post('/app/restaurantList/', (req, res) => {
+    router.post('/app/addRestaurant/', (req, res) => {
         console.log(req.body);
         var jsonObj = req.body;
-        jsonObj.listId = this.idGenerator;
         this.Restaurant.model.create([jsonObj], (err) => {
             if (err) {
-                console.log('object creation failed');
+                console.log('Restaurant not added');
             }
         });
-        res.send(this.idGenerator.toString());
-        this.idGenerator++;
+        res.send(jsonObj);
+        //this.idGenerator++;
     });
 
-    // Retrives the complete menu for a given restaurant id
-    router.get('/app/restaurantList/:restaurantId/menuList', (req, res) => {
+    router.get('/app/restaurantList/:restaurantId', (req, res) => {
         var id = req.params.restaurantId;
         console.log('Query single restaurant with id: ' + id);
-        this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
+        this.Restaurant.retrieveRestaurantDetails(res, {_id: id});
     });
 
     router.get('/app/restaurantList/', (req, res) => {
@@ -71,16 +70,35 @@ class App {
         this.Restaurant.retrieveAllRestaurantLists(res);
     });
 
-    router.post('/app/addRestaurant/', (req, res) => {
-      console.log(req.body);
-      let jsonObj = req.body;
-      this.Restaurant.model.create([jsonObj], (err) => {
-        if (err) {
-            console.log('object creation failed');
-        }
-      });
-      res.send(this.idGenerator.toString());
-    });
+    router.get('/app/restaurantMenu/:restaurantId', (req, res) => {
+      var id = req.params.restaurantId;
+      console.log('Query single restaurant menu with id: ' + id);
+      this.RestaurantMenu.retrieveMenuDetails(res, {restaurantId: id});
+  });
+
+  router.get('/app/restaurantMenuItem/:itemId', (req, res) => {
+    var id = req.params.itemId;
+    this.RestaurantMenu.retrieveMenuDetails(res, {_id: id});
+});
+
+router.post('/app/restaurantMenuItem/', (req, res) => {
+  console.log(req.body);
+  var jsonObj = req.body;
+  this.RestaurantMenu.model.create([jsonObj], (err) => {
+      if (err) {
+          console.log('Restaurant not added');
+      }
+      res.send(jsonObj);
+  });
+  
+});
+
+router.delete('/app/restaurantMenuItem/:itemId', (req, res) => {
+
+  var id = req.params.itemId;
+  this.RestaurantMenu.deleteMenuItem(res, {_id : id});
+
+});
 
     this.expressApp.use('/', router);
 

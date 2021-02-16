@@ -18,7 +18,6 @@ class RestaurantController{
         this.schema = new Mongoose.Schema(
             {
                 restaurantName: String,
-                restaurantId: Number,
                 restaurantAddress: String,
                 phoneNumber: String,
             }, {collection: 'restaurantList'}
@@ -36,14 +35,11 @@ class RestaurantController{
         });
     }
 
-    public addRestaurant(response:any, request:JSON): any {
-        console.log("inserting payload:" + request);
-        this.model.create([request], (err) => {
-            if (err) {
-                console.log('object creation failed');
-            }
+    public retrieveRestaurantDetails(response:any, filter:Object) {
+        var query = this.model.find(filter);
+        query.exec( (err, itemArray) => {
+            response.json(itemArray) ;
         });
-        console.log("payload added successfully:" + request);
     }
 }
 export {RestaurantController}

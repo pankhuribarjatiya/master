@@ -10,22 +10,39 @@ var RestaurantMenuController = /** @class */ (function () {
         this.createSchema();
         this.createModel();
     }
+    // public createSchema(): void {
+    //     this.schema = new Mongoose.Schema(
+    //         {
+    //             restaurantId: Number,
+    //             restaurantMenu: [ {
+    //                 itemId: Number,
+    //                 itemName: String,
+    //                 itemDescription: String,
+    //                 itemPrice: Number,
+    //             }]
+    //         }, {collection: 'restaurantMenu'}
+    //     );
+    // }
     RestaurantMenuController.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
-            restaurantId: Number,
-            restaurantMenu: [{
-                    itemId: Number,
-                    itemName: String,
-                    itemDescription: String,
-                    itemPrice: Number
-                }]
+            restaurantId: String,
+            itemName: String,
+            itemDescription: String,
+            itemPrice: Number
         }, { collection: 'restaurantMenu' });
     };
     RestaurantMenuController.prototype.createModel = function () {
         this.model = mongooseConnection.model("Menu", this.schema);
     };
     RestaurantMenuController.prototype.retrieveMenuDetails = function (response, filter) {
-        var query = this.model.findOne(filter);
+        var query = this.model.find(filter);
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
+    };
+    RestaurantMenuController.prototype.deleteMenuItem = function (response, filter) {
+        //db.mycol.remove({'title':'MongoDB Overview'})
+        var query = this.model.remove(filter);
         query.exec(function (err, itemArray) {
             response.json(itemArray);
         });
