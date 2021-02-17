@@ -35,18 +35,7 @@ var App = /** @class */ (function () {
         //     console.log('Query single list with id: ' + id);
         //     this.RestaurantMenu.retrieveRestaurantMenuCount(res, {listId: id});
         // });
-        router.post('/app/addRestaurant/', function (req, res) {
-            console.log(req.body);
-            var jsonObj = req.body;
-            _this.Restaurant.model.create([jsonObj], function (err, response) {
-                if (err) {
-                    console.log('Restaurant not added');
-                }
-                console.log(response);
-                res.send(response);
-            });
-            //this.idGenerator++;
-        });
+        
         router.get('/app/restaurantList/:restaurantId', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Query single restaurant with id: ' + id);
@@ -65,7 +54,7 @@ var App = /** @class */ (function () {
             var id = req.params.itemId;
             _this.RestaurantMenu.retrieveMenuDetails(res, { _id: id });
         });
-        router.post('/app/restaurantMenuItem/', function (req, res) {
+        router.post('/app/addRestaurantMenuItem/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
             _this.RestaurantMenu.model.create([jsonObj], function (err, response) {
@@ -75,6 +64,21 @@ var App = /** @class */ (function () {
                 res.send(response);
             });
         });
+
+        router.post('/app/addRestaurant/', function (req, res) {
+            console.log(req.body);
+            var jsonObj = req.body;
+            _this.Restaurant.model.create([jsonObj], function (err, response) {
+                if (err) {
+                    console.log('Restaurant not added');
+                }
+                console.log(response);
+                res.send(response);
+            });
+            //this.idGenerator++;
+        });
+
+        
         router["delete"]('/app/restaurantMenuItem/:itemId', function (req, res) {
             var id = req.params.itemId;
             _this.RestaurantMenu.deleteMenuItem(res, { _id: id });

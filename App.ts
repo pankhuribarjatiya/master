@@ -84,7 +84,7 @@ class App {
     this.RestaurantMenu.retrieveMenuDetails(res, {_id: id});
 });
 
-router.post('/app/restaurantMenuItem/', (req, res) => {
+router.post('/app/addRestaurantMenuItem/', (req, res) => {
   console.log(req.body);
   var jsonObj = req.body;
   this.RestaurantMenu.model.create([jsonObj], (err, response) => {

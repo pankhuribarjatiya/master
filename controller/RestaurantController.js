@@ -15,7 +15,7 @@ var RestaurantController = /** @class */ (function () {
             restaurantName: String,
             restaurantAddress: String,
             phoneNumber: String
-        }, { collection: 'restaurantList' });
+        }, { collection: 'restaurants' });
     };
     RestaurantController.prototype.createModel = function () {
         this.model = mongooseConnection.model("Restaurant", this.schema);
