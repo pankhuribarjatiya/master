@@ -32,6 +32,12 @@ var RestaurantController = /** @class */ (function () {
             response.json(itemArray);
         });
     };
+    RestaurantController.prototype.deleteRestaurant = function (response, filter) {
+        var query = this.model.remove(filter);
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
+    };
     return RestaurantController;
 }());
 exports.RestaurantController = RestaurantController;

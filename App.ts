@@ -41,11 +41,7 @@ class App {
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
-    // router.get('/app/list/:listId/count', (req, res) => {
-    //     var id = req.params.listId;
-    //     console.log('Query single list with id: ' + id);
-    //     this.RestaurantMenu.retrieveRestaurantMenuCount(res, {listId: id});
-    // });
+    
 
     router.post('/app/addRestaurant/', (req, res) => {
         console.log(req.body);
@@ -104,8 +100,15 @@ router.delete('/app/restaurantMenuItem/:itemId', (req, res) => {
 
 });
 
-    this.expressApp.use('/', router);
+router.delete('/app/deleteRestaurant/:restaurantId', (req, res) => {
+    var id = req.params.restaurantId;
+    console.log('Restaurant deleted');
+    this.Restaurant.deleteRestaurant(res, {_id: id});
+});
 
+    
+
+    this.expressApp.use('/', router);
     this.expressApp.use('/app/json/', express.static(__dirname+'/app/json'));
     this.expressApp.use('/images', express.static(__dirname+'/img'));
     this.expressApp.use('/', express.static(__dirname+'/pages'));

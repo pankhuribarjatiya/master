@@ -20,7 +20,7 @@ class RestaurantController{
                 restaurantName: String,
                 restaurantAddress: String,
                 phoneNumber: String,
-            }, {collection: 'restaurantList'}
+            }, {collection: 'restaurants'}
         );
     }
 
@@ -39,6 +39,14 @@ class RestaurantController{
         var query = this.model.find(filter);
         query.exec( (err, itemArray) => {
             response.json(itemArray) ;
+        });
+    }
+
+
+    public deleteRestaurant(response:any, filter:Object) {
+        var query = this.model.remove(filter);
+        query.exec( (err, itemArray) => {
+            response.json(itemArray);
         });
     }
 }
