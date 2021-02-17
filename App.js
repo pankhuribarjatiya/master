@@ -4,19 +4,15 @@ exports.App = void 0;
 var express = require("express");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
-//var MongoClient = require('mongodb').MongoClient;
-//var Q = require('q');
 var RestaurantController_1 = require("./controller/RestaurantController");
 var RestaurantMenuController_1 = require("./controller/RestaurantMenuController");
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
-    // public idGenerator:number;
     //Run configuration methods on the Express instance.
     function App() {
         this.expressApp = express();
         this.middleware();
         this.routes();
-        //this.idGenerator = 100;
         this.Restaurant = new RestaurantController_1.RestaurantController();
         this.RestaurantMenu = new RestaurantMenuController_1.RestaurantMenuController();
     }
@@ -30,6 +26,7 @@ var App = /** @class */ (function () {
     App.prototype.routes = function () {
         var _this = this;
         var router = express.Router();
+        //API for adding restaurant in the database
         router.post('/app/addRestaurant/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
@@ -40,26 +37,30 @@ var App = /** @class */ (function () {
                 console.log(response);
                 res.send(response);
             });
-            //this.idGenerator++;
         });
+        //Display restaurant with specififc id
         router.get('/app/restaurantList/:restaurantId', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Query single restaurant with id: ' + id);
             _this.Restaurant.retrieveRestaurantDetails(res, { _id: id });
         });
+        //Display all restaurant List
         router.get('/app/restaurantList/', function (req, res) {
             console.log('Query All Restaurants');
             _this.Restaurant.retrieveAllRestaurantLists(res);
         });
+        //Display menu of a specific restaurant
         router.get('/app/restaurantMenu/:restaurantId', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Query single restaurant menu with id: ' + id);
             _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
         });
+        //Display a specific menu from restaurant menu
         router.get('/app/restaurantMenuItem/:itemId', function (req, res) {
             var id = req.params.itemId;
             _this.RestaurantMenu.retrieveMenuDetails(res, { _id: id });
         });
+        //Add menu for a specific restaurant
         router.post('/app/addRestaurantMenuItem/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
@@ -70,10 +71,12 @@ var App = /** @class */ (function () {
                 res.send(response);
             });
         });
+        //Delete a specific menu from specific restaurant 
         router["delete"]('/app/restaurantMenuItem/:itemId', function (req, res) {
             var id = req.params.itemId;
             _this.RestaurantMenu.deleteMenuItem(res, { _id: id });
         });
+        //Delete a specific restauarant
         router["delete"]('/app/deleteRestaurant/:restaurantId', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Restaurant deleted');
