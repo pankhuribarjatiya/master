@@ -20,7 +20,7 @@ class RestaurantController{
                 restaurantName: String,
                 restaurantAddress: String,
                 phoneNumber: String,
-            }, {collection: 'restaurants'}
+            }, {collection: 'restaurantList'}
         );
     }
 
