@@ -14,19 +14,7 @@ class RestaurantMenuController {
         this.createModel();
     }
 
-    // public createSchema(): void {
-    //     this.schema = new Mongoose.Schema(
-    //         {
-    //             restaurantId: Number,
-    //             restaurantMenu: [ {
-    //                 itemId: Number,
-    //                 itemName: String,
-    //                 itemDescription: String,
-    //                 itemPrice: Number,
-    //             }]
-    //         }, {collection: 'restaurantMenu'}
-    //     );
-    // }
+  
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
@@ -56,14 +44,6 @@ class RestaurantMenuController {
             response.json(itemArray);
         });
     }
-
-    // public retrieveTasksCount(response:any, filter:Object) {
-    //     var query = this.model.find(filter).select('tasks').count();
-    //     query.exec( (err, numberOfTasks) => {
-    //         console.log('number of tasks: ' + numberOfTasks);
-    //         response.json(numberOfTasks);
-    //     });
-    // }
 
 }
 export {RestaurantMenuController};

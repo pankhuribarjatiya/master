@@ -10,19 +10,6 @@ var RestaurantMenuController = /** @class */ (function () {
         this.createSchema();
         this.createModel();
     }
-    // public createSchema(): void {
-    //     this.schema = new Mongoose.Schema(
-    //         {
-    //             restaurantId: Number,
-    //             restaurantMenu: [ {
-    //                 itemId: Number,
-    //                 itemName: String,
-    //                 itemDescription: String,
-    //                 itemPrice: Number,
-    //             }]
-    //         }, {collection: 'restaurantMenu'}
-    //     );
-    // }
     RestaurantMenuController.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
             restaurantId: String,

@@ -49,5 +49,34 @@ class RestaurantController{
             response.json(itemArray);
         });
     }
+
+    public async addRestaurant(res:any, jsonObj: any) {
+        const conflict = "Restaurant with the same location already exists";
+        const success = "Restaurant created successfully";
+        const output = await this.model.find({restaurantAddress: jsonObj.restaurantAddress})
+        .then(res => {
+            if (res.length === 0) {
+                console.log("Creating a new restaurant");
+                this.createRestaurant(jsonObj);
+                return success;
+            } else {
+                console.log(conflict);
+                return conflict;
+            }
+        })
+        if(output === conflict) {
+            res.status(409);
+        }
+        return res.json(output);
+    }
+
+    private async createRestaurant(jsonObj: any) {
+        this.model.create([jsonObj], (err, response) => {
+            if (err) {
+                console.log("Restaurant not added");
+            }
+            console.log(response);
+        });
+    }
 }
 export {RestaurantController}

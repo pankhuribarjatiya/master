@@ -38,20 +38,14 @@ class App {
   private routes(): void {
     let router = express.Router();
     
-  //API for adding restaurant in the database
-  router.post('/app/addRestaurant/', (req, res) => {
-      console.log(req.body);
+    //Add restaurant
+    router.post('/app/addRestaurant/',  (req, res) => {
       var jsonObj = req.body;
-      this.Restaurant.model.create([jsonObj], (err, response) => {
-          if (err) {
-              console.log('Restaurant not added');
-          }
-          console.log(response);
-          res.send(response);
-      });
-  });
+      console.log('Adding a restaurant: ' + jsonObj);
+      this.Restaurant.addRestaurant(res, jsonObj);
+    });
 
-    //Display restaurant with specififc id
+    //Display restaurant with specific id
     router.get('/app/restaurantList/:restaurantId', (req, res) => {
         var id = req.params.restaurantId;
         console.log('Query single restaurant with id: ' + id);

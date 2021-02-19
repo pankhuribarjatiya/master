@@ -26,19 +26,13 @@ var App = /** @class */ (function () {
     App.prototype.routes = function () {
         var _this = this;
         var router = express.Router();
-        //API for adding restaurant in the database
+        //Add restaurant
         router.post('/app/addRestaurant/', function (req, res) {
-            console.log(req.body);
             var jsonObj = req.body;
-            _this.Restaurant.model.create([jsonObj], function (err, response) {
-                if (err) {
-                    console.log('Restaurant not added');
-                }
-                console.log(response);
-                res.send(response);
-            });
+            console.log('Adding a restaurant: ' + jsonObj);
+            _this.Restaurant.addRestaurant(res, jsonObj);
         });
-        //Display restaurant with specififc id
+        //Display restaurant with specific id
         router.get('/app/restaurantList/:restaurantId', function (req, res) {
             var id = req.params.restaurantId;
             console.log('Query single restaurant with id: ' + id);

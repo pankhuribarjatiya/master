@@ -63,7 +63,6 @@ mongod -port 3000 -dbpath "./db"
 mongo --port 3000 --authenticationDatabase admin
 load('createDB/createAdminUser.js');
 load('createDB/createRestaurantData.js');
-load('createDB/restaurantList.js');
 exit
 
 node AppServer.js
