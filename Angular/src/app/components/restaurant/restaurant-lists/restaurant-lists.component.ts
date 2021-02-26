@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantService } from "src/app/services/restaurant.service";
+import { Restaurant } from "../../../models/restaurant";
 
 @Component({
   selector: 'app-restaurant-lists',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantListsComponent implements OnInit {
 
-  constructor() { }
+  restaurantlist: Restaurant[] = []
+  constructor(private RestaurantService: RestaurantService) { }
 
   ngOnInit(): void {
+    this.restaurantlist = this.RestaurantService.getRestaurants()
   }
-
 }

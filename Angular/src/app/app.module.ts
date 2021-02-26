@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedComponent } from './components/shared/shared.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { RestaurantListsComponent } from './components/restaurant/restaurant-lists/restaurant-lists.component';
+import { RestaurantItemComponent} from "./components/restaurant/restaurant-lists/restaurant-item/restaurant-item.component";
 import { RestaurantMenuComponent } from './components/restaurant/restaurant-menu/restaurant-menu.component';
 import { CartComponent } from './components/restaurant/cart/cart.component';
 import { CartItemComponent } from './components/restaurant/cart/cart-item/cart-item.component';
@@ -22,6 +23,7 @@ import { NavComponent } from './components/shared/nav/nav.component';
     SharedComponent,
     RestaurantComponent,
     RestaurantListsComponent,
+    RestaurantItemComponent,
     RestaurantMenuComponent,
     CartComponent,
     CartItemComponent,
@@ -29,9 +31,9 @@ import { NavComponent } from './components/shared/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-   
-   
-   
+
+
+
   ],
   imports: [
     BrowserModule,
