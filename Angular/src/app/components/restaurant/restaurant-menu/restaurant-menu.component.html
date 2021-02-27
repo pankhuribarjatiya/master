@@ -1,3 +1,4 @@
+
 <nav></nav>
 <div class="container">
   <div class="row">
@@ -12,3 +13,35 @@
     </div>
   </div>
 </div>
+
+<!--<nav></nav>-->
+
+<!--  <div class="row">-->
+<!--    <div class="col">-->
+<!--      <app-header></app-header>-->
+<!--    </div>-->
+
+<!--    <div class="col" *ngFor="let menu of menulist">-->
+<!--      <app-items [menuItem] = "menu"></app-items>-->
+<!--    </div>-->
+<!--</div>-->
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let menu of menulist">
+      <app-items [menuItem] = "menu"></app-items>
+    </div>
+  </div>
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm" *ngFor="let menu of menulist">-->
+<!--      <app-items [menuItem] = "menu"></app-items>-->
+<!--    </div>-->
+
+<!--    <div class="col-sm">-->
+<!--      <app-cart></app-cart>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
