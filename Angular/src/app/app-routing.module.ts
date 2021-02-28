@@ -6,7 +6,7 @@ import { RestaurantListsComponent } from './components/restaurant/restaurant-lis
 import { RestaurantMenuComponent } from './components/restaurant/restaurant-menu/restaurant-menu.component';
 import { LoginComponent } from './components/login/login.component';
 //import { CartComponent } from './components/restaurant/cart/cart.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 
 const routes: Routes = [
 
