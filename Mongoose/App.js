@@ -15,6 +15,8 @@ var App = /** @class */ (function () {
         this.routes();
         this.Restaurant = new RestaurantController_1.RestaurantController();
         this.RestaurantMenu = new RestaurantMenuController_1.RestaurantMenuController();
+        this.rIdGenerator = 100;
+        this.mIdGenerator = 100;
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {
@@ -28,9 +30,16 @@ var App = /** @class */ (function () {
         var router = express.Router();
         //Add restaurant
         router.post('/app/addRestaurant/', function (req, res) {
+            console.log(req.body);
             var jsonObj = req.body;
-            console.log('Adding a restaurant: ' + jsonObj);
-            _this.Restaurant.addRestaurant(res, jsonObj);
+            jsonObj._id = _this.rIdGenerator;
+            _this.Restaurant.model.create([jsonObj], function (err) {
+                if (err) {
+                    console.log('Restaurant not added  ', err);
+                }
+            });
+            res.send(_this.rIdGenerator.toString());
+            _this.rIdGenerator++;
         });
         //Display restaurant with specific id
         router.get('/app/restaurantList/:restaurantId', function (req, res) {
@@ -58,12 +67,14 @@ var App = /** @class */ (function () {
         router.post('/app/addRestaurantMenuItem/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
-            _this.RestaurantMenu.model.create([jsonObj], function (err, response) {
+            jsonObj._id = _this.mIdGenerator;
+            _this.RestaurantMenu.model.create([jsonObj], function (err) {
                 if (err) {
-                    console.log('Restaurant not added');
+                    console.log('Menu Item not added  ', err);
                 }
-                res.send(response);
             });
+            res.send(_this.mIdGenerator.toString());
+            _this.mIdGenerator++;
         });
         //Delete a specific menu from specific restaurant 
         router["delete"]('/app/restaurantMenuItem/:itemId', function (req, res) {

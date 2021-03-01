@@ -16,7 +16,8 @@ class RestaurantController{
 
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
-            {
+            {   
+                _id: Number, 
                 restaurantName: String,
                 restaurantAddress: String,
                 phoneNumber: String,
