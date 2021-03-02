@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService} from "../../../services/menu.service";
 import { Menu } from "../../../models/menu";
-
 @Component({
-  selector: 'app-restaurant-menu',
-  templateUrl: './restaurant-menu.component.html',
-  styleUrls: ['./restaurant-menu.component.css']
+  selector: 'app-restaurant-menulist',
+  templateUrl: './restaurant-menulist.component.html',
+  styleUrls: ['./restaurant-menulist.component.css']
 })
-export class RestaurantMenuComponent implements OnInit {
+export class RestaurantMenulistComponent implements OnInit {
 
   menulist: Menu[] = []
   constructor(private MenuServices: MenuService) { }

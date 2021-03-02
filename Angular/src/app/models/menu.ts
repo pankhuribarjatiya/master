@@ -5,7 +5,7 @@ export class Menu {
   price: number;
   imageUrl: string;
 
-  constructor(id, name, description = '', price = 0, imageUrl = 'https://pbs.twimg.com/profile_images/990973421835071489/ZYY6dIm9_400x400.jpg') {
+  constructor(id, name, description = '', price = 0, imageUrl = '') {
     this.id = id
     this.name = name
     this.description = description

@@ -6,14 +6,14 @@ import { Menu } from "src/app/models/menu"
 export class MenuService {
 
   Menus : Menu[] = [
-    new Menu(1, 'Redhawk Dinning', 'seattle',80,'https://pbs.twimg.com/profile_images/990973421835071489/ZYY6dIm9_400x400.jpg'),
-    new Menu(2, 'Cactus', 'seattle',90,'https://ehc-west-0-bucket.s3.us-west-2.amazonaws.com/web/documents/cactuscoffeeshop/promo_5c8fbfc008184.png'),
-    new Menu(3, 'Chipotle', 'seattle',8,'https://pbs.twimg.com/profile_images/970669059917471744/_KaAvCGb_400x400.jpg'),
-    new Menu(4, 'Food Truck', 'seattle',56,'https://i.pinimg.com/originals/55/dc/c0/55dcc028a9f7d9e7250c7cc7520c5214.jpg'),
-    new Menu(5, 'Mcdonalds', 'seattle',78,'https://yt3.ggpht.com/a-/AAuE7mAME_lpFRR2T0W4e8RF6NHA1o59FKzSDCBqjw=s240-mo-c-c0xffffffff-rj-k-no'),
-    new Menu(6, 'dominos', 'seattle',45,'https://ik.imagekit.io/smdxc0e2g3/generic-endpoint/https://pbs.twimg.com/profile_images/1968502170/domisoss_400x400.jpg?tr=w-240,rt-0'),
-    new Menu(7, 'Burgur King', 'seattle',34,'https://image.pngaaa.com/920/1924920-small.png'),
-    new Menu(8, 'Molly Moons', 'seattle',23,'https://pbs.twimg.com/profile_images/378800000145589863/6d5b0be5bf3701679981a606cf19fd24.jpeg'),
+    new Menu(1, 'Pancakes', 'seattle',8.47,'https://bakingamoment.com/wp-content/uploads/2020/10/IMG_9322-chocolate-chip-pancakes.jpg'),
+    new Menu(2, 'waffles', 'seattle',7.99,'https://www.cookedbyjulie.com/wp-content/uploads/2020/03/blueberry-waffles-one-500x500.jpg'),
+    new Menu(3, 'Classic Omelette', 'seattle',9.99,'https://www.glutenfreestories.com/wp-content/uploads/2020/12/20201208-IMG_3959-500x500.jpg'),
+    new Menu(4, 'Hash Browns', 'seattle',5.99,'https://i5.walmartimages.com/asr/319b5b23-8b3b-43f9-b80f-82315edf351b_1.fc992fad516f6b3003950ceabdcd2ecb.jpeg'),
+    new Menu(5, 'Scrambled Eggs', 'seattle',6.99,'https://www.theworktop.com/wp-content/uploads/2019/03/Scrambled-Eggs-Cream-Cheese-low-carb-breakfast-500x500.jpg'),
+    new Menu(6, 'Breakfast Tacos', 'seattle',12.97,'https://www.lemonblossoms.com/wp-content/uploads/2019/06/Breakfast-Tacos-S5-500x500.jpg'),
+    new Menu(7, 'Brewed Coffee', 'seattle',6.99,'https://www.willowcrestlane.com/wp-content/uploads/2020/04/Maple-Cinnamon-Latte-5-500x500.jpg'),
+    new Menu(8, 'Matcha Latte', 'seattle',7.99,'https://gimmedelicious.com/wp-content/uploads/2018/03/Iced-Matcha-Latte2-500x500.jpg'),
   ]
 
   constructor() { }
