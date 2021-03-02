@@ -48,6 +48,7 @@ var RestaurantController = /** @class */ (function () {
     }
     RestaurantController.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
+            _id: Number,
             restaurantName: String,
             restaurantAddress: String,
             phoneNumber: String
@@ -81,7 +82,7 @@ var RestaurantController = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        conflict = "Restaurant with the same name and location already exists";
+                        conflict = "Restaurant with the same location already exists";
                         success = "Restaurant created successfully";
                         return [4 /*yield*/, this.model.find({ restaurantAddress: jsonObj.restaurantAddress })
                                 .then(function (res) {

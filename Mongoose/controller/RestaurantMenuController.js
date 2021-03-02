@@ -12,6 +12,7 @@ var RestaurantMenuController = /** @class */ (function () {
     }
     RestaurantMenuController.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
+            _id: Number,
             restaurantId: String,
             itemName: String,
             itemDescription: String,

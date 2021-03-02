@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+
+
 import { AppComponent } from './app.component';
 import { SharedComponent } from './components/shared/shared.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
@@ -17,6 +19,8 @@ import { NavComponent } from './components/shared/nav/nav.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { RestaurantMenulistComponent } from './components/menu/restaurant-menulist/restaurant-menulist.component';
 import { MenuItemComponent } from "./components/menu/restaurant-menulist/menu-item/menu-item.component";
+import { LoginComponent } from './components/login/login.component';
+import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +38,9 @@ import { MenuItemComponent } from "./components/menu/restaurant-menulist/menu-it
     NavComponent,
     MenuComponent,
     MenuItemComponent,
-    RestaurantMenulistComponent
-
-
-
+    RestaurantMenulistComponent,
+    LoginComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

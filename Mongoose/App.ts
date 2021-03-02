@@ -17,6 +17,8 @@ class App {
   public expressApp: express.Application;
   public Restaurant:RestaurantController;
   public RestaurantMenu:RestaurantMenuController;
+  public rIdGenerator: number;
+  public mIdGenerator: number;
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -25,6 +27,8 @@ class App {
     this.routes();
     this.Restaurant = new RestaurantController();
     this.RestaurantMenu = new RestaurantMenuController();
+    this.rIdGenerator = 100;
+    this.mIdGenerator = 100;
   }
 
   // Configure Express middleware.
@@ -39,11 +43,18 @@ class App {
     let router = express.Router();
     
     //Add restaurant
-    router.post('/app/addRestaurant/',  (req, res) => {
+    router.post('/app/addRestaurant/', (req, res) => {​​
+      console.log(req.body);
       var jsonObj = req.body;
-      console.log('Adding a restaurant: ' + jsonObj);
-      this.Restaurant.addRestaurant(res, jsonObj);
-    });
+      jsonObj._id = this.rIdGenerator;
+      this.Restaurant.model.create([jsonObj], (err) => {​​
+      if (err) {​​
+              console.log('Restaurant not added  ', err);
+                }​​
+              }​​);
+      res.send(this.rIdGenerator.toString());
+      this.rIdGenerator++;
+      }​​);
 
     //Display restaurant with specific id
     router.get('/app/restaurantList/:restaurantId', (req, res) => {
@@ -76,18 +87,22 @@ class App {
 
 //Add menu for a specific restaurant
 
-router.post('/app/addRestaurantMenuItem/', (req, res) => {
-  console.log(req.body);
-  var jsonObj = req.body;
-  this.RestaurantMenu.model.create([jsonObj], (err, response) => {
-      if (err) {
-          console.log('Restaurant not added');
-      }
-      
-      res.send(response);
-  });
-  
-});
+router.post('/app/addRestaurantMenuItem/', (req, res) => {​​
+        console.log(req.body);
+        var jsonObj = req.body;
+        jsonObj._id = this.mIdGenerator;
+        
+        this.RestaurantMenu.model.create([jsonObj], (err)=>
+        {​​
+        if (err) {​​
+        console.log('Menu Item not added  ', err);
+        }​​
+        }​​);
+        res.send(this.mIdGenerator.toString());
+        this.mIdGenerator++ 
+        }​​);
+
+
 
 //Delete a specific menu from specific restaurant 
 router.delete('/app/restaurantMenuItem/:itemId', (req, res) => {

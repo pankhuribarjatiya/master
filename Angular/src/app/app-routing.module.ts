@@ -5,7 +5,9 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
 import { RestaurantListsComponent } from './components/restaurant/restaurant-lists/restaurant-lists.component';
 import { MenuComponent} from "./components/menu/menu.component";
 import { RestaurantMenulistComponent } from './components/menu/restaurant-menulist/restaurant-menulist.component';
+import { LoginComponent } from './components/login/login.component';
 //import { CartComponent } from './components/restaurant/cart/cart.component';
+import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 
 const routes: Routes = [
 
@@ -15,6 +17,9 @@ const routes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'menulist', component: RestaurantMenulistComponent},
   //{ path: 'cart', component: CartComponent }
+  { path: '', redirectTo: '/shop', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({imports: [
     RouterModule.forRoot(routes)
