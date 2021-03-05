@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class RestaurantService {
+export class RestaurantServiceCopy {
 
   hostUrl:string = 'http://localhost:8080/';
   url:string = 'http://localhost:8080/data/restaurantList.json';

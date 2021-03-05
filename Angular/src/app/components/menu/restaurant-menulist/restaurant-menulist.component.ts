@@ -11,8 +11,13 @@ export class RestaurantMenulistComponent implements OnInit {
   menulist: Menu[] = []
   constructor(private MenuServices: MenuService) { }
 
-  ngOnInit(): void {
-    this.menulist = this.MenuServices.getMenus()
-  }
+  // ngOnInit(): void {
+  //   this.menulist = this.MenuServices.getMenus()
+  // }
 
+  ngOnInit() {
+    this.MenuServices.getMenus().subscribe((menu) =>{
+    this.menulist = menu;
+  })
+  }
 }
