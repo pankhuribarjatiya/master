@@ -1,117 +1,34 @@
-<!--<section id="home" class="slider" data-stellar-background-ratio="0.5">-->
-<!--    <div class="row">-->
-
-<!--        <div class="owl-carousel owl-theme">-->
-<!--            <div class="item item-first">-->
-<!--                <div class="caption">-->
-<!--                    <div class="container">-->
-<!--                        <div class="col-md-8 col-sm-12">-->
-<!--                            <h3>EatEZ &amp; Eat With Ease</h3>-->
-<!--                            <h1>Our mission is to provide an unforgettable experience</h1>-->
-<!--                            <a href="http://localhost:63342/EatEz_SaaS/signup.html?_ijt=bhcbd7h9etpcfd03i05v4qjepo" class="section-btn btn btn-default smoothScroll">Sign-Up</a>-->
-<!--                            <a href="#contact" class="section-btn btn btn-default smoothScroll">Sign-In</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-
-<!--<section id="contact" data-stellar-background-ratio="0.5">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-
-<!--            <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">-->
-<!--                <div id="google-map">-->
-<!--                    <img src="images/Food1.jpg" width="500" height="365" >-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="col-md-6 col-sm-12">-->
-
-<!--                <div class="col-md-12 col-sm-12">-->
-<!--                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">-->
-<!--                        <h2>Sign In</h2>-->
-<!--                        <h3>As a:</h3>-->
-<!--                        <br>-->
-<!--                        <select name="role_dd" class="form-control" id="role_dd">-->
-<!--                            <option value="Student/Employee" id="se">Student/Employee</option>-->
-<!--                            <option value="Partner" id="pa">Partner</option>-->
-<!--                            <option value="Delivery Person" id="dp">Delivery Person</option>-->
-<!--                        </select>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Student/Employee CONTACT FORM &ndash;&gt;-->
-<!--                <div id="contact_form_student">-->
-<!--                    <form #loginForm= "ngForm" (submit) = "login()">-->
-<!--                        &lt;!&ndash;-->
-<!--                         IF MAIL SENT SUCCESSFUL  // connect this with custom JS-->
-<!--                        <h6 class="text-success">Your message has been sent successfully.</h6>-->
-
-<!--                        IF MAIL NOT SENT-->
-<!--                        <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>-->
-<!--                        &ndash;&gt;-->
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <input type="email" class="form-control" id="student-email" name="email" placeholder="Email Id" [ngModel] = "model.userEmailId">-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <input type="password" class="form-control" id="student-passsword" name="password" placeholder="Password" [ngModel] = "model.userPassword">-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <button type="submit" class="form-control" id="cf-submit" name="submit">Submit</button>-->
-<!--                        </div>-->
-<!--                    </form>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Partner Contact Form &ndash;&gt;-->
-<!--                <div id="contact_form_partner" style="display:none;">-->
-
-<!--                    <form>-->
-<!--                        &lt;!&ndash;-->
-<!--                         IF MAIL SENT SUCCESSFUL  // connect this with custom JS-->
-<!--                        <h6 class="text-success">Your message has been sent successfully.</h6>-->
-
-<!--                        IF MAIL NOT SENT-->
-<!--                        <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>-->
-<!--                        &ndash;&gt;-->
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <input type="email" class="form-control" id="student-name" name="name" placeholder="Email Id" [ngModel] = "model.userEmailId">-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <input type="password" class="form-control" id="student-lastname" name="password" placeholder="Password" [ngModel] = "model.userPassword">-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <button type="submit" class="form-control" id="cf-submit" name="submit">Submit</button>-->
-<!--                        </div>-->
-<!--                    </form>-->
-<!--                </div>-->
-
-<!--                <div id="contact_form_delivery_person" style="display:none;">-->
-<!--                    <form>-->
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <input type="text" class="form-control" id="student-name" name="name" placeholder="User Id" [ngModel] = "model.userEmailId">-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <input type="password" class="form-control" id="student-lastname" name="email" placeholder="Password" [ngModel] = "model.userPassword">-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-12 col-sm-12">-->
-<!--                            <button type="submit" class="form-control" id="cf-submit" name="submit">Submit</button>-->
-<!--                        </div>-->
-<!--                    </form>-->
-
-<!--                </div>-->
-
-<!--            </div>-->
-
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="guest-form-card card">
+  
+        <div class="card-header text-center">
+          <h1>Sign In</h1>
+        </div>
+  
+        <div class="card-body">
+          <form #loginForm="ngForm" (ngSubmit)="login()">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input id="username" class="form-control" [ngClass]="{ 'is-invalid': username.touched && username.invalid }" name="username" #username="ngModel" [(ngModel)]="model.username" required />
+              <span class="invalid-feedback">Username can't be blank.</span>
+            </div>
+  
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" class="form-control" [ngClass]="{ 'is-invalid': password.touched && password.invalid }" #password="ngModel" [(ngModel)]="model.password" required />
+              <span class="invalid-feedback">Password can't be blank.</span>
+            </div>
+  
+            <div class="form-group">
+              <input type="checkbox" id="remember" name="remember" #remember="ngModel" [(ngModel)]="model.remember">
+              <label class="ml-1" for="remember">Remember Me</label>
+            </div>
+  
+            <button class="btn btn-primary btn-block" [disabled]="loginForm.invalid" [routerLink]="['/restaurant']">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
