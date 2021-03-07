@@ -11,8 +11,8 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
 import { RestaurantListsComponent } from './components/restaurant/restaurant-lists/restaurant-lists.component';
 import { RestaurantItemComponent} from "./components/restaurant/restaurant-lists/restaurant-item/restaurant-item.component";
 // import { RestaurantMenuComponent } from './components/restaurant/restaurant-menu/restaurant-menu.component';
-import { CartComponent } from './components/menu/cart/cart.component';
-import { CartItemComponent } from './components/menu/cart/cart-item/cart-item.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 // import { ItemsComponent } from './components/restaurant/restaurant-menu/items/items.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';

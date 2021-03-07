@@ -8,10 +8,13 @@ import { RestaurantMenulistComponent } from './components/menu/restaurant-menuli
 import { LoginComponent } from './components/login/login.component';
 //import { CartComponent } from './components/restaurant/cart/cart.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
+import { CartComponent } from './components/cart/cart.component';
+
 
 const routes: Routes = [
 
   { path: '', redirectTo: 'restaurant', pathMatch: 'full' },
+  { path: 'cart', component: CartComponent },
   { path: 'restaurant', component: RestaurantComponent },
   { path: 'restaurantList', component: RestaurantListsComponent },
   { path: 'menu', component: MenuComponent },
