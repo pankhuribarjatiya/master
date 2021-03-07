@@ -3,6 +3,8 @@ import * as express from 'express';
 import * as logger from 'morgan';
 import * as url from 'url';
 import * as bodyParser from 'body-parser';
+import * as cors from 'cors';
+
 
 // Creates and configures an ExpressJS web server.
 class App {
@@ -13,6 +15,7 @@ class App {
   //Run configuration methods on the Express instance.
   constructor() {
     this.express = express();
+    this.express.use(cors());
     this.middleware();
     this.routes();
   }

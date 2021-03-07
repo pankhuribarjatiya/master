@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Menu } from "src/app/models/menu";
-import { HttpClient, HttpRequest } from '@angular/common/http';
+//import { Menu } from "src/app/models/menu";
+import { HttpClient, HttpRequest ,HttpErrorResponse} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
+  
 
 
 
@@ -17,10 +20,25 @@ export class MenuService {
   }
   
 
-  getMenus(): Observable <Menu[]> {
-    //TODO: Populate products from an API and return an Observable
-    return this.http.get<Menu[]>(this.url);
-  }
+  // getMenus(): Observable <Menu[]> {
+  //   //TODO: Populate products from an API and return an Observable
+  //   return this.http.get<Menu[]>(this.url);
+  // }
+  getMenus(id:Number) {
+  return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenu/${id}`)
+  .pipe(
+    map((response: Menu[]) => {
+      return response;
+    }),
+    catchError(this.handleError)
+  );
+  
+}
+
+private handleError(error: HttpErrorResponse) {
+  console.error(error.message);
+  return throwError('A data error occurred, please try again.');
+}
 
   // Menus : Menu[] = [
   //   new Menu(1, 'Pancakes', 'seattle',8.47,'https://bakingamoment.com/wp-content/uploads/2020/10/IMG_9322-chocolate-chip-pancakes.jpg'),
@@ -39,6 +57,22 @@ export class MenuService {
   //   //TODO: Populate products from an API and return an Observable
   //   return this.Menus
   // }
+}
+export interface Restaurant {
+  _id: number;
+  restaurantName: string;
+  restaurantAddress: string;
+  phoneNumber: string;
+  restaurantImageUrl: string;
+}
+export interface Menu {
+  
+  _id:number;
+  restaurantId: number;
+  itemName: String;
+  itemDescription: String;
+  itemPrice: Number;
+
 }
 
 

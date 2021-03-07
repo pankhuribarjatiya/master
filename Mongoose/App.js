@@ -4,6 +4,7 @@ exports.App = void 0;
 var express = require("express");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
+var cors = require("cors");
 var RestaurantController_1 = require("./controller/RestaurantController");
 var RestaurantMenuController_1 = require("./controller/RestaurantMenuController");
 // Creates and configures an ExpressJS web server.
@@ -11,6 +12,7 @@ var App = /** @class */ (function () {
     //Run configuration methods on the Express instance.
     function App() {
         this.expressApp = express();
+        this.expressApp.use(cors());
         this.middleware();
         this.routes();
         this.Restaurant = new RestaurantController_1.RestaurantController();

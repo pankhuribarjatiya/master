@@ -16,7 +16,8 @@ var RestaurantMenuController = /** @class */ (function () {
             restaurantId: String,
             itemName: String,
             itemDescription: String,
-            itemPrice: Number
+            itemPrice: Number,
+            menuItemImageUrl: String
         }, { collection: 'restaurantMenu' });
     };
     RestaurantMenuController.prototype.createModel = function () {

@@ -51,7 +51,8 @@ var RestaurantController = /** @class */ (function () {
             _id: Number,
             restaurantName: String,
             restaurantAddress: String,
-            phoneNumber: String
+            phoneNumber: String,
+            restaurantImageUrl: String
         }, { collection: 'restaurants' });
     };
     RestaurantController.prototype.createModel = function () {

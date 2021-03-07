@@ -22,7 +22,8 @@ class RestaurantMenuController {
                 restaurantId: String,
                 itemName: String,
                 itemDescription: String,
-                itemPrice: Number
+                itemPrice: Number,
+                menuItemImageUrl :String,
             }, {collection: 'restaurantMenu'}
         );
     }

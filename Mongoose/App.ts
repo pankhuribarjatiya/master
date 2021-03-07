@@ -4,6 +4,7 @@ import * as logger from 'morgan';
 import * as mongodb from 'mongodb';
 import * as url from 'url';
 import * as bodyParser from 'body-parser';
+import * as cors from 'cors';
 
 import {RestaurantController} from './controller/RestaurantController';
 import {RestaurantMenuController} from './controller/RestaurantMenuController';
@@ -23,12 +24,14 @@ class App {
   //Run configuration methods on the Express instance.
   constructor() {
     this.expressApp = express();
+    this.expressApp.use(cors());
     this.middleware();
     this.routes();
     this.Restaurant = new RestaurantController();
     this.RestaurantMenu = new RestaurantMenuController();
     this.rIdGenerator = 100;
     this.mIdGenerator = 100;
+    
   }
 
   // Configure Express middleware.

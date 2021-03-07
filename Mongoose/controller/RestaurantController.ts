@@ -21,6 +21,7 @@ class RestaurantController{
                 restaurantName: String,
                 restaurantAddress: String,
                 phoneNumber: String,
+                restaurantImageUrl: String,
             }, {collection: 'restaurants'}
         );
     }
