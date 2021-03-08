@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'restaurant', component: RestaurantComponent },
   { path: 'restaurantList', component: RestaurantListsComponent },
-  { path: 'menu', component: MenuComponent },
+  { path: 'menu/:id', component: MenuComponent },
   { path: 'menulist', component: RestaurantMenulistComponent},
   //{ path: 'cart', component: CartComponent }
   { path: '', redirectTo: '/shop', pathMatch: 'full' },
