@@ -1,17 +1,16 @@
 <div class="card mb-4 shadow-sm">
-  <img class="bd-placeholder-img card-img-top p-2" width="100%" [src]="menuItems.menuItemImageUrl" />
-
+  <img class="bd-placeholder-img card-img-top p-2" width="100%" [src]="menuItem.menuItemImageUrl" />
   <div class="card-body">
 
     <p class="card-text">
-      <strong>{{ menuItems.itemPrice | currency}}</strong>
+      <strong>{{ menuItem.itemPrice | currency}}</strong>
     </p>
-    <h5 class="card-text">{{menuItems.itemName}}</h5>
-    <p class="card-text">{{ menuItems.itemDescription }}</p>
+    <h5 class="card-text">{{menuItem.itemName}}</h5>
+    <p class="card-text">{{ menuItem.itemDescription }}</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-primary product-btn"[routerLink]="['/cart']">Add to Cart</button>
-        <!-- <button type="button" class="btn btn-sm btn-outline-secondary product-btn">View Details</button> -->
+        <button type="button" class="btn btn-sm btn-primary product-btn" (click) = "handleAddToCart()">Add to Cart</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary product-btn">View Details</button>
       </div>
     </div>
   </div>

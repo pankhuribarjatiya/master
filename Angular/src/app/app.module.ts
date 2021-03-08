@@ -11,10 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { RestaurantListsComponent } from './components/restaurant/restaurant-lists/restaurant-lists.component';
 import { RestaurantItemComponent} from "./components/restaurant/restaurant-lists/restaurant-item/restaurant-item.component";
-// import { RestaurantMenuComponent } from './components/restaurant/restaurant-menu/restaurant-menu.component';
-import { CartComponent } from './components/cart/cart.component';
-import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
-// import { ItemsComponent } from './components/restaurant/restaurant-menu/items/items.component';
+import { CartComponent } from './components/menu/cart/cart.component';
+import { CartItemComponent } from './components/menu/cart/cart-item/cart-item.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavComponent } from './components/shared/nav/nav.component';
@@ -28,6 +26,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OwnerMenuItemComponent } from './components/restaurantOwner/ownerMenu-item.component';
 import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
 import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
+import { ItemOrderDetailComponent } from './components/order-details/item-order-detail/item-order-detail.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +49,8 @@ import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-fo
     CheckoutComponent,
     OwnerMenuItemComponent,
     MenuItemListComponent,
-    MenuItemFormComponent
+    MenuItemFormComponent,
+    ItemOrderDetailComponent,
   ],
   imports: [
     BrowserModule,
