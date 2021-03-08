@@ -13,6 +13,8 @@ export class CartComponent implements OnInit {
 
   cartItems = [];
 
+  model : any = {}
+
   cartTotal = 0
 
   constructor(
@@ -43,5 +45,9 @@ export class CartComponent implements OnInit {
     this.cartItems.forEach(item => {
       this.cartTotal += (item.qty * item.price)
     })
+  }
+
+  login() {
+    console.log(this.model);
   }
 }

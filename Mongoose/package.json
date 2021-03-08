@@ -37,5 +37,6 @@
   "bugs": {
     "url": "https://github.com/asupekar/EatEz_SaaS/issues"
   },
-  "homepage": "https://github.com/asupekar/EatEz_SaaS#readme"
+  "homepage": "https://github.com/asupekar/EatEz_SaaS#readme",
+  "devDependencies": {}
 }

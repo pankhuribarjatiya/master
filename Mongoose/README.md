@@ -71,7 +71,7 @@ Go to local host on postman
 
 //TroubleShooting
 If port already in use error comes execute below command:  
-sof -i tcp:3000
+lsof -i tcp:3000
 Kill -9 <pid>
 
 
