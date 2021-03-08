@@ -8,6 +8,7 @@ import * as cors from 'cors';
 
 import {RestaurantController} from './controller/RestaurantController';
 import {RestaurantMenuController} from './controller/RestaurantMenuController';
+import {OrderDetailController} from './controller/OrderDetailController';
 import {DataAccess} from './DataAccess';
 import { isThisTypeNode } from 'typescript';
 
@@ -18,8 +19,10 @@ class App {
   public expressApp: express.Application;
   public Restaurant:RestaurantController;
   public RestaurantMenu:RestaurantMenuController;
+  public OrderDetail:OrderDetailController;
   public rIdGenerator: number;
   public mIdGenerator: number;
+  public orderIdGenerator: number;
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -29,8 +32,10 @@ class App {
     this.routes();
     this.Restaurant = new RestaurantController();
     this.RestaurantMenu = new RestaurantMenuController();
+    this.OrderDetail = new OrderDetailController();
     this.rIdGenerator = 100;
     this.mIdGenerator = 100;
+    this.orderIdGenerator = 100;
     
   }
 
@@ -53,6 +58,7 @@ class App {
       this.Restaurant.model.create([jsonObj], (err) => {​​
       if (err) {​​
               console.log('Restaurant not added  ', err);
+              return;
                 }​​
               }​​);
       res.send(this.rIdGenerator.toString());
@@ -99,6 +105,7 @@ router.post('/app/addRestaurantMenuItem/', (req, res) => {​​
         {​​
         if (err) {​​
         console.log('Menu Item not added  ', err);
+        return;
         }​​
         }​​);
         res.send(this.mIdGenerator.toString());
@@ -120,6 +127,35 @@ router.delete('/app/deleteRestaurant/:restaurantId', (req, res) => {
     var id = req.params.restaurantId;
     console.log('Restaurant deleted');
     this.Restaurant.deleteRestaurant(res, {_id: id});
+});
+
+//Get order details for specific order Id
+router.get('/app/orderDetails/:orderID', (req, res) => {
+  var id = req.params.orderID;
+  this.OrderDetail.retrieveOrderDetails(res, {_id: id});
+});
+
+
+//Create order
+router.post('/app/addOrder/', (req, res) => {​​
+  console.log(req.body);
+  var jsonObj = req.body;
+  jsonObj._id = this.orderIdGenerator;
+  this.OrderDetail.model.create([jsonObj], (err) => {​​
+    if (err) 
+    {​​
+      console.log('Order could not be created', err);
+      return;
+    }​​
+  }​​);
+  res.send(this.orderIdGenerator.toString());
+  this.orderIdGenerator++;
+  }​​);
+
+   //Display all order details
+router.get('/app/OrderDetails/', (req, res) => {
+  console.log('Query All Orders');
+  this.OrderDetail.retrieveAllOrderDetails(res);
 });
 
 this.expressApp.use('/', router);

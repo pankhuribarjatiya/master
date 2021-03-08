@@ -7,6 +7,7 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var RestaurantController_1 = require("./controller/RestaurantController");
 var RestaurantMenuController_1 = require("./controller/RestaurantMenuController");
+var OrderDetailController_1 = require("./controller/OrderDetailController");
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
     //Run configuration methods on the Express instance.
@@ -17,8 +18,10 @@ var App = /** @class */ (function () {
         this.routes();
         this.Restaurant = new RestaurantController_1.RestaurantController();
         this.RestaurantMenu = new RestaurantMenuController_1.RestaurantMenuController();
+        this.OrderDetail = new OrderDetailController_1.OrderDetailController();
         this.rIdGenerator = 100;
         this.mIdGenerator = 100;
+        this.orderIdGenerator = 100;
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {
@@ -38,6 +41,7 @@ var App = /** @class */ (function () {
             _this.Restaurant.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('Restaurant not added  ', err);
+                    return;
                 }
             });
             res.send(_this.rIdGenerator.toString());
@@ -73,6 +77,7 @@ var App = /** @class */ (function () {
             _this.RestaurantMenu.model.create([jsonObj], function (err) {
                 if (err) {
                     console.log('Menu Item not added  ', err);
+                    return;
                 }
             });
             res.send(_this.mIdGenerator.toString());
@@ -88,6 +93,30 @@ var App = /** @class */ (function () {
             var id = req.params.restaurantId;
             console.log('Restaurant deleted');
             _this.Restaurant.deleteRestaurant(res, { _id: id });
+        });
+        //Get order details for specific order Id
+        router.get('/app/orderDetails/:orderID', function (req, res) {
+            var id = req.params.orderID;
+            _this.OrderDetail.retrieveOrderDetails(res, { _id: id });
+        });
+        //Create order
+        router.post('/app/addOrder/', function (req, res) {
+            console.log(req.body);
+            var jsonObj = req.body;
+            jsonObj._id = _this.orderIdGenerator;
+            _this.OrderDetail.model.create([jsonObj], function (err) {
+                if (err) {
+                    console.log('Order could not be created', err);
+                    return;
+                }
+            });
+            res.send(_this.orderIdGenerator.toString());
+            _this.orderIdGenerator++;
+        });
+        //Display all order details
+        router.get('/app/OrderDetails/', function (req, res) {
+            console.log('Query All Orders');
+            _this.OrderDetail.retrieveAllOrderDetails(res);
         });
         this.expressApp.use('/', router);
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));

@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 //import { CartComponent } from './components/restaurant/cart/cart.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 import { CartComponent } from './components/cart/cart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component'
 
 
 const routes: Routes = [
@@ -19,10 +21,11 @@ const routes: Routes = [
   { path: 'restaurantList', component: RestaurantListsComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'menulist', component: RestaurantMenulistComponent},
-  //{ path: 'cart', component: CartComponent }
-  { path: '', redirectTo: '/shop', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'order-details', component: OrderDetailsComponent },
+  { path: 'checkout', component: CheckoutComponent},
+  { path: '**', component: PageNotFoundComponent },
+
 ];
 @NgModule({imports: [
     RouterModule.forRoot(routes)

@@ -22,6 +22,8 @@ import { RestaurantMenulistComponent } from './components/menu/restaurant-menuli
 import { MenuItemComponent } from "./components/menu/restaurant-menulist/menu-item/menu-item.component";
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,8 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
     RestaurantComponent,
     RestaurantListsComponent,
     RestaurantItemComponent,
-    // RestaurantMenuComponent,
     CartComponent,
     CartItemComponent,
-    // ItemsComponent,
     HeaderComponent,
     FooterComponent,
     NavComponent,
@@ -42,6 +42,8 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
     RestaurantMenulistComponent,
     LoginComponent,
     PageNotFoundComponent,
+    OrderDetailsComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
