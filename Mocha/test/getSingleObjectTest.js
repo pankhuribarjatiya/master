@@ -26,14 +26,12 @@ describe('Test Restaurant result', function () {
 				done();
 			});
         });
-    
-   
-    
-	it('The first entry in the array has known properties', function(){
-	    expect(requestResult[0]).to.include.keys('_id');
-	    expect(requestResult[0]).to.have.property('restaurantName');
-		//expect(response.body).to.not.be.a.string;
+
+	it('Testing the object by using assert', function(){
+	    assert.isObject(response, 'is array of objects');
+		assert.notStrictEqual(response.body.length, 1, "We can give message with assert");
 	});
+	
 
 	it('The elements in the array have the expected properties', function(){
 		expect(response.body).to.satisfy(
