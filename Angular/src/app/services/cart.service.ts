@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpRequest, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+
+import { throwError } from 'rxjs';
 
 import { CartItem } from '../models/cart-item';
 import { cartUrl } from '../config/api';
 import { Menu } from '../models/menu';
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,6 @@ export class CartService {
   constructor(private http: HttpClient) { }
 
   getCartItems(): Observable<CartItem[]> {
-    //TODO: Mapping the obtained result to our CartItem props. (pipe() and map())
     return this.http.get<CartItem[]>(cartUrl).pipe(
       map((result: any[]) => {
         let cartItems: CartItem[] = [];
@@ -40,8 +41,16 @@ export class CartService {
       })
     );
   }
-
-  addProductToCart(menu: Menu): Observable<any> {
-    return this.http.post(cartUrl, { menu });
+  
+  private handleError(error: HttpErrorResponse) {
+    console.error(error.message);
+    return throwError('A data error occurred, please try again.');
+  }
+  
+  add(menuItem: Menu) {
+    return this.http.post('http://127.0.0.1:8080/app/addOrder', menuItem)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 }

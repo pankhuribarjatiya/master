@@ -6,9 +6,8 @@ import { RestaurantListsComponent } from './components/restaurant/restaurant-lis
 import { MenuComponent} from "./components/menu/menu.component";
 import { RestaurantMenulistComponent } from './components/menu/restaurant-menulist/restaurant-menulist.component';
 import { LoginComponent } from './components/login/login.component';
-//import { CartComponent } from './components/restaurant/cart/cart.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
-import { CartComponent } from './components/cart/cart.component';
+import { CartComponent } from './components/menu/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component'
 import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
@@ -27,6 +26,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent},
   { path: 'restaurantOwner/:id', component: MenuItemListComponent },
   { path: 'addMenuItem/:id', component: MenuItemFormComponent},
+  { path: 'addToCart/', component: MenuItemFormComponent},
   { path: '**', component: PageNotFoundComponent },
   
 
