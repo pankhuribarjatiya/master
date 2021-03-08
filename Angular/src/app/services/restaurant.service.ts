@@ -16,19 +16,12 @@ export class RestaurantService {
 
   constructor(private http: HttpClient) {
   }
-
-  // getRestaurants(): Observable <Restaurant[]> {
-  //     //TODO: Populate products from an API and return an Observable
-  //     return this.http.get<Restaurant[]>(`http://127.0.0.1:8080/app/restaurant`);
-  //     console.log("restauranat");
-  //   }
-
-    getRestaurants() {
   
-      return this.http.get<Restaurant[]>('http://127.0.0.1:8080/app/restaurantList')
-    .pipe(
-      map((response: Restaurant[]) => {
-        return response;
+  retrieveAllRestaurantLists() {
+        return this.http.get<Restaurant[]>('http://127.0.0.1:8080/app/restaurantList')
+        .pipe(
+         map((response: Restaurant[]) => {
+         return response;
       }),
       catchError(this.handleError)
     );
@@ -41,10 +34,3 @@ private handleError(error: HttpErrorResponse) {
 
 }
 
-// export interface Restaurant {
-//                 _id: number;
-//                 restaurantName: string;
-//                 restaurantAddress: string;
-//                 phoneNumber: string;
-//                 restaurantImageUrl: string;
-// }

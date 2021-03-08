@@ -19,12 +19,7 @@ export class MenuService {
   constructor(private http: HttpClient) {
   }
   
-
-  // getMenus(): Observable <Menu[]> {
-  //   //TODO: Populate products from an API and return an Observable
-  //   return this.http.get<Menu[]>(this.url);
-  // }
-  getMenus(id:String) {
+  retrieveMenuDetails(id:String) {
   return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenu/${id}`)
   .pipe(
     map((response: Menu[]) => {

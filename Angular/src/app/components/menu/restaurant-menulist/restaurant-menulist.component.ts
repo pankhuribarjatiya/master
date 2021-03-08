@@ -24,12 +24,12 @@ export class RestaurantMenulistComponent implements OnInit {
          this.activatedRoute.paramMap.subscribe(paramMap => {​​​​
               let menuId = paramMap.get('id');
                   console.log(menuId);
-                  this.getMenus(menuId);
+                  this.retrieveMenuDetails(menuId);
         }​​​​);
 }​​​​
  
-  getMenus(id : string) {​​​​
-      this.MenuService.getMenus(id) //model._id; Menu.restaurantId
+retrieveMenuDetails(id : string) {​​​​
+      this.MenuService.retrieveMenuDetails(id) //model._id; Menu.restaurantId
       .subscribe(menulist => {​​​​
       console.log(JSON.parse(JSON.stringify(menulist)));
       this.menulist = JSON.parse(JSON.stringify(menulist));
