@@ -1,6 +1,10 @@
 :host {
-  display: block;
-  padding: 10px;
+  padding: 2% 0px;
+	line-height: 30px;
+  font-style:italic;
+  font-size: 20px;
+  text-align: center;
+ 
 }
 ul {
   list-style-type: none;
@@ -8,34 +12,23 @@ ul {
 ul li {
   margin: 10px 0;
 }
-header, label {
-  color: #53ace4;
+ label {
+  color: #000808;
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  text-align: center;
 }
 input, select {
-  background-color: #29394b;
-  color: #c6c5c3;
-  border-radius: 3px;
-  border: none;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset;
-  border-color: #53ace4;
-  padding: 6px;
+  margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block; 
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    vertical-align:middle;
+    margin-left:20px
 }
-/* .ng-invalid:not(.ng-pristine):not(.required-invalid) {
-  border: 1px solid #d93a3e;
-}
-input[required].ng-invalid {
-  border-right: 5px solid #d93a3e;
-}
-input[required]:not(.required-invalid),
-input[required].ng-invalid:not(.required-invalid) {
-  border-right: 5px solid #37ad79;
-}
-.error {
-  color: #d93a3e;
-}
-#year {
-  width: 50px;
-} */
+
 button[type=submit] {
   background-color: #45bf94;
   border: 0;

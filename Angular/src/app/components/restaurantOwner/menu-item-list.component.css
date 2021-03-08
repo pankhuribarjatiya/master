@@ -1,5 +1,35 @@
 
+.topnav-right {
+  float: right;
+}
 
+.topnav {
+  overflow: hidden;
+  background-color: rgb(231, 75, 75);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #080e09;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
 
 .wrapper {
 	width: 1170px;
@@ -13,8 +43,9 @@ header {
 	position: fixed;
   background-image:url("https://api.dineoncampus.com/files/test/path/ea76905e-6407-415e-a404-8e8ba597f9dc.png");
   background-repeat: no-repeat;
-  background-size: 900px 200px;
+  background-size: 700px 200px;
 	background-position:  center;
+  position: absolute !important;
 }
 
 section {
