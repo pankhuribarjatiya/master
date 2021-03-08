@@ -28,6 +28,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OwnerMenuItemComponent } from './components/restaurantOwner/ownerMenu-item.component';
 import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
 import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
+import { ItemOrderDetailComponent } from './components/order-details/item-order-detail/item-order-detail.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-fo
     CheckoutComponent,
     OwnerMenuItemComponent,
     MenuItemListComponent,
-    MenuItemFormComponent
+    MenuItemFormComponent,
+    ItemOrderDetailComponent,
   ],
   imports: [
     BrowserModule,
