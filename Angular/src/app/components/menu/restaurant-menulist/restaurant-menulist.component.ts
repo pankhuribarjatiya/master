@@ -21,39 +21,19 @@ export class RestaurantMenulistComponent implements OnInit {
 
   
   ngOnInit() {​​​​
-
-    this.activatedRoute.paramMap
-
-      .subscribe(paramMap => {​​​​
-
-        let menuId = paramMap.get('id');
-
-       console.log(menuId);
-
-        this.getMenus(menuId);
-
-      }​​​​);
-
-  }​​​​
+         this.activatedRoute.paramMap.subscribe(paramMap => {​​​​
+              let menuId = paramMap.get('id');
+                  console.log(menuId);
+                  this.getMenus(menuId);
+        }​​​​);
+}​​​​
  
   getMenus(id : string) {​​​​
-
-    //searchResult: MenuItem[];
-
-    this.MenuService.getMenus(id) //model._id; Menu.restaurantId
-
+      this.MenuService.getMenus(id) //model._id; Menu.restaurantId
       .subscribe(menulist => {​​​​
-
-        console.log(JSON.parse(JSON.stringify(menulist)));
-
-        //JSON.parse(JSON.stringify(menuItems))
-
-        this.menulist = JSON.parse(JSON.stringify(menulist));
-
+      console.log(JSON.parse(JSON.stringify(menulist)));
+      this.menulist = JSON.parse(JSON.stringify(menulist));
       }​​​​);
-
-  }​​​​
-
-
+    }​​​
 }
 
