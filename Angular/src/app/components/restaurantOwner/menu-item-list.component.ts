@@ -33,7 +33,7 @@ export class MenuItemListComponent implements OnInit {
 
   getMenuItems(restaurantId : string) {
     //searchResult: MenuItem[];
-    this.menuItemService.getMenus(restaurantId) //model._id;
+    this.menuItemService.retrieveMenuDetails(restaurantId) //model._id;
       .subscribe(menuItems => {
         console.log(JSON.parse(JSON.stringify(menuItems)));
         //JSON.parse(JSON.stringify(menuItems))

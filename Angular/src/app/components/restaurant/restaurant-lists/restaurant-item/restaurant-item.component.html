@@ -5,9 +5,7 @@
     <p class="card-text">{{restaurantItem.restaurantAddress}}</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="col text-center">
-        {{ restaurantItem._id }}
-        
-        <button type="button" class="btn btn-default btn-danger" [routerLink]="['/menu', restaurantItem._id]" >View Menu</button>
+       <button type="button" class="btn btn-default btn-danger" [routerLink]="['/menu', restaurantItem._id]" >View Menu</button>
         
       </div>
     </div>
