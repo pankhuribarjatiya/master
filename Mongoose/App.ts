@@ -158,6 +158,14 @@ router.get('/app/OrderDetails/', (req, res) => {
   this.OrderDetail.retrieveAllOrderDetails(res);
 });
 
+   //Display specific order details
+   router.get('/app/OrderDetails/:emailId', (req, res) => {
+    var emailId = req.params.emailId;
+    console.log("Email id = " +emailId);
+    this.OrderDetail.retrieveOrderDetails(res, {emailId: emailId});
+  });
+
+
 this.expressApp.use('/', router);
 this.expressApp.use('/app/json/', express.static(__dirname+'/app/json'));
 this.expressApp.use('/images', express.static(__dirname+'/img'));

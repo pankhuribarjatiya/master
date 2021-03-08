@@ -15,7 +15,7 @@ var OrderDetailController = /** @class */ (function () {
             _id: Number,
             custEmailId: String,
             restaurantId: String,
-            menuId: Number,
+            itemId: [Number],
             totalPrice: Number
         }, { collection: 'OrderDetail' });
     };
