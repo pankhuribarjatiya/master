@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SharedComponent } from './components/shared/shared.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { RestaurantListsComponent } from './components/restaurant/restaurant-lists/restaurant-lists.component';
 import { RestaurantItemComponent} from "./components/restaurant/restaurant-lists/restaurant-item/restaurant-item.component";
@@ -24,6 +25,9 @@ import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OwnerMenuItemComponent } from './components/restaurantOwner/ownerMenu-item.component';
+import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
+import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
 
 @NgModule({
   declarations: [
@@ -44,10 +48,14 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     PageNotFoundComponent,
     OrderDetailsComponent,
     CheckoutComponent,
+    OwnerMenuItemComponent,
+    MenuItemListComponent,
+    MenuItemFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule
   ],

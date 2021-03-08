@@ -1,3 +1,4 @@
+import { Menu } from './../models/menu';
 import { Injectable } from '@angular/core';
 //import { Menu } from "src/app/models/menu";
 import { HttpClient, HttpRequest ,HttpErrorResponse} from '@angular/common/http';
@@ -14,7 +15,7 @@ export class MenuService {
 
 
   hostUrl:string = 'http://localhost:8080/';
-  url:string = 'http://localhost:8080/data/menuList.json';
+  //url:string = 'http://localhost:8080/data/menuList.json';
 
   constructor(private http: HttpClient) {
   }
@@ -33,6 +34,21 @@ export class MenuService {
     catchError(this.handleError)
   );
   
+}
+add(menuItem: Menu) {
+  return this.http.post('http://127.0.0.1:8080/app/addRestaurantMenuItem', menuItem)
+    .pipe(
+      catchError(this.handleError)
+    );
+}
+
+delete(menuItem: Menu) {
+  ///app/restaurantMenuItem/:itemId'
+  console.log('deleteing id ', menuItem._id);
+  return this.http.delete(`http://127.0.0.1:8080/app/restaurantMenuItem/${menuItem._id}`)
+  .pipe(
+    catchError(this.handleError)
+  );
 }
 
 private handleError(error: HttpErrorResponse) {
@@ -58,22 +74,31 @@ private handleError(error: HttpErrorResponse) {
   //   return this.Menus
   // }
 }
-export interface Restaurant {
-  _id: number;
-  restaurantName: string;
-  restaurantAddress: string;
-  phoneNumber: string;
-  restaurantImageUrl: string;
-}
-export interface Menu {
+// export interface Restaurant {
+//   _id: number;
+//   restaurantName: string;
+//   restaurantAddress: string;
+//   phoneNumber: string;
+//   restaurantImageUrl: string;
+// }
+// export interface Menu {
   
-  _id:number;
-  restaurantId: number;
-  itemName: String;
-  itemDescription: String;
-  itemPrice: Number;
+//   _id:number;
+//   restaurantId: number;
+//   itemName: String;
+//   itemDescription: String;
+//   itemPrice: Number;
 
-}
+// }
+
+// export interface MenuItem {
+//   _id:number;
+//   restaurantId: number;
+//   itemName: String;
+//   itemDescription: String;
+//   itemPrice: Number;
+//   menuItemImageUrl:String,
+// }
 
 
 

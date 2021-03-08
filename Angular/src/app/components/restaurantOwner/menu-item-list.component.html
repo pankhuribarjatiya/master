@@ -1,0 +1,26 @@
+
+<header>
+  
+</header>
+
+<section>
+  <div class="content-area">
+    <div class="wrapper">
+      <h2>REDHAWKS DINING</h2>
+      <p>901 12th Ave, Seattle, WA 98122</p>
+      <p> Ph:+1-9807363543</p>
+      <div class="title">
+        <h4>Menu</h4>
+    </div>
+    </div>
+  </div>
+  <mw-menu-item
+    *ngFor="let menuItem of menuItems"
+    [menuItem]="menuItem"
+    (delete)="onMenuItemDelete($event)"></mw-menu-item>
+</section>
+<footer>
+  <a routerLink="/addMenuItem/1" >
+  <button class="button button1">Add Item</button>
+  </a>
+</footer>
