@@ -11,7 +11,8 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component'
-
+import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
+import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
 
 const routes: Routes = [
 
@@ -24,7 +25,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'order-details', component: OrderDetailsComponent },
   { path: 'checkout', component: CheckoutComponent},
+  { path: 'restaurantOwner/:id', component: MenuItemListComponent },
+  { path: 'addMenuItem/:id', component: MenuItemFormComponent},
   { path: '**', component: PageNotFoundComponent },
+  
 
 ];
 @NgModule({imports: [
