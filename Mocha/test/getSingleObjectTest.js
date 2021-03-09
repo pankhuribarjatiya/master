@@ -9,7 +9,7 @@ var should = chai.should();
 var http = require('http');
 chai.use(chaiHttp);
 
-describe('Test Restaurant result', function () {
+describe('Test Get single Restaurant result', function () {
 //	this.timeout(15000);
 
 	var requestResult;
@@ -50,7 +50,7 @@ describe('Test Restaurant result', function () {
 });
 
 // it('Should return an array object with more than 1 object', function (){
-//   expect(response).to.have.status(200);
+//   expect(response).to.have.status(404);
 //   expect(response.body).to.have.length.above(2);
 //   expect(response).to.have.headers;
 //   });
