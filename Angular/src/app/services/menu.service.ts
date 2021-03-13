@@ -4,6 +4,7 @@ import { HttpClient, HttpRequest ,HttpErrorResponse} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { productsUrl } from 'src/app/config/api';
 
 @Injectable({
   providedIn: 'root'
@@ -46,6 +47,8 @@ export class MenuService {
     console.error(error.message);
     return throwError('A data error occurred, please try again.');
   }
+
+  getProducts(): Observable<Menu[]> {
+    return this.http.get<Menu[]>(productsUrl);
+  }
 }
-
-

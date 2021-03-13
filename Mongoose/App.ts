@@ -9,6 +9,8 @@ import * as cors from 'cors';
 import {RestaurantController} from './controller/RestaurantController';
 import {RestaurantMenuController} from './controller/RestaurantMenuController';
 import {OrderDetailController} from './controller/OrderDetailController';
+import {CartDetailController} from './controller/CartDetailsController';
+
 import {DataAccess} from './DataAccess';
 import { isThisTypeNode } from 'typescript';
 
@@ -20,9 +22,11 @@ class App {
   public Restaurant:RestaurantController;
   public RestaurantMenu:RestaurantMenuController;
   public OrderDetail:OrderDetailController;
+  public CartDetails: CartDetailController;
   public rIdGenerator: number;
   public mIdGenerator: number;
   public orderIdGenerator: number;
+  public cartIdGenerator: number;
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -33,9 +37,11 @@ class App {
     this.Restaurant = new RestaurantController();
     this.RestaurantMenu = new RestaurantMenuController();
     this.OrderDetail = new OrderDetailController();
+    this.CartDetails = new CartDetailController();
     this.rIdGenerator = 100;
     this.mIdGenerator = 100;
     this.orderIdGenerator = 100;
+    this.cartIdGenerator = 100;
     
   }
 
@@ -164,6 +170,56 @@ router.get('/app/OrderDetails/', (req, res) => {
     console.log("Email id = " +emailId);
     this.OrderDetail.retrieveOrderDetails(res, {emailId: emailId});
   });
+ 
+
+  router.get('/app/restaurantList/', (req, res) => {
+    console.log('Query All Restaurants');
+    this.Restaurant.retrieveAllRestaurantLists(res);
+});
+
+
+
+   //Display specific order details
+   router.get('/app/AllCartDetails/', (req, res) => {
+    this.CartDetails.retrieveAllCartDetails(res);
+  });
+
+     //Display specific order details
+     router.get('/app/cartDetails/:custEmailId', (req, res) => {
+      var custEmailId = req.params.custEmailId;
+      console.log("Email id = " +custEmailId);
+      this.CartDetails.retrieveCartDetails(res, {custEmailId: custEmailId});
+    });
+
+  //Create order
+  router.post('/app/addCartDetails/', (req, res) => {​​
+    console.log(req.body);
+    var jsonObj = req.body;
+    jsonObj._id = this.cartIdGenerator;
+    this.CartDetails.model.create([jsonObj], (err) => {​​
+      if (err) 
+      {​​
+        console.log('Order could not be created', err);
+        return;
+      }​​
+    }​​);
+    res.send(this.cartIdGenerator.toString());
+    this.cartIdGenerator++;
+    }​​);
+
+    //Delete a specific restauarant
+  router.delete('/app/deleteCart/:cartId', (req, res) => {
+    var id = req.params.cartId;
+    console.log('CartItem deleted');
+    this.CartDetails.deleteCartItem(res, {_id: id});
+});
+
+  //Delete entire specific restauarant
+  router.delete('/app/deleteCart/', (req, res) => {
+    var id = req.params.cartId;
+    console.log('CartItem deleted');
+    this.CartDetails.deleteAllCartItem(res);
+});
 
 
 this.expressApp.use('/', router);

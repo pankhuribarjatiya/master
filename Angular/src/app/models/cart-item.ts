@@ -2,17 +2,21 @@ import { Menu } from './menu';
 
 
 export class CartItem {
-  id: Number;
+  _id: Number;
   menuId: Number;
   itemName: String;
+  restaurantId: Number;
   qty: number;
   itemPrice: Number;
+  custEmailId: String;
 
-  constructor(id: Number, menu: Menu, qty = 1) {
-    this.id = id;
+  constructor(id: Number, menu: Menu, qty = 1, custEmailId: String) {
+    this._id = id;
     this.menuId = menu._id;
     this.itemName = menu.itemName;
     this.itemPrice = menu.itemPrice;
     this.qty = qty;
+    this.restaurantId = menu.restaurantId;
+    this.custEmailId = custEmailId;
   }
 }

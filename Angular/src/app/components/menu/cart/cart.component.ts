@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MessengerService } from 'src/app/services/messenger.service'
 import { Menu } from 'src/app/models/menu';
 import { CartService } from 'src/app/services/cart.service';
+import { CartItem } from 'src/app/models/cart-item';
 
 @Component({
   selector: 'app-cart',
@@ -14,6 +15,8 @@ export class CartComponent implements OnInit {
 
   cartTotal = 0
 
+  custEmailId: string = "asupekar@seattleu.edu";
+
   constructor(
     private msg: MessengerService,
     private cartService: CartService
@@ -21,13 +24,14 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.handleSubscription();
+    this.loadCartItems(this.custEmailId);
   }
 
   handleSubscription() {
-    this.msg.getMsg().subscribe((product: Menu) => {
-      this.addMenuToCart(product);
-      
-    })
+    // this.msg.getMsg().subscribe((item: Menu) => {
+    //   this.addMenuToCart(item);   
+    // })
+    this.addMenuToCart
   }
 
 
@@ -59,5 +63,13 @@ export class CartComponent implements OnInit {
       }) 
     }
     this.calcCartTotal();
+  }
+
+
+  loadCartItems(custEmailId : string) {
+    this.cartService.retrieveCartDetails(custEmailId).subscribe((items: CartItem[]) => {
+      this.cartItems = JSON.parse(JSON.stringify(items));
+      this.calcCartTotal();
+    })
   }
 }

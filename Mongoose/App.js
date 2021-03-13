@@ -8,6 +8,7 @@ var cors = require("cors");
 var RestaurantController_1 = require("./controller/RestaurantController");
 var RestaurantMenuController_1 = require("./controller/RestaurantMenuController");
 var OrderDetailController_1 = require("./controller/OrderDetailController");
+var CartDetailsController_1 = require("./controller/CartDetailsController");
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
     //Run configuration methods on the Express instance.
@@ -19,9 +20,11 @@ var App = /** @class */ (function () {
         this.Restaurant = new RestaurantController_1.RestaurantController();
         this.RestaurantMenu = new RestaurantMenuController_1.RestaurantMenuController();
         this.OrderDetail = new OrderDetailController_1.OrderDetailController();
+        this.CartDetails = new CartDetailsController_1.CartDetailController();
         this.rIdGenerator = 100;
         this.mIdGenerator = 100;
         this.orderIdGenerator = 100;
+        this.cartIdGenerator = 100;
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {
@@ -123,6 +126,46 @@ var App = /** @class */ (function () {
             var emailId = req.params.emailId;
             console.log("Email id = " + emailId);
             _this.OrderDetail.retrieveOrderDetails(res, { emailId: emailId });
+        });
+        router.get('/app/restaurantList/', function (req, res) {
+            console.log('Query All Restaurants');
+            _this.Restaurant.retrieveAllRestaurantLists(res);
+        });
+        //Display specific order details
+        router.get('/app/AllCartDetails/', function (req, res) {
+            _this.CartDetails.retrieveAllCartDetails(res);
+        });
+        //Display specific order details
+        router.get('/app/cartDetails/:custEmailId', function (req, res) {
+            var custEmailId = req.params.custEmailId;
+            console.log("Email id = " + custEmailId);
+            _this.CartDetails.retrieveCartDetails(res, { custEmailId: custEmailId });
+        });
+        //Create order
+        router.post('/app/addCartDetails/', function (req, res) {
+            console.log(req.body);
+            var jsonObj = req.body;
+            jsonObj._id = _this.cartIdGenerator;
+            _this.CartDetails.model.create([jsonObj], function (err) {
+                if (err) {
+                    console.log('Order could not be created', err);
+                    return;
+                }
+            });
+            res.send(_this.cartIdGenerator.toString());
+            _this.cartIdGenerator++;
+        });
+        //Delete a specific restauarant
+        router["delete"]('/app/deleteCart/:cartId', function (req, res) {
+            var id = req.params.cartId;
+            console.log('CartItem deleted');
+            _this.CartDetails.deleteCartItem(res, { _id: id });
+        });
+        //Delete a specific restauarant
+        router["delete"]('/app/deleteCart/', function (req, res) {
+            var id = req.params.cartId;
+            console.log('CartItem deleted');
+            _this.CartDetails.deleteAllCartItem(res);
         });
         this.expressApp.use('/', router);
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));

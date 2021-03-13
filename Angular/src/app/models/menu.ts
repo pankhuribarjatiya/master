@@ -1,8 +1,8 @@
 export interface Menu {
   _id:number;
   restaurantId: number;
-  itemName: String;
-  itemDescription: String;
-  itemPrice: Number;
+  itemName: string;
+  itemDescription: string;
+  itemPrice: number;
   menuItemImageUrl: string;
 }

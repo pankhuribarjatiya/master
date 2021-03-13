@@ -7,7 +7,7 @@ interface IOrderDetails extends Mongoose.Document {
         restauarntId: number;
         menuId: number;
         itemIds: [number]; 
-        itemPrice: number;
+        totalPrice: number;
         orderDate: Date;
     }];
 }

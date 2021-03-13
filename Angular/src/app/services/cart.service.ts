@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { throwError } from 'rxjs';
 
 import { CartItem } from '../models/cart-item';
-import { cartUrl } from '../config/api';
+//import { cartUrl } from '../config/api';
 import { Menu } from '../models/menu';
 import { map, catchError } from 'rxjs/operators';
 
@@ -14,10 +14,11 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class CartService {
 
+  hostUrl:string = `http://localhost:8080/`;
   constructor(private http: HttpClient) { }
 
-  getCartItems(): Observable<CartItem[]> {
-    return this.http.get<CartItem[]>(cartUrl).pipe(
+  retrieveCartDetails(custEmailId:String): Observable<CartItem[]> {
+    return this.http.get<CartItem[]>(this.hostUrl+ `app/cartDetails/${custEmailId}`).pipe(
       map((result: any[]) => {
         let cartItems: CartItem[] = [];
 
@@ -33,7 +34,7 @@ export class CartService {
           }
 
           if (!productExists) {
-            cartItems.push(new CartItem(item.id, item.menu));
+            cartItems.push(new CartItem(item.id, item.menu, item.qty = 1, item.custEmailId));
           }
         }
 
@@ -47,10 +48,24 @@ export class CartService {
     return throwError('A data error occurred, please try again.');
   }
   
-  add(menuItem: Menu) {
-    return this.http.post('http://127.0.0.1:8080/app/addOrder', menuItem)
+  add(cartItem: CartItem) {
+    console.log(cartItem)
+    return this.http.post('http://127.0.0.1:8080/app/addCartDetails/', cartItem)
       .pipe(
         catchError(this.handleError)
       );
   }
+
+  delete(cartItem: CartItem) {
+    ///app/restaurantMenuItem/:itemId'
+    console.log('deleteing id ', cartItem._id);
+    return this.http.delete(`http://127.0.0.1:8080/app/deleteCart/${cartItem}`)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  // addProductToCart(item: CartItem): Observable<any> {
+  //   return this.add(item);
+  // }
 }
