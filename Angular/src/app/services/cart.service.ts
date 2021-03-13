@@ -19,14 +19,17 @@ export class CartService {
 
   retrieveCartDetails(custEmailId:String): Observable<CartItem[]> {
     return this.http.get<CartItem[]>(this.hostUrl+ `app/cartDetails/${custEmailId}`).pipe(
-      map((result: any[]) => {
+      map((result: CartItem[]) => {
+        console.log("Result is " + JSON.stringify(result));
         let cartItems: CartItem[] = [];
 
         for (let item of result) {
+          console.log("Item is " + JSON.stringify(item));
+          item = JSON.parse(JSON.stringify(item));
           let productExists = false
 
           for (let i in cartItems) {
-            if (cartItems[i].menuId === item.menu.id) {
+            if (cartItems[i].menuId === item.menuId && cartItems[i].itemName === item.itemName && cartItems[i].restaurantId === item.restaurantId) {
               cartItems[i].qty++
               productExists = true
               break;
@@ -34,7 +37,10 @@ export class CartService {
           }
 
           if (!productExists) {
-            cartItems.push(new CartItem(item.id, item.menu, item.qty = 1, item.custEmailId));
+            console.log("Adding item" + JSON.stringify(item));
+            console.log("Check id inside item" + item._id);
+            cartItems.push(item);
+            console.log("Post add item" + JSON.stringify(item));
           }
         }
 
@@ -64,8 +70,4 @@ export class CartService {
       catchError(this.handleError)
     );
   }
-
-  // addProductToCart(item: CartItem): Observable<any> {
-  //   return this.add(item);
-  // }
 }

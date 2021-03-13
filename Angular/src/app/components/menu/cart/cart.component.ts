@@ -23,52 +23,53 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.handleSubscription();
+    console.log("Inside NgOnINIT()");
+    //this.handleSubscription();
     this.loadCartItems(this.custEmailId);
   }
 
-  handleSubscription() {
-    // this.msg.getMsg().subscribe((item: Menu) => {
-    //   this.addMenuToCart(item);   
-    // })
-    this.addMenuToCart
-  }
+  // handleSubscription() {
+  //   this.addMenuToCart
+  // }
 
 
   calcCartTotal() {
+    console.log("Inside cart total");
     this.cartTotal = 0
     this.cartItems.forEach(item => {
-      this.cartTotal += (item.qty * item.price)
+      this.cartTotal += (item.qty * item.itemPrice)
     })
   }
 
-  addMenuToCart(product : Menu){
+  // addMenuToCart(product : Menu){
 
-    let productExists = false;
+  //   let productExists = false;
 
-    for (let index in this.cartItems){
-      if(this.cartItems[index].productId === product._id){
-        this.cartItems[index].qty++;
-        productExists = true;
-        break;
-      }
-    }
+  //   for (let index in this.cartItems){
+  //     if(this.cartItems[index].productId === product._id){
+  //       this.cartItems[index].qty++;
+  //       productExists = true;
+  //       break;
+  //     }
+  //   }
 
-    if(!productExists){
-      this.cartItems.push({
-        productId: product._id,
-        productName: product.itemName,
-        price: product.itemPrice,
-        qty: 1
-      }) 
-    }
-    this.calcCartTotal();
-  }
+  //   if(!productExists){
+  //     this.cartItems.push({
+  //       productId: product._id,
+  //       productName: product.itemName,
+  //       price: product.itemPrice,
+  //       qty: 1
+  //     }) 
+  //   }
+  //   this.calcCartTotal();
+  // }
 
 
   loadCartItems(custEmailId : string) {
+    console.log("Inside load cart items");
     this.cartService.retrieveCartDetails(custEmailId).subscribe((items: CartItem[]) => {
       this.cartItems = JSON.parse(JSON.stringify(items));
+      console.log("Cartitems in cart components is " + JSON.stringify(this.cartItems) );
       this.calcCartTotal();
     })
   }

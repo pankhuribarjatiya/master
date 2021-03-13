@@ -1,2 +1,28 @@
 <app-nav></app-nav>
-<p>order-details works!</p>
+<!-- <div class="row">
+    <div class="col-md-4" *ngFor="let item of cartItems">
+      <app-menu-item [menuItem] = "menu"></app-menu-item>
+    </div>
+</div> -->
+
+<div class="row">
+<div class="col-md-4" *ngFor="let item of cartItems">
+  <div class="card mb-4 shadow-sm">
+    <img class="bd-placeholder-img card-img-top p-2" width="100%" [src]="item.menuItemImageUrl" />
+    <div class="card-body">
+  
+      <p class="card-text">
+        <strong>{{ item.itemPrice | currency}}</strong>
+      </p>
+      <h5 class="card-text">{{item.itemName}}</h5>
+      <p class="card-text">{{ item.itemDescription }}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-primary product-btn" (delete)="onCartItemDelete(item)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

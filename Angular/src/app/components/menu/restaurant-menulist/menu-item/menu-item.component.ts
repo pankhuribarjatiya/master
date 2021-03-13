@@ -27,6 +27,7 @@ export class MenuItemComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    //console.log("Inside ngInit menuItem")
     this.form = this.formBuilder.group({
       itemName: this.formBuilder.control(''),
       itemDescription: this.formBuilder.control(''),
@@ -35,25 +36,11 @@ export class MenuItemComponent implements OnInit {
     });
   }
 
-  handleAddToCart(cartItem) {
-    //var menuItemzzz = JSON.parse(JSON.stringify(this.cartItem));
-    //this.menuItem.custEmailId = this.custEmailId;
-
-
-      // this.cartItem.restaurantId = menuItem.restaurantId;
-      // this.cartItem.menuId = menuItem._id;
-      // this.cartItem.custEmailId = this.custEmailId;
-      // this.cartItem.itemName = menuItem.itemName;
-      // this.cartItem.itemPrice = menuItem.itemPrice;
-
-    //this.menuItem._id = id;
-
-    //console.log("HandleAddToCart() item is " +id);
-    //this.msg.sendMsg(this.menuItem)
-
-    this.cartService.add(cartItem).subscribe (() => {
-      // console.log(JSON.parse(JSON.stringify(cartItem)));
-      this.cartItem = JSON.parse(JSON.stringify(cartItem));
+  handleAddToCart(menuItem) {
+    this.cartItem = new CartItem(menuItem, 1, this.custEmailId);
+    console.log("Menu looks like  " + JSON.stringify(menuItem));
+    this.cartService.add(this.cartItem).subscribe (() => {
+      window.location.reload();
     })
   };
 }

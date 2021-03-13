@@ -10,8 +10,8 @@ export class CartItem {
   itemPrice: Number;
   custEmailId: String;
 
-  constructor(id: Number, menu: Menu, qty = 1, custEmailId: String) {
-    this._id = id;
+  constructor(menu: Menu, qty = 1, custEmailId: String) {
+    //this._id = id;
     this.menuId = menu._id;
     this.itemName = menu.itemName;
     this.itemPrice = menu.itemPrice;
