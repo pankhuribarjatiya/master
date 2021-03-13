@@ -161,7 +161,7 @@ var App = /** @class */ (function () {
             console.log('CartItem deleted');
             _this.CartDetails.deleteCartItem(res, { _id: id });
         });
-        //Delete a specific restauarant
+        //Delete entire specific restauarant
         router["delete"]('/app/deleteCart/', function (req, res) {
             var id = req.params.cartId;
             console.log('CartItem deleted');

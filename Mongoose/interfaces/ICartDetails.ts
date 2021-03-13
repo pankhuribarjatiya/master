@@ -8,7 +8,7 @@ interface ICartDetails extends Mongoose.Document {
     restaurantId: string;
     itemId: number; 
     itemName: string;
-    totalPrice: number;
+    itemPrice: number;
     qty: number;
 }
 export {ICartDetails};

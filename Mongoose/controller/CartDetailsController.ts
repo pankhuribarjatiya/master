@@ -23,7 +23,7 @@ class CartDetailController {
                 restaurantId: String,
                 itemId: Number,
                 itemName: String,
-                totalPrice: Number,
+                itemPrice: Number,
                 qty: Number,
             }, {collection: 'CartDetail'}
         );
