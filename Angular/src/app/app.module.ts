@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 import { AppComponent } from './app.component';
@@ -27,6 +29,7 @@ import { OwnerMenuItemComponent } from './components/restaurantOwner/ownerMenu-i
 import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
 import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
 import { ItemOrderDetailComponent } from './components/order-details/item-order-detail/item-order-detail.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -51,13 +54,16 @@ import { ItemOrderDetailComponent } from './components/order-details/item-order-
     MenuItemListComponent,
     MenuItemFormComponent,
     ItemOrderDetailComponent,
+    ConfirmationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    IvyCarouselModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

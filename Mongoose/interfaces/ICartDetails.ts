@@ -10,5 +10,6 @@ interface ICartDetails extends Mongoose.Document {
     itemName: string;
     itemPrice: number;
     qty: number;
+    itemImageUrl: string;
 }
 export {ICartDetails};

@@ -12,6 +12,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component'
 import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
 import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'restaurantOwner/:id', component: MenuItemListComponent },
   { path: 'addMenuItem/:id', component: MenuItemFormComponent},
   { path: 'addToCart/', component: MenuItemFormComponent},
+  { path: 'confirmation', component: ConfirmationComponent},
   { path: '**', component: PageNotFoundComponent },
   
 

@@ -2,4 +2,5 @@
     <span>{{ cartItem.itemName }}</span> x
     <span>{{ cartItem.qty }}</span>:
     <strong>{{ (cartItem.qty * cartItem.itemPrice) | currency }}</strong>
+    <img class="col-md-4"src="https://www.svgrepo.com/show/79440/delete-button.svg" (click)="deleteCartItem(cartItem)"> 
   </div>

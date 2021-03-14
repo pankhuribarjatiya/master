@@ -18,7 +18,8 @@ var CartDetailController = /** @class */ (function () {
             itemId: Number,
             itemName: String,
             itemPrice: Number,
-            qty: Number
+            qty: Number,
+            itemImageUrl: String
         }, { collection: 'CartDetail' });
     };
     CartDetailController.prototype.createModel = function () {

@@ -63,9 +63,16 @@ export class CartService {
   }
 
   delete(cartItem: CartItem) {
-    ///app/restaurantMenuItem/:itemId'
     console.log('deleteing id ', cartItem._id);
-    return this.http.delete(`http://127.0.0.1:8080/app/deleteCart/${cartItem}`)
+    return this.http.delete(`http://127.0.0.1:8080/app/deleteCart/${cartItem._id}`)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  deleteAllCart() {
+    console.log("Inside deleteAllCart");
+    return this.http.delete(`http://127.0.0.1:8080/app/deleteCart`)
     .pipe(
       catchError(this.handleError)
     );

@@ -25,6 +25,7 @@ class CartDetailController {
                 itemName: String,
                 itemPrice: Number,
                 qty: Number,
+                itemImageUrl: String,
             }, {collection: 'CartDetail'}
         );
     }

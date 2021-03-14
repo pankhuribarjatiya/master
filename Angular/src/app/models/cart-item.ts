@@ -9,6 +9,7 @@ export class CartItem {
   qty: number;
   itemPrice: Number;
   custEmailId: String;
+  itemImageUrl: String;
 
   constructor(menu: Menu, qty = 1, custEmailId: String) {
     //this._id = id;
@@ -18,5 +19,6 @@ export class CartItem {
     this.qty = qty;
     this.restaurantId = menu.restaurantId;
     this.custEmailId = custEmailId;
+    this.itemImageUrl = menu.menuItemImageUrl;
   }
 }

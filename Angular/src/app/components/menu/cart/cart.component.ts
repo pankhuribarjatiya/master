@@ -23,14 +23,8 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log("Inside NgOnINIT()");
-    //this.handleSubscription();
     this.loadCartItems(this.custEmailId);
   }
-
-  // handleSubscription() {
-  //   this.addMenuToCart
-  // }
 
 
   calcCartTotal() {
@@ -41,29 +35,6 @@ export class CartComponent implements OnInit {
     })
   }
 
-  // addMenuToCart(product : Menu){
-
-  //   let productExists = false;
-
-  //   for (let index in this.cartItems){
-  //     if(this.cartItems[index].productId === product._id){
-  //       this.cartItems[index].qty++;
-  //       productExists = true;
-  //       break;
-  //     }
-  //   }
-
-  //   if(!productExists){
-  //     this.cartItems.push({
-  //       productId: product._id,
-  //       productName: product.itemName,
-  //       price: product.itemPrice,
-  //       qty: 1
-  //     }) 
-  //   }
-  //   this.calcCartTotal();
-  // }
-
 
   loadCartItems(custEmailId : string) {
     console.log("Inside load cart items");
@@ -72,5 +43,22 @@ export class CartComponent implements OnInit {
       console.log("Cartitems in cart components is " + JSON.stringify(this.cartItems) );
       this.calcCartTotal();
     })
+  }
+
+  retrieveCartDetails(custEmailId : string) {
+    this.cartService.retrieveCartDetails(custEmailId) 
+      .subscribe(cartItems => {​​​​
+      console.log(JSON.parse(JSON.stringify(cartItems)));
+      this.cartItems = JSON.parse(JSON.stringify(cartItems));
+    }​​​​);
+  }
+
+
+  //Delete entire cart
+  onCartAllItemDelete() {
+    this.cartService.deleteAllCart()
+      .subscribe(() => {
+        window.location.reload();
+      });
   }
 }

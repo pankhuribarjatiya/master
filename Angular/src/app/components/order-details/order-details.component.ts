@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class OrderDetailsComponent implements OnInit {
 
   cartItems: CartItem[];
-  id : string = "asupekar@seattleu.edu";
+  custEmailId : string = "asupekar@seattleu.edu";
 
   constructor( 
     private CartService : CartService,
@@ -19,26 +19,15 @@ export class OrderDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(){
-    this.activatedRoute.paramMap.subscribe(paramMap => {​​​​
-      let emailId = paramMap.get('id');
-          console.log(emailId);
-          this.retrieveCartDetails(emailId);
-    }​​​​);
+    this.retrieveCartDetails(this.custEmailId);  
   }
 
-  retrieveCartDetails(id : string) {
-    this.CartService.retrieveCartDetails(id) 
+  retrieveCartDetails(custEmailId : string) {
+    this.CartService.retrieveCartDetails(custEmailId) 
       .subscribe(cartItems => {​​​​
       console.log(JSON.parse(JSON.stringify(cartItems)));
       this.cartItems = JSON.parse(JSON.stringify(cartItems));
     }​​​​);
-  }
-
-  onCartItemDelete(cartItem: CartItem) {
-    this.CartService.delete(cartItem)
-      .subscribe(() => {
-        this.retrieveCartDetails(cartItem.custEmailId.toString());
-      });
   }
 
 }
