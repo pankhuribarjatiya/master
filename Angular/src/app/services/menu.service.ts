@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { productsUrl } from 'src/app/config/api';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,19 +15,25 @@ export class MenuService {
   hostUrl:string = 'http://localhost:8080/';
   //url:string = 'http://localhost:8080/data/menuList.json';
 
-  constructor(private http: HttpClient) {
+  constructor(private router: Router,
+    private http: HttpClient) {
+
   }
   
-  retrieveMenuDetails(id:String) {
-  return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenu/${id}`)
-  .pipe(
-    map((response: Menu[]) => {
-      return response;
-    }),
-    catchError(this.handleError)
-  );
-  
-}
+  retrieveMenuDetails(id: string): Observable<Menu[]> {
+    return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenu/${id}`)
+      .pipe(
+        catchError((err) => {
+          console.log('error caught in service')
+          console.error(err);
+ 
+          //Handle the error here
+          this.router.navigate(['/', 'restaurantOwnerLogin']);
+          return throwError(err);    //Rethrow it back to component
+        })
+      )
+  }
+
   add(menuItem: Menu) {
     return this.http.post('http://127.0.0.1:8080/app/addRestaurantMenuItem', menuItem)
       .pipe(

@@ -286,6 +286,1945 @@ function concatAll() {
 
 /***/ }),
 
+/***/ "0L5U":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/angular-responsive-carousel/__ivy_ngcc__/fesm2015/angular-responsive-carousel.js ***!
+  \*******************************************************************************************************/
+/*! exports provided: CarouselComponent, IvyCarouselModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarouselComponent", function() { return CarouselComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IvyCarouselModule", function() { return IvyCarouselModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
+
+
+
+
+
+function CarouselComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.counter);
+} }
+function CarouselComponent_ng_template_5_div_0_img_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 11);
+} if (rf & 2) {
+    const i_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2).index;
+    const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("object-fit", ctx_r8.objectFit);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r8.getImage(i_r6)["image"]["path"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+} }
+function CarouselComponent_ng_template_5_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, CarouselComponent_ng_template_5_div_0_img_1_Template, 1, 3, "img", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const i_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index;
+    const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("width", ctx_r7.getCellWidth() + "px")("border-radius", ctx_r7.borderRadius + "px");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r7.getImage(i_r6) && ctx_r7.getImage(i_r6)["image"]);
+} }
+function CarouselComponent_ng_template_5_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, CarouselComponent_ng_template_5_div_0_Template, 2, 5, "div", 8);
+} if (rf & 2) {
+    const i_r6 = ctx.index;
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", i_r6 < ctx_r2.cellLimit);
+} }
+function CarouselComponent_div_6_div_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "div", 14);
+} if (rf & 2) {
+    const i_r13 = ctx.index;
+    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("carousel-dot-active", i_r13 === ctx_r11.activeDotIndex);
+} }
+function CarouselComponent_div_6_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, CarouselComponent_div_6_div_1_Template, 1, 2, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r3.dotsArr);
+} }
+function CarouselComponent_div_7_Template(rf, ctx) { if (rf & 1) {
+    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CarouselComponent_div_7_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r15); const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r14.prev(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CarouselComponent_div_7_Template_div_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r15); const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r16.next(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("carousel-arrows-outside", ctx_r4.arrowsOutside)("carousel-dark-arrows", ctx_r4.arrowsTheme === "dark");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("carousel-arrow-disabled", ctx_r4.isPrevArrowDisabled());
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("carousel-arrow-disabled", ctx_r4.isNextArrowDisabled());
+} }
+const _c0 = ["*"];
+class Touches {
+    constructor(properties) {
+        this.eventType = undefined;
+        this.handlers = {};
+        this.startX = 0;
+        this.startY = 0;
+        this.lastTap = 0;
+        this.doubleTapMinTimeout = 300;
+        this.tapMinTimeout = 200;
+        this.touchstartTime = 0;
+        this.i = 0;
+        this.isMousedown = false;
+        this._touchListeners = {
+            "touchstart": "handleTouchstart",
+            "touchmove": "handleTouchmove",
+            "touchend": "handleTouchend"
+        };
+        this._mouseListeners = {
+            "mousedown": "handleMousedown",
+            "mousemove": "handleMousemove",
+            "mouseup": "handleMouseup",
+            "wheel": "handleWheel"
+        };
+        this._otherListeners = {
+            "resize": "handleResize"
+        };
+        /*
+         * Listeners
+         */
+        /* Touchstart */
+        this.handleTouchstart = (event) => {
+            this.elementPosition = this.getElementPosition();
+            this.touchstartTime = new Date().getTime();
+            if (this.eventType === undefined) {
+                this.getTouchstartPosition(event);
+            }
+            this.runHandler("touchstart", event);
+        };
+        /* Touchmove */
+        this.handleTouchmove = (event) => {
+            const touches = event.touches;
+            // Pan
+            if (this.detectPan(touches)) {
+                this.runHandler("pan", event);
+            }
+            // Pinch
+            if (this.detectPinch(event)) {
+                this.runHandler("pinch", event);
+            }
+            // Linear swipe
+            switch (this.detectLinearSwipe(event)) {
+                case "horizontal-swipe":
+                    event.swipeType = "horizontal-swipe";
+                    this.runHandler("horizontal-swipe", event);
+                    break;
+                case "vertical-swipe":
+                    event.swipeType = "vertical-swipe";
+                    this.runHandler("vertical-swipe", event);
+                    break;
+            }
+            // Linear swipe
+            if (this.detectLinearSwipe(event) ||
+                this.eventType === 'horizontal-swipe' ||
+                this.eventType === 'vertical-swipe') {
+                this.handleLinearSwipe(event);
+            }
+        };
+        /* Touchend */
+        this.handleTouchend = (event) => {
+            const touches = event.touches;
+            // Double Tap
+            if (this.detectDoubleTap()) {
+                this.runHandler("double-tap", event);
+            }
+            // Tap
+            this.detectTap();
+            this.runHandler("touchend", event);
+            this.eventType = 'touchend';
+            if (touches && touches.length === 0) {
+                this.eventType = undefined;
+                this.i = 0;
+            }
+        };
+        /* Mousedown */
+        this.handleMousedown = (event) => {
+            this.isMousedown = true;
+            this.elementPosition = this.getElementPosition();
+            this.touchstartTime = new Date().getTime();
+            if (this.eventType === undefined) {
+                this.getMousedownPosition(event);
+            }
+            this.runHandler("mousedown", event);
+        };
+        /* Mousemove */
+        this.handleMousemove = (event) => {
+            //event.preventDefault();
+            if (!this.isMousedown) {
+                return;
+            }
+            // Pan
+            this.runHandler("pan", event);
+            // Linear swipe
+            switch (this.detectLinearSwipe(event)) {
+                case "horizontal-swipe":
+                    event.swipeType = "horizontal-swipe";
+                    this.runHandler("horizontal-swipe", event);
+                    break;
+                case "vertical-swipe":
+                    event.swipeType = "vertical-swipe";
+                    this.runHandler("vertical-swipe", event);
+                    break;
+            }
+            // Linear swipe
+            if (this.detectLinearSwipe(event) ||
+                this.eventType === 'horizontal-swipe' ||
+                this.eventType === 'vertical-swipe') {
+                this.handleLinearSwipe(event);
+            }
+        };
+        /* Mouseup */
+        this.handleMouseup = (event) => {
+            // Tap
+            this.detectTap();
+            this.isMousedown = false;
+            this.runHandler("mouseup", event);
+            this.eventType = undefined;
+            this.i = 0;
+        };
+        /* Wheel */
+        this.handleWheel = (event) => {
+            this.runHandler("wheel", event);
+        };
+        /* Resize */
+        this.handleResize = (event) => {
+            this.runHandler("resize", event);
+        };
+        this.properties = properties;
+        this.element = this.properties.element;
+        this.elementPosition = this.getElementPosition();
+        this.toggleEventListeners('addEventListener');
+    }
+    get touchListeners() {
+        return this.properties.touchListeners ? this.properties.touchListeners : this._touchListeners;
+    }
+    get mouseListeners() {
+        return this.properties.mouseListeners ? this.properties.mouseListeners : this._mouseListeners;
+    }
+    get otherListeners() {
+        return this.properties.otherListeners ? this.properties.otherListeners : this._otherListeners;
+    }
+    destroy() {
+        this.toggleEventListeners('removeEventListener');
+    }
+    toggleEventListeners(action) {
+        let listeners;
+        if (this.properties.listeners === 'mouse and touch') {
+            listeners = Object.assign(this.touchListeners, this.mouseListeners);
+        }
+        else {
+            listeners = this.detectTouchScreen() ? this.touchListeners : this.mouseListeners;
+        }
+        if (this.properties.resize) {
+            listeners = Object.assign(listeners, this.otherListeners);
+        }
+        for (var listener in listeners) {
+            const handler = listeners[listener];
+            // Window
+            if (listener === "resize") {
+                if (action === 'addEventListener') {
+                    window.addEventListener(listener, this[handler], false);
+                }
+                if (action === 'removeEventListener') {
+                    window.removeEventListener(listener, this[handler], false);
+                }
+                // Document
+            }
+            else if (listener === 'mouseup' || listener === "mousemove") {
+                if (action === 'addEventListener') {
+                    document.addEventListener(listener, this[handler], false);
+                }
+                if (action === 'removeEventListener') {
+                    document.removeEventListener(listener, this[handler], false);
+                }
+                // Element
+            }
+            else {
+                if (action === 'addEventListener') {
+                    this.element.addEventListener(listener, this[handler], false);
+                }
+                if (action === 'removeEventListener') {
+                    this.element.removeEventListener(listener, this[handler], false);
+                }
+            }
+        }
+    }
+    addEventListeners(listener, handler) {
+        window.addEventListener(listener, this[handler], false);
+    }
+    removeEventListeners(listener, handler) {
+        window.removeEventListener(listener, this[handler], false);
+    }
+    handleLinearSwipe(event) {
+        //event.preventDefault();
+        this.i++;
+        if (this.i > 3) {
+            this.eventType = this.getLinearSwipeType(event);
+        }
+        if (this.eventType === 'horizontal-swipe') {
+            this.runHandler('horizontal-swipe', event);
+        }
+        if (this.eventType === 'vertical-swipe') {
+            this.runHandler('vertical-swipe', event);
+        }
+    }
+    runHandler(eventName, response) {
+        if (this.handlers[eventName]) {
+            this.handlers[eventName](response);
+        }
+    }
+    /*
+     * Detection
+     */
+    detectPan(touches) {
+        return touches.length === 1 && !this.eventType || this.eventType === 'pan';
+    }
+    detectDoubleTap() {
+        if (this.eventType != undefined) {
+            return;
+        }
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - this.lastTap;
+        clearTimeout(this.doubleTapTimeout);
+        if (tapLength < this.doubleTapMinTimeout && tapLength > 0) {
+            return true;
+        }
+        else {
+            this.doubleTapTimeout = setTimeout(() => {
+                clearTimeout(this.doubleTapTimeout);
+            }, this.doubleTapMinTimeout);
+        }
+        this.lastTap = currentTime;
+    }
+    detectTap() {
+        if (this.eventType != undefined) {
+            return;
+        }
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - this.touchstartTime;
+        if (tapLength > 0) {
+            if (tapLength < this.tapMinTimeout) {
+                this.runHandler("tap", event);
+            }
+            else {
+                this.runHandler("longtap", event);
+            }
+        }
+    }
+    detectPinch(event) {
+        const touches = event.touches;
+        return (touches.length === 2 && this.eventType === undefined) || this.eventType === 'pinch';
+    }
+    detectLinearSwipe(event) {
+        const touches = event.touches;
+        if (touches) {
+            if (touches.length === 1 && !this.eventType || this.eventType === 'horizontal-swipe' || this.eventType === 'vertical-swipe') {
+                return this.getLinearSwipeType(event);
+            }
+        }
+        else {
+            if (!this.eventType || this.eventType === 'horizontal-swipe' || this.eventType === 'vertical-swipe') {
+                return this.getLinearSwipeType(event);
+            }
+        }
+    }
+    getLinearSwipeType(event) {
+        if (this.eventType !== 'horizontal-swipe' && this.eventType !== 'vertical-swipe') {
+            const movementX = Math.abs(this.moveLeft(0, event) - this.startX);
+            const movementY = Math.abs(this.moveTop(0, event) - this.startY);
+            if ((movementY * 3) > movementX) {
+                return 'vertical-swipe';
+            }
+            else {
+                return 'horizontal-swipe';
+            }
+        }
+        else {
+            return this.eventType;
+        }
+    }
+    getElementPosition() {
+        return this.element.getBoundingClientRect();
+    }
+    getTouchstartPosition(event) {
+        this.startX = event.touches[0].clientX - this.elementPosition.left;
+        this.startY = event.touches[0].clientY - this.elementPosition.top;
+    }
+    getMousedownPosition(event) {
+        this.startX = event.clientX - this.elementPosition.left;
+        this.startY = event.clientY - this.elementPosition.top;
+    }
+    moveLeft(index, event) {
+        const touches = event.touches;
+        if (touches) {
+            return touches[index].clientX - this.elementPosition.left;
+        }
+        else {
+            return event.clientX - this.elementPosition.left;
+        }
+    }
+    moveTop(index, event) {
+        const touches = event.touches;
+        if (touches) {
+            return touches[index].clientY - this.elementPosition.top;
+        }
+        else {
+            return event.clientY - this.elementPosition.top;
+        }
+    }
+    detectTouchScreen() {
+        var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+        var mq = function (query) {
+            return window.matchMedia(query).matches;
+        };
+        if (('ontouchstart' in window)) {
+            return true;
+        }
+        // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+        // https://git.io/vznFH
+        var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+        return mq(query);
+    }
+    /* Public properties and methods */
+    on(event, handler) {
+        if (event) {
+            this.handlers[event] = handler;
+        }
+    }
+}
+
+class Carousel {
+    constructor(properties, utils, cells, container, slide) {
+        this.properties = properties;
+        this.utils = utils;
+        this.cells = cells;
+        this.container = container;
+        this.slide = slide;
+        this.isContentImages = true;
+        this.isLazyLoad = true;
+        this.isContainerLocked = true;
+        this.alignCells = "left";
+        this.initialContainerPosition = 0;
+        this.containerPullLimit = 100;
+        this.handleTouchstart = (event) => {
+            this.container.handleTouchstart();
+            this.slide.handleTouchstart(event);
+        };
+        this.handleHorizontalSwipe = (event) => {
+            this.container.handleHorizontalSwipe();
+        };
+        this.handleTouchend = (event) => {
+            if (this.properties.freeScroll) {
+                this.container.handleTouchend();
+            }
+            else {
+                this.container.handleTouchend(true);
+                this.slide.handleTouchend(event);
+            }
+        };
+        this.isNextArrowDisabled = () => {
+            return this.slide.isNextArrowDisabled();
+        };
+        this.isPrevArrowDisabled = () => {
+            return this.slide.isPrevArrowDisabled();
+        };
+        this.init();
+    }
+    get cellLength() {
+        return this.cells.cellLength;
+    }
+    get cellLengthInLightDOMMode() {
+        if (this.images) {
+            let cellLength = this.visibleCellsCount + this.overflowCellsLimit * 2;
+            if (cellLength > this.images.length) {
+                cellLength = this.images.length;
+            }
+            return cellLength;
+        }
+        else {
+            return this.cellLength;
+        }
+    }
+    get lastCellIndex() {
+        return this.images.length ? (this.images.length - 1) : (this.cells.cellLength - 1);
+    }
+    get overflowCellsLimit() {
+        if (this.images && this.isImagesLessCellLimit) {
+            return Math.floor((this.images.length - this.visibleCellsCount) / 2);
+        }
+        else {
+            return this.properties.overflowCellsLimit;
+        }
+    }
+    get isImagesLessCellLimit() {
+        return this.properties.overflowCellsLimit * 2 + this.visibleCellsCount > this.images.length;
+    }
+    get cellLimit() {
+        if (this.isLightDOM) {
+            return this.visibleCellsCount + this.overflowCellsLimit * 2;
+        }
+        else {
+            return this.properties.images.length;
+        }
+    }
+    get isLightDOM() {
+        return this.properties.lightDOM || this.properties.loop;
+    }
+    get images() {
+        return this.properties.images;
+    }
+    get margin() {
+        return this.properties.margin;
+    }
+    get minSwipeDistance() {
+        return this.properties.minSwipeDistance;
+    }
+    get transitionDuration() {
+        return this.properties.transitionDuration;
+    }
+    get transitionTimingFunction() {
+        return this.properties.transitionTimingFunction;
+    }
+    get fullCellWidth() {
+        return this.properties.cellWidth + this.margin;
+    }
+    get visibleCellsCount() {
+        return Math.ceil(this.visibleWidth / this.fullCellWidth);
+    }
+    get lapCounter() {
+        return Math.floor(this.slide.counter / this.cellLengthInLightDOMMode);
+    }
+    get slideCounter() {
+        return this.slide.counter;
+    }
+    init() {
+        this.cellsElement = this.properties.cellsElement;
+        this.visibleWidth = this.properties.visibleWidth || this.cellsElement.parentElement.clientWidth;
+    }
+    lineUpCells() {
+        this.cells.lineUp();
+    }
+    handleTransitionend() {
+        this.slide.handleTransitionend();
+    }
+    getImage(index) {
+        return this.cells.getImage(index);
+    }
+    next(length = 1) {
+        if (!this.isNextArrowDisabled()) {
+            this.slide.next(length);
+        }
+    }
+    prev(length = 1) {
+        this.slide.prev(length);
+    }
+    autoplay() {
+        this.autoplayId = setInterval(() => {
+            this.next();
+        }, this.properties.autoplayInterval);
+    }
+    stopAutoplay() {
+        if (this.autoplayId) {
+            clearInterval(this.autoplayId);
+        }
+    }
+}
+
+class Container {
+    constructor(carouselProperties, utils, cells) {
+        this.carouselProperties = carouselProperties;
+        this.utils = utils;
+        this.cells = cells;
+        /* The index of the new position relative to
+         * the active index, for example -1 or +1
+         */
+        this.newPositionIndex = 0;
+        this.initialPositionX = 0;
+        this.initialElementPositionX = 0;
+        this.isLocked = true;
+        this.pullLimit = 100;
+        this.init();
+    }
+    get visibleWidth() {
+        return this.utils.visibleWidth;
+    }
+    get overflowCellsLimit() {
+        return this.utils.overflowCellsLimit;
+    }
+    get images() {
+        return this.carouselProperties.images;
+    }
+    get element() {
+        return this.carouselProperties.cellsElement;
+    }
+    get freeScroll() {
+        return this.carouselProperties.freeScroll;
+    }
+    get fullCellWidth() {
+        return this.carouselProperties.cellWidth + this.carouselProperties.margin;
+    }
+    get visibleCellsCount() {
+        return Math.ceil(this.visibleWidth / this.fullCellWidth);
+    }
+    get transitionDuration() {
+        return this.carouselProperties.transitionDuration;
+    }
+    get transitionTimingFunction() {
+        return this.carouselProperties.transitionTimingFunction;
+    }
+    get cellLength() {
+        if (this.images) {
+            return this.images.length;
+        }
+        else {
+            return this.cells.cellLength;
+        }
+    }
+    get cellLengthInLightDOMMode() {
+        if (this.images) {
+            let cellLength = this.visibleCellsCount + this.overflowCellsLimit * 2;
+            if (cellLength > this.images.length) {
+                cellLength = this.images.length;
+            }
+            return cellLength;
+        }
+        else {
+            return this.cellLength;
+        }
+    }
+    get tooFewCells() {
+        return this.visibleCellsCount > this.cellLength;
+    }
+    get disabled() {
+        return this.tooFewCells;
+    }
+    get margin() {
+        return this.carouselProperties.margin;
+    }
+    get isLightDOM() {
+        return this.carouselProperties.lightDOM || this.carouselProperties.loop;
+    }
+    init() {
+        this.setWidth();
+    }
+    handleTouchstart() {
+        this.startX = this.utils.getStartX(event);
+        this.startTime = new Date().getTime();
+        this.initialElementPositionX = this.getInitialElementPositionX();
+    }
+    handleHorizontalSwipe() {
+        if (this.disabled) {
+            return;
+        }
+        if (!this.isSwipeInProgress) {
+            this.startX = this.utils.getStartX(event);
+            this.startTime = new Date().getTime();
+            this.initialElementPositionX = this.getInitialElementPositionX();
+        }
+        this.isSwipeInProgress = true;
+        this.moveX = this.utils.getMoveX(event);
+        this.move();
+    }
+    handleTouchend(simpleProcessing = false) {
+        if (this.disabled) {
+            return;
+        }
+        /* If touchend was passed to the Slide class */
+        if (simpleProcessing) {
+            this.isSwipeInProgress = false;
+            return;
+        }
+        this.isSwipeInProgress = false;
+        this.finishMoving();
+        this.clearInitialValues();
+    }
+    move() {
+        let positionX = this.getMovePositionX();
+        const isPulled = this.detectPulled();
+        const direction = this.getDirection();
+        if (isPulled) {
+            if (isPulled.edge === "left" && direction === "right" ||
+                isPulled.edge === "right" && direction === "left") {
+                positionX = this.slowdownOnPull(positionX);
+            }
+        }
+        this.transformPositionX(positionX, 0);
+        if (this.freeScroll) {
+            this.initialPositionX = positionX;
+        }
+        if (isPulled) {
+            if (isPulled.edge === 'left' && isPulled.overflowX > this.pullLimit) {
+                this.initialPositionX = 0;
+            }
+            if (isPulled.edge === 'right' && isPulled.overflowX > this.pullLimit) {
+                this.initialPositionX = positionX;
+            }
+        }
+    }
+    getMovePositionX() {
+        const distance = this.getDistance();
+        return this.initialElementPositionX - distance;
+    }
+    getDistance() {
+        return this.startX - this.moveX;
+    }
+    /* If the container is pulled out of the left or right border */
+    detectPulled() {
+        const currentPositionX = this.getCurrentPositionX();
+        if (currentPositionX > 0) {
+            return {
+                edge: 'left',
+                positionX: currentPositionX,
+                overflowX: Math.abs(currentPositionX)
+            };
+        }
+        if (currentPositionX < this.getEndPosition()) {
+            return {
+                edge: 'right',
+                positionX: currentPositionX,
+                overflowX: Math.abs(currentPositionX - this.getEndPosition())
+            };
+        }
+    }
+    slowdownOnPull(_positionX) {
+        let distance = Math.abs(this.getDistance());
+        const endPosition = this.getEndPosition();
+        const isPulled = this.detectPulled();
+        const decelerationRatio = 3 + isPulled.overflowX / 50;
+        let positionX;
+        if (isPulled.edge === 'left') {
+            if (this.initialElementPositionX < 0) {
+                distance = distance - Math.abs(this.initialElementPositionX);
+            }
+            const rubberPositionX = distance / decelerationRatio;
+            positionX = rubberPositionX;
+            if (this.initialElementPositionX > 0) {
+                positionX = this.initialElementPositionX + rubberPositionX;
+            }
+            if (positionX > this.pullLimit) {
+                positionX = this.pullLimit;
+            }
+        }
+        if (isPulled.edge === 'right') {
+            const rubberPositionX = endPosition + (((this.initialElementPositionX - distance) - endPosition) / decelerationRatio);
+            const containerWidth = this.getWidth();
+            positionX = rubberPositionX;
+            if (this.initialElementPositionX < -(containerWidth - this.visibleWidth)) {
+                positionX = ((containerWidth - this.visibleWidth) + this.initialElementPositionX) + rubberPositionX;
+            }
+            if (positionX < endPosition - this.pullLimit) {
+                positionX = endPosition - this.pullLimit;
+            }
+        }
+        return positionX;
+    }
+    finishMoving() {
+        const positionX = this.getMovePositionX();
+        let newPositionX;
+        if (this.freeScroll) {
+            newPositionX = this.getInertia();
+        }
+        /* Align container while pulling */
+        newPositionX = this.getAlignedPositionOnPull(newPositionX);
+        this.transformPositionX(newPositionX);
+        this.setInitialPosition(positionX);
+    }
+    /* Returns the new position of the container with inertia */
+    getInertia() {
+        const distance = this.getDistance();
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - this.startTime;
+        let inertia = (distance / tapLength) * 100;
+        return this.initialPositionX - inertia;
+    }
+    getAlignedPositionOnPull(newPositionX) {
+        const direction = this.getDirection();
+        if (direction === 'left') {
+            let endPosition = this.getEndPosition();
+            if (newPositionX < endPosition) {
+                return endPosition;
+            }
+        }
+        if (direction === 'right') {
+            if (newPositionX > 0) {
+                return 0;
+            }
+        }
+        return newPositionX;
+    }
+    getCurrentPositionX() {
+        const parentPosition = this.element.parentElement.getBoundingClientRect();
+        const position = this.element.getBoundingClientRect();
+        return position.left - parentPosition.left;
+    }
+    getEndPosition() {
+        if (this.isLightDOM) {
+            let imagesInContainer = this.cells.imageUtils.getImages();
+            return -(imagesInContainer.length * this.fullCellWidth - this.visibleWidth - this.margin);
+        }
+        else {
+            const width = this.getWidth();
+            const visibleWidth = this.element.parentElement.clientWidth;
+            return visibleWidth - width;
+        }
+    }
+    transformPositionX(value, duration = this.transitionDuration) {
+        if (value === undefined) {
+            return;
+        }
+        this.element.style.transition = 'transform ' + duration + 'ms ' + this.transitionTimingFunction;
+        this.element.style.transform = 'translateX(' + value + 'px)';
+    }
+    getWidth() {
+        let width = this.cellLengthInLightDOMMode * this.fullCellWidth;
+        let totalImageWidth = this.cellLength * this.fullCellWidth;
+        if (totalImageWidth < width) {
+            width = totalImageWidth;
+        }
+        return this.isLightDOM ? width : totalImageWidth;
+    }
+    setWidth() {
+        const width = this.getWidth();
+        this.element.style.width = width + "px";
+    }
+    setInitialPosition(position) {
+        this.initialPositionX = position;
+    }
+    getElementPosition() {
+        return this.element.getBoundingClientRect();
+    }
+    getInitialElementPositionX() {
+        const carouselElementPosition = this.utils.getCarouselElementPosition()['left'];
+        return this.getElementPosition()['left'] - carouselElementPosition;
+    }
+    clearInitialValues() {
+        this.startX = this.moveX = undefined;
+    }
+    getDirection() {
+        const direction = Math.sign(this.startX - this.moveX);
+        if (direction === -1) {
+            return 'right';
+        }
+        if (direction === 1) {
+            return 'left';
+        }
+    }
+}
+
+class ImageUtils {
+    constructor(element) {
+        this.element = element;
+    }
+    getImages() {
+        return this.cellStack.filter(this.filter);
+    }
+    comparePositions(a, b) {
+        if (a.positionX < b.positionX) {
+            return -1;
+        }
+        if (a.positionX > b.positionX) {
+            return 1;
+        }
+        return 0;
+    }
+    filter(cell) {
+        return cell.img !== undefined;
+    }
+}
+class Cells {
+    constructor(carouselProperties, utils) {
+        this.carouselProperties = carouselProperties;
+        this.utils = utils;
+        this.counter = 0;
+        this.imageUtils = new ImageUtils(this.element);
+        this.init(carouselProperties);
+    }
+    get images() {
+        return this.carouselProperties.images;
+    }
+    get cellLength() {
+        return this.cells.length;
+    }
+    get fullCellWidth() {
+        return this.carouselProperties.cellWidth + this.carouselProperties.margin;
+    }
+    get cellLengthInLightDOMMode() {
+        if (this.images) {
+            let cellLength = this.visibleCellsCount + this.utils.overflowCellsLimit * 2;
+            if (cellLength > this.images.length) {
+                cellLength = this.images.length;
+            }
+            return cellLength;
+        }
+        else {
+            return this.cellLength;
+        }
+    }
+    get visibleCellsCount() {
+        return Math.ceil(this.visibleWidth / this.fullCellWidth);
+    }
+    get overflowCellsLimit() {
+        return this.carouselProperties.overflowCellsLimit;
+    }
+    get isLightDOM() {
+        return this.carouselProperties.lightDOM || this.carouselProperties.loop;
+    }
+    lineUp() {
+        const cells = this.element.children;
+        this.imageUtils.cellStack = [];
+        for (var i = 0; i < cells.length; i++) {
+            let cell = cells[i];
+            let positionX = this.getCellPositionInContainer(i);
+            cell.style.transform = 'translateX(' + positionX + 'px)';
+            cell.style.width = this.carouselProperties.cellWidth + 'px';
+            if (this.getImage(i)) {
+                this.imageUtils.cellStack.push({
+                    index: i,
+                    positionX,
+                    img: this.getImage(i)['image']
+                });
+            }
+        }
+        ;
+    }
+    ifSequenceOfCellsIsChanged() {
+        const cells = this.element.children;
+        return cells[0]['style'].transform !== 'translateX(0px)';
+    }
+    getCellPositionInContainer(cellIndexInDOMTree) {
+        let positionIndex = this.getCellIndexInContainer(cellIndexInDOMTree);
+        return positionIndex * this.fullCellWidth;
+    }
+    getCellIndexInContainer(cellIndexInDOMTree) {
+        let positionIndex;
+        if (!this.isLightDOM) {
+            return cellIndexInDOMTree;
+        }
+        let cellLength = this.cellLengthInLightDOMMode;
+        let counter = this.counter - this.carouselProperties.overflowCellsLimit;
+        if (counter > cellLength) {
+            counter = counter % cellLength;
+        }
+        if (counter < 0) {
+            return cellIndexInDOMTree;
+        }
+        else {
+            positionIndex = cellIndexInDOMTree - counter;
+            if (positionIndex < 0) {
+                positionIndex = cellLength + positionIndex;
+            }
+        }
+        return positionIndex;
+    }
+    getImage(cellIndex) {
+        if (!this.images) {
+            return;
+        }
+        let imageIndex = this.getImageIndex(cellIndex);
+        let file = this.images[imageIndex];
+        if (file && !file.type) {
+            file.type = 'image';
+        }
+        return {
+            image: this.images[imageIndex],
+            imageIndex
+        };
+    }
+    getImageIndex(cellIndexInDOMTree) {
+        const positionIndex = this.getCellIndexInContainer(cellIndexInDOMTree);
+        let imageIndex;
+        let overflowCellsLimit = this.carouselProperties.overflowCellsLimit;
+        if (this.counter > overflowCellsLimit) {
+            let cellLimitOverflow = this.counter - overflowCellsLimit;
+            imageIndex = positionIndex + cellLimitOverflow;
+            if (this.images && this.carouselProperties.loop) {
+                imageIndex = imageIndex % this.images.length;
+            }
+        }
+        else {
+            imageIndex = cellIndexInDOMTree;
+        }
+        return imageIndex;
+    }
+    setCounter(value) {
+        this.counter = value;
+    }
+    init(carouselProperties) {
+        this.element = this.carouselProperties.cellsElement;
+        this.cells = this.element.children;
+        this.visibleWidth = this.carouselProperties.visibleWidth || this.element.parentElement.clientWidth;
+    }
+}
+
+class Slide {
+    constructor(carouselProperties, utils, cells, container) {
+        this.carouselProperties = carouselProperties;
+        this.utils = utils;
+        this.cells = cells;
+        this.container = container;
+        this.counter = 0;
+        this._counter = 0;
+        this.initialPositionX = 0;
+        this.currentPositionX = 0;
+        this.init();
+    }
+    get fullCellWidth() {
+        return this.carouselProperties.cellWidth + this.carouselProperties.margin;
+    }
+    get margin() {
+        return this.carouselProperties.margin;
+    }
+    get minSwipeDistance() {
+        return this.carouselProperties.minSwipeDistance;
+    }
+    get visibleCellsCount() {
+        return Math.ceil(this.visibleWidth / this.fullCellWidth);
+    }
+    get visibleCellsOverflowContainer() {
+        return (this.visibleCellsCount * this.fullCellWidth - this.margin) > this.visibleWidth;
+    }
+    /* The position to which the container returns after each slide
+     * in the light DUM tree mode.
+     */
+    get fixedContainerPosition() {
+        return -(this.overflowCellsLimit * this.fullCellWidth);
+    }
+    get overflowCellsLimit() {
+        return this.carouselProperties.overflowCellsLimit;
+    }
+    get images() {
+        return this.carouselProperties.images;
+    }
+    get cellLength() {
+        if (this.isLightDOM) {
+            return this.cells.cellLengthInLightDOMMode;
+        }
+        else {
+            if (this.images) {
+                return this.images.length;
+            }
+            else {
+                return this.cells.cellLength;
+            }
+        }
+    }
+    get isLightDOM() {
+        return this.carouselProperties.lightDOM || this.carouselProperties.loop;
+    }
+    init() {
+        this.visibleWidth = this.carouselProperties.visibleWidth || this.carouselProperties.hostElement.clientWidth;
+    }
+    handleTouchstart(event) {
+        /* Touchstart event is not called for arrow */
+        this.isNotClickOnArrow = true;
+        this.isSlideLengthLimited = undefined;
+        if (!this.isSlideInProgress) {
+            this.initialPositionX = this.container.getCurrentPositionX();
+        }
+    }
+    handleTouchend(event) {
+        if (!this.isNotClickOnArrow) {
+            return;
+        }
+        this.currentPositionX = this.container.getCurrentPositionX();
+        this.distanceAbs = Math.abs(this.initialPositionX - this.currentPositionX);
+        this.distance = this.initialPositionX - this.currentPositionX;
+        this.direction = this.getDirection();
+        this.isNotClickOnArrow = undefined;
+        this.handleSlide();
+    }
+    handleTransitionend() {
+        this.setCounter();
+        this.isSlideInProgress = false;
+        if (this.isLightDOM) {
+            this.alignContainerFast();
+        }
+    }
+    detectClickOnArrow(event) {
+        return event.target.classList.contains("carousel-arrow");
+    }
+    handleSlide(customSlideLength = undefined) {
+        let isUsingButton = customSlideLength;
+        let newPositionX;
+        if (isUsingButton && this.isSlideInProgress || !this.direction) {
+            return;
+        }
+        /* Custom slide length is used in arrows */
+        if (customSlideLength) {
+            this.slideLength = this.limitSlideLength(customSlideLength);
+            if (!this.isSlideInProgress) {
+                this.initialPositionX = this.container.getCurrentPositionX();
+            }
+        }
+        else {
+            this.slideLength = this.getSlideLength(this.distanceAbs);
+        }
+        /* Store intermediate counter value */
+        this._counter = this.getPreliminaryCounter();
+        if (this.direction === 'left') {
+            if (!customSlideLength) {
+                this.slideLength = this.limitSlideLength(this.getSlideLength(this.distanceAbs));
+            }
+            this._counter = this.getPreliminaryCounter();
+            let isSlidesEnd = this.isSlidesEnd(this._counter);
+            newPositionX = this.getPositionByIndex(this._counter);
+            if (isSlidesEnd) {
+                this._counter = this.counter;
+                newPositionX = this.getPositionByIndex(this.counter);
+                this.slideLength = 0;
+            }
+        }
+        if (this.direction === 'right') {
+            if (!customSlideLength) {
+                this.slideLength = this.getSlideLength(this.distanceAbs);
+            }
+            if (this._counter < 0) {
+                this._counter = this.counter;
+                this.slideLength = this.counter;
+            }
+            newPositionX = this.getPositionByIndex(this.counter - this.slideLength);
+        }
+        if (this.container.getCurrentPositionX() !== newPositionX) {
+            this.isSlideInProgress = true;
+            this.container.transformPositionX(newPositionX);
+        }
+    }
+    next(length = 1) {
+        this.direction = 'left';
+        this.handleSlide(length);
+    }
+    prev(length = 1) {
+        this.direction = 'right';
+        this.handleSlide(length);
+    }
+    select(index) {
+        if (index > this.cellLength - 1) {
+            return;
+        }
+        if (index > this.counter) {
+            let length = index - this.counter;
+            this.next(length);
+        }
+        if (index < this.counter) {
+            let length = this.counter - index;
+            this.prev(length);
+        }
+    }
+    getPreliminaryCounter() {
+        if (this.direction === 'left') {
+            return this.counter + this.slideLength;
+        }
+        if (this.direction === 'right') {
+            return this.counter - this.slideLength;
+        }
+    }
+    /*
+     * Limits the length of the slide during calls to the next() and prev()
+     * methods if the specified position is outside the cell length
+     */
+    limitSlideLength(slideLength) {
+        if (slideLength > 1) {
+            for (var i = 0; i < slideLength; i++) {
+                let newCounter = this.counter + (slideLength - i);
+                if (!this.isSlidesEnd(newCounter)) {
+                    slideLength = slideLength - i;
+                    this.isSlideLengthLimited = i > 0;
+                    break;
+                }
+            }
+        }
+        return slideLength;
+    }
+    /* Offset the container to show the last cell completely */
+    getPositionCorrection(counter) {
+        let correction = 0;
+        let isLastSlide = this.isLastSlide(counter);
+        if (this.carouselProperties.loop || this.direction === "right") {
+            return 0;
+        }
+        if (this.isSlideLengthLimited || isLastSlide) {
+            let cellsWidth = this.cells.cellLengthInLightDOMMode * this.fullCellWidth;
+            if (this.visibleWidth < cellsWidth) {
+                correction = -(this.visibleCellsCount * this.fullCellWidth - this.visibleWidth - this.margin);
+            }
+            if (correction >= -this.margin) {
+                correction = 0;
+            }
+        }
+        return correction;
+    }
+    getSlideLength(distanceAbs) {
+        let isLastSlide = this.isLastSlide(this.counter);
+        /* If the last cell does not fit entirely, then the
+         * length of the swipe to the left, from the extreme
+         * right position, may be shorter than usual.
+         */
+        if (isLastSlide && this.direction === "right") {
+            distanceAbs = distanceAbs + this.visibleWidth % this.fullCellWidth;
+        }
+        let length = Math.floor(distanceAbs / this.fullCellWidth);
+        if (distanceAbs % this.fullCellWidth >= this.minSwipeDistance) {
+            length++;
+        }
+        return length;
+    }
+    getDistanceAbs() {
+        return Math.abs(this.initialPositionX - this.currentPositionX);
+    }
+    getDirection() {
+        const direction = Math.sign(this.initialPositionX - this.currentPositionX);
+        if (direction === -1) {
+            return 'right';
+        }
+        if (direction === 1) {
+            return 'left';
+        }
+    }
+    isSlidesEnd(counter) {
+        let margin = this.visibleCellsOverflowContainer ? 1 : 0;
+        let imageLength = this.images ? this.images.length : this.cells.cellLength;
+        if (this.carouselProperties.loop) {
+            return false;
+        }
+        else {
+            return (imageLength - counter + margin) < this.visibleCellsCount;
+        }
+    }
+    isLastSlide(counter) {
+        return this.isSlidesEnd(counter + 1);
+    }
+    setCounter() {
+        if (this.direction === 'left') {
+            this.counter = this.counter + this.slideLength;
+        }
+        if (this.direction === 'right') {
+            this.counter = this.counter - this.slideLength;
+        }
+    }
+    getPositionByIndex(_counter) {
+        let correction = this.getPositionCorrection(this.counter + this.slideLength);
+        let position;
+        if (correction !== 0) {
+            correction = correction + this.fullCellWidth;
+        }
+        if (this.direction === 'right') {
+            correction = 0;
+        }
+        if (this.isLightDOM && this.isLightDOMMode(_counter) ||
+            this.isLightDOM && this.ifLeftDOMModeAtEnd(_counter)) {
+            let initialPosition = this.getPositionWithoutCorrection(this.initialPositionX);
+            let counterDifference = _counter - this.counter;
+            position = initialPosition - ((counterDifference * this.fullCellWidth) - correction);
+        }
+        else {
+            position = -((_counter * this.fullCellWidth) - correction);
+        }
+        position = this.provideSafePosition(position);
+        return position;
+    }
+    provideSafePosition(position) {
+        const endPosition = this.container.getEndPosition();
+        if (this.direction === 'left') {
+            if (position > 0) {
+                position = 0;
+            }
+        }
+        if (this.direction === 'right') {
+            if (position < endPosition) {
+                position = endPosition;
+            }
+        }
+        return position;
+    }
+    getPositionWithoutCorrection(value) {
+        let remainder = value % this.fullCellWidth;
+        if (remainder !== 0) {
+            return value - (this.fullCellWidth + remainder);
+        }
+        else {
+            return value;
+        }
+    }
+    isNextArrowDisabled() {
+        return this.isLastSlide(this.counter);
+    }
+    isPrevArrowDisabled() {
+        return this.counter === 0;
+    }
+    alignContainerFast() {
+        if (this.isLightDOMMode(this.counter)) {
+            let positionX = this.fixedContainerPosition;
+            this.container.transformPositionX(positionX, 0);
+            this.cells.setCounter(this.counter);
+            this.cells.lineUp();
+        }
+        else if (this.ifLeftDOMModeToBeginning(this.counter)) {
+            /* If we have already exited the light DOM mode but
+             * the cells are still out of place
+             */
+            if (this.cells.ifSequenceOfCellsIsChanged()) {
+                let positionX = -(this.counter * this.fullCellWidth);
+                this.container.transformPositionX(positionX, 0);
+                this.cells.setCounter(this.counter);
+                this.cells.lineUp();
+            }
+        }
+        else if (this.ifLeftDOMModeAtEnd(this.counter)) {
+            let containerPositionX = this.container.getCurrentPositionX();
+            let containerWidth = this.container.getWidth();
+            this.visibleWidth;
+            if (this.isLastSlide(this.counter) &&
+                containerWidth + containerPositionX >= this.visibleWidth) {
+                return;
+            }
+            let correction = this.getPositionCorrection(this.counter);
+            if (correction !== 0) {
+                correction = correction + this.fullCellWidth;
+            }
+            if (this.direction === 'right') {
+                correction = 0;
+            }
+            let positionX = this.fixedContainerPosition + correction;
+            this.container.transformPositionX(positionX, 0);
+            this.cells.setCounter(this.counter);
+            this.cells.lineUp();
+        }
+    }
+    isLightDOMMode(counter) {
+        let flag;
+        let remainderOfCells = this.images.length - this.overflowCellsLimit - this.visibleCellsCount;
+        if (!this.isLightDOM) {
+            return false;
+        }
+        if (counter > this.overflowCellsLimit && this.direction === "left" &&
+            counter <= remainderOfCells) {
+            flag = true;
+        }
+        if (counter >= this.overflowCellsLimit && this.direction === "right" &&
+            counter < remainderOfCells) {
+            flag = true;
+        }
+        if (this.counter > this.overflowCellsLimit && this.direction === "left" &&
+            this.counter <= remainderOfCells) {
+            flag = true;
+        }
+        if (this.counter >= this.overflowCellsLimit && this.direction === "right" &&
+            this.counter < remainderOfCells) {
+            flag = true;
+        }
+        return flag;
+    }
+    ifLeftDOMModeAtEnd(counter) {
+        let flag;
+        let remainderOfCells = this.images.length - this.overflowCellsLimit - this.visibleCellsCount;
+        if (counter >= remainderOfCells) {
+            flag = true;
+        }
+        if (this.counter >= remainderOfCells) {
+            flag = true;
+        }
+        return flag;
+    }
+    ifLeftDOMModeToBeginning(counter) {
+        let flag;
+        if (counter <= this.overflowCellsLimit) {
+            flag = true;
+        }
+        if (this.counter <= this.overflowCellsLimit) {
+            flag = true;
+        }
+        return flag;
+    }
+}
+
+class Utils {
+    constructor(carouselProperties) {
+        this.carouselProperties = carouselProperties;
+    }
+    get images() {
+        return this.carouselProperties.images;
+    }
+    get overflowCellsLimit() {
+        if (this.images && this.isImagesLessCellLimit) {
+            return Math.floor((this.images.length - this.visibleCellsCount) / 2);
+        }
+        else {
+            return this.carouselProperties.overflowCellsLimit;
+        }
+    }
+    get isImagesLessCellLimit() {
+        return this.carouselProperties.overflowCellsLimit * 2 + this.visibleCellsCount > this.images.length;
+    }
+    get visibleCellsCount() {
+        return Math.ceil(this.visibleWidth / this.fullCellWidth);
+    }
+    get fullCellWidth() {
+        return this.carouselProperties.cellWidth + this.carouselProperties.margin;
+    }
+    get visibleWidth() {
+        return this.carouselProperties.visibleWidth || this.carouselProperties.cellsElement.parentElement.clientWidth;
+    }
+    getStartX(event) {
+        const touches = event.touches;
+        const carouselElementPosition = this.getCarouselElementPosition()['left'];
+        let startX;
+        if (touches) {
+            startX = touches[0].clientX - carouselElementPosition;
+        }
+        else {
+            startX = event.clientX - carouselElementPosition;
+        }
+        return startX;
+    }
+    getMoveX(event) {
+        const touches = event.touches;
+        const carouselElementPositionX = this.getCarouselElementPosition()['left'];
+        if (touches) {
+            return touches[0].clientX - carouselElementPositionX;
+        }
+        else {
+            return event.clientX - carouselElementPositionX;
+        }
+    }
+    getCarouselElementPosition() {
+        return this.carouselProperties.hostElement.getBoundingClientRect();
+    }
+}
+
+class CarouselComponent {
+    constructor(elementRef, ref) {
+        this.elementRef = elementRef;
+        this.ref = ref;
+        this.minTimeout = 30;
+        this._cellWidth = 200;
+        this._loop = false;
+        this._lightDOM = false;
+        this.events = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.height = 200;
+        this.autoplay = false;
+        this.autoplayInterval = 5000;
+        this.pauseOnHover = true;
+        this.dots = false;
+        this.margin = 10;
+        this.objectFit = 'cover';
+        this.minSwipeDistance = 10;
+        this.transitionDuration = 200;
+        this.transitionTimingFunction = 'ease-out';
+        this.counterSeparator = " / ";
+        this.overflowCellsLimit = 3;
+        this.listeners = 'mouse and touch';
+        this.cellsToScroll = 1;
+        this.freeScroll = false;
+        this.arrows = true;
+        this.arrowsTheme = 'light';
+        this.hostClassCarousel = true;
+        this.handleTouchstart = (event) => {
+            //event.preventDefault();
+            this.touches.addEventListeners("mousemove", "handleMousemove");
+            this.carousel.handleTouchstart(event);
+            this.isMoving = true;
+        };
+        this.handleHorizontalSwipe = (event) => {
+            event.preventDefault();
+            this.carousel.handleHorizontalSwipe(event);
+        };
+        this.handleTouchend = (event) => {
+            const touches = event.touches;
+            this.carousel.handleTouchend(event);
+            this.touches.removeEventListeners("mousemove", "handleMousemove");
+            this.isMoving = false;
+        };
+        this.handleTap = (event) => {
+            let outboundEvent = {
+                name: 'click'
+            };
+            let nodes = Array.prototype.slice.call(this.cellsElement.children);
+            let cellElement = event.srcElement.closest(".carousel-cell");
+            const i = nodes.indexOf(cellElement);
+            const cellIndex = nodes.indexOf(cellElement);
+            if (this.images) {
+                //outboundEvent.fileIndex = this.carousel.getFileIndex(i);
+                //outboundEvent.file = this.carousel.getFile(cellIndex);
+            }
+            else {
+                outboundEvent.cellIndex = cellIndex;
+            }
+        };
+    }
+    get isContainerLocked() {
+        return this.carousel.isContainerLocked;
+    }
+    get slideCounter() {
+        return this.carousel.slideCounter;
+    }
+    get lapCounter() {
+        return this.carousel.lapCounter;
+    }
+    get isLandscape() {
+        return window.innerWidth > window.innerHeight;
+    }
+    get isSafari() {
+        const ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('safari') !== -1) {
+            return !(ua.indexOf('chrome') > -1);
+        }
+    }
+    get counter() {
+        let counter;
+        if (this.loop) {
+            counter = this.slideCounter % this.cellLength;
+        }
+        else {
+            counter = this.slideCounter;
+        }
+        return counter + 1 + this.counterSeparator + this.cellLength;
+    }
+    get cellsElement() {
+        return this.elementRef.nativeElement.querySelector('.carousel-cells');
+    }
+    get isArrows() {
+        return this.arrows && !this.freeScroll;
+    }
+    get isCounter() {
+        return this._isCounter && this.cellLength > 1;
+    }
+    get activeDotIndex() {
+        return this.slideCounter % this.cellLength;
+    }
+    get cellLimit() {
+        if (this.carousel) {
+            return this.carousel.cellLimit;
+        }
+    }
+    set images(images) {
+        this._images = images;
+    }
+    get images() {
+        return this._images;
+    }
+    set cellWidth(value) {
+        if (value) {
+            this._cellWidth = value;
+        }
+    }
+    set isCounter(value) {
+        if (value) {
+            this._isCounter = value;
+        }
+    }
+    set loop(value) {
+        if (value) {
+            this._loop = value;
+        }
+    }
+    get loop() {
+        if (this.images) {
+            return this._loop;
+        }
+        else {
+            return false;
+        }
+    }
+    set lightDOM(value) {
+        if (value) {
+            this._lightDOM = value;
+        }
+    }
+    get lightDOM() {
+        if (this.images) {
+            return this._lightDOM;
+        }
+        else {
+            return false;
+        }
+    }
+    onWindowResize(event) {
+        this.landscapeMode = this.isLandscape;
+        this.ref.detectChanges();
+        this.initCarousel();
+        this.carousel.lineUpCells();
+    }
+    onMousemove(event) {
+        if (this.autoplay && this.pauseOnHover) {
+            this.carousel.stopAutoplay();
+        }
+    }
+    onMouseleave(event) {
+        if (this.autoplay && this.pauseOnHover) {
+            this.carousel.autoplay();
+        }
+    }
+    ngOnInit() {
+        this.isNgContent = this.cellsElement.children.length > 0;
+        this.touches = new Touches({
+            element: this.cellsElement,
+            listeners: this.listeners,
+            mouseListeners: {
+                "mousedown": "handleMousedown",
+                "mouseup": "handleMouseup"
+            }
+        });
+        this.touches.on('touchstart', this.handleTouchstart);
+        this.touches.on('horizontal-swipe', this.handleHorizontalSwipe);
+        this.touches.on('touchend', this.handleTouchend);
+        this.touches.on('mousedown', this.handleTouchstart);
+        this.touches.on('mouseup', this.handleTouchend);
+        this.touches.on('tap', this.handleTap);
+        this.setDimensions();
+    }
+    ngAfterViewInit() {
+        this.initCarousel();
+        if (this.autoplay) {
+            this.carousel.autoplay();
+        }
+        this.cellLength = this.getCellLength();
+        this.dotsArr = Array(this.cellLength).fill(1);
+        this.ref.detectChanges();
+        this.carousel.lineUpCells();
+        /* Start detecting changes in the DOM tree */
+        this.detectDomChanges();
+    }
+    ngOnChanges(changes) {
+        if (changes.width || changes.height || changes.images) {
+            this.setDimensions();
+            this.initCarousel();
+            this.carousel.lineUpCells();
+            this.ref.detectChanges();
+        }
+    }
+    ngOnDestroy() {
+        this.touches.destroy();
+        //this.carousel.destroy();
+    }
+    initCarousel() {
+        let carouselProperties = {
+            id: this.id,
+            cellsElement: this.elementRef.nativeElement.querySelector('.carousel-cells'),
+            hostElement: this.elementRef.nativeElement,
+            images: this.images,
+            cellWidth: this.getCellWidth(),
+            loop: this.loop,
+            autoplayInterval: this.autoplayInterval,
+            overflowCellsLimit: this.overflowCellsLimit,
+            visibleWidth: this.width,
+            margin: this.margin,
+            minSwipeDistance: this.minSwipeDistance,
+            transitionDuration: this.transitionDuration,
+            transitionTimingFunction: this.transitionTimingFunction,
+            videoProperties: this.videoProperties,
+            eventHandler: this.events,
+            freeScroll: this.freeScroll,
+            lightDOM: this.lightDOM
+        };
+        this.utils = new Utils(carouselProperties);
+        this.cells = new Cells(carouselProperties, this.utils);
+        this.container = new Container(carouselProperties, this.utils, this.cells);
+        this.slide = new Slide(carouselProperties, this.utils, this.cells, this.container);
+        this.carousel = new Carousel(carouselProperties, this.utils, this.cells, this.container, this.slide);
+    }
+    detectDomChanges() {
+        const observer = new MutationObserver((mutations) => {
+            this.onDomChanges();
+        });
+        var config = {
+            attributes: true,
+            childList: true,
+            characterData: true
+        };
+        observer.observe(this.elementRef.nativeElement, config);
+    }
+    onDomChanges() {
+        this.cellLength = this.getCellLength();
+        this.carousel.lineUpCells();
+        this.ref.detectChanges();
+    }
+    setDimensions() {
+        this.hostStyleHeight = this.height + 'px';
+        this.hostStyleWidth = this.width + 'px';
+    }
+    getImage(index) {
+        return this.carousel.getImage(index);
+    }
+    handleTransitionendCellContainer(event) {
+        this.carousel.handleTransitionend();
+    }
+    toggleVideo(video) {
+        event.preventDefault();
+        if (this.videoProperties.noPlay) {
+            return;
+        }
+        if (video.paused) {
+            video.play();
+            this.isVideoPlaying = true;
+        }
+        else {
+            video.pause();
+            this.isVideoPlaying = false;
+        }
+        this.ref.detectChanges();
+    }
+    getCellWidth() {
+        let elementWidth = this.elementRef.nativeElement.clientWidth;
+        if (this.cellsToShow) {
+            let margin = this.cellsToShow > 1 ? this.margin : 0;
+            let totalMargin = margin * (this.cellsToShow - 1);
+            return (elementWidth - totalMargin) / this.cellsToShow;
+        }
+        if (this._cellWidth === '100%') {
+            return elementWidth;
+        }
+        else {
+            return this._cellWidth;
+        }
+    }
+    next() {
+        this.carousel.next(this.cellsToScroll);
+        this.carousel.stopAutoplay();
+    }
+    prev() {
+        this.carousel.prev(this.cellsToScroll);
+        this.carousel.stopAutoplay();
+    }
+    isNextArrowDisabled() {
+        if (this.carousel) {
+            return this.carousel.isNextArrowDisabled();
+        }
+    }
+    isPrevArrowDisabled() {
+        if (this.carousel) {
+            return this.carousel.isPrevArrowDisabled();
+        }
+    }
+    getCellLength() {
+        if (this.images) {
+            return this.images.length;
+        }
+        else {
+            return this.cellsElement.children.length;
+        }
+    }
+}
+CarouselComponent.ɵfac = function CarouselComponent_Factory(t) { return new (t || CarouselComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
+CarouselComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CarouselComponent, selectors: [["carousel"], ["", "carousel", ""]], hostVars: 6, hostBindings: function CarouselComponent_HostBindings(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("resize", function CarouselComponent_resize_HostBindingHandler($event) { return ctx.onWindowResize($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveWindow"])("mousemove", function CarouselComponent_mousemove_HostBindingHandler($event) { return ctx.onMousemove($event); })("mouseleave", function CarouselComponent_mouseleave_HostBindingHandler($event) { return ctx.onMouseleave($event); });
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("height", ctx.hostStyleHeight)("width", ctx.hostStyleWidth);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("carousel", ctx.hostClassCarousel);
+    } }, inputs: { height: "height", autoplay: "autoplay", autoplayInterval: "autoplayInterval", pauseOnHover: "pauseOnHover", dots: "dots", margin: "margin", objectFit: "objectFit", minSwipeDistance: "minSwipeDistance", transitionDuration: "transitionDuration", transitionTimingFunction: "transitionTimingFunction", counterSeparator: "counterSeparator", overflowCellsLimit: "overflowCellsLimit", listeners: "listeners", cellsToScroll: "cellsToScroll", freeScroll: "freeScroll", arrows: "arrows", arrowsTheme: "arrowsTheme", isCounter: ["counter", "isCounter"], images: "images", cellWidth: "cellWidth", loop: "loop", lightDOM: "lightDOM", id: "id", width: "width", borderRadius: "borderRadius", videoProperties: "videoProperties", cellsToShow: "cellsToShow", arrowsOutside: "arrowsOutside" }, outputs: { events: "events" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]], ngContentSelectors: _c0, decls: 8, vars: 6, consts: [["class", "carousel-counter", 4, "ngIf"], [1, "carousel-container"], [1, "carousel-cells", 3, "transitionend"], ["cells", ""], ["ngFor", "", 3, "ngForOf"], ["class", "carousel-dots", 4, "ngIf"], ["class", "carousel-arrows", 3, "carousel-arrows-outside", "carousel-dark-arrows", 4, "ngIf"], [1, "carousel-counter"], ["class", "carousel-cell", 3, "width", "border-radius", 4, "ngIf"], [1, "carousel-cell"], ["draggable", "false", 3, "src", "object-fit", 4, "ngIf"], ["draggable", "false", 3, "src"], [1, "carousel-dots"], ["class", "carousel-dot", 3, "carousel-dot-active", 4, "ngFor", "ngForOf"], [1, "carousel-dot"], [1, "carousel-arrows"], [1, "carousel-arrow", "carousel-arrow-prev", 3, "click"], [1, "carousel-arrow", "carousel-arrow-next", 3, "click"]], template: function CarouselComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojectionDef"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, CarouselComponent_div_0_Template, 2, 1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("transitionend", function CarouselComponent_Template_div_transitionend_2_listener($event) { return ctx.handleTransitionendCellContainer($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojection"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, CarouselComponent_ng_template_5_Template, 1, 1, "ng-template", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, CarouselComponent_div_6_Template, 2, 1, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, CarouselComponent_div_7_Template, 3, 8, "div", 6);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isCounter);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("carousel-moving", ctx.isMoving);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.images);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.dots);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isArrows);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: ["[_nghost-%COMP%]{-moz-user-select:none;-webkit-user-select:none;box-sizing:border-box;display:block;height:100%;left:0;position:relative;top:0;transform-origin:top left;user-select:none;width:100%;z-index:10000}[_nghost-%COMP%]   .carousel-container[_ngcontent-%COMP%]{cursor:grab;height:100%;overflow:hidden;width:100%}[_nghost-%COMP%]   .carousel-container.carousel-moving[_ngcontent-%COMP%]{cursor:grabbing}[_nghost-%COMP%]   .carousel-counter[_ngcontent-%COMP%]{background-color:rgba(23,37,68,.3);border-radius:13px;color:#fff;font-size:11px;line-height:normal;padding:5px 7px;position:absolute;right:24px;text-align:right;top:8px;transition:opacity .2s;z-index:30}[_nghost-%COMP%]     .carousel-cells{display:block;height:100%;transition:transform .2s;width:100%;will-change:transform}[_nghost-%COMP%]     .carousel-cells .carousel-cell.swiper-prev-image{transform:translate3d(-100%,0,0)}[_nghost-%COMP%]     .carousel-cells .carousel-cell.swiper-next-image{transform:translate3d(100%,0,0)}[_nghost-%COMP%]     .carousel-cells .carousel-cell{height:100%;overflow:hidden;position:absolute;width:100%}[_nghost-%COMP%]     .carousel-cells .carousel-cell img, [_nghost-%COMP%]     .carousel-cells .carousel-cell video{height:100%;object-fit:contain;position:relative;width:100%}[_nghost-%COMP%]     .carousel-cells .carousel-cell img.swiper-hide{display:none}[_nghost-%COMP%]     .carousel-cells .carousel-cell .carousel-play{bottom:0;left:0;position:absolute;right:0;top:0;z-index:1}[_nghost-%COMP%]   .carousel-arrow[_ngcontent-%COMP%]{background-color:#fff;background-position:50%;background-repeat:no-repeat;background-size:31px;border-radius:100px;box-shadow:0 0 5px rgba(0,0,0,.15);cursor:pointer;height:40px;margin-top:-20px;position:absolute;top:50%;width:40px;z-index:10}[_nghost-%COMP%]   .carousel-arrow-prev[_ngcontent-%COMP%]{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMTUuNDEgMTYuNTlMMTAuODMgMTJsNC41OC00LjU5TDE0IDZsLTYgNiA2IDYgMS40MS0xLjQxeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);left:10px}[_nghost-%COMP%]   .carousel-arrow-next[_ngcontent-%COMP%]{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNOC41OSAxNi41OUwxMy4xNyAxMiA4LjU5IDcuNDEgMTAgNmw2IDYtNiA2LTEuNDEtMS40MXoiLz48cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=);right:10px}[_nghost-%COMP%]   .carousel-arrows-outside[_ngcontent-%COMP%]   .carousel-arrow-prev[_ngcontent-%COMP%]{left:-60px}[_nghost-%COMP%]   .carousel-arrows-outside[_ngcontent-%COMP%]   .carousel-arrow-next[_ngcontent-%COMP%]{right:-60px}[_nghost-%COMP%]   .carousel-dark-arrows[_ngcontent-%COMP%]   .carousel-arrow[_ngcontent-%COMP%]{filter:invert(1)}[_nghost-%COMP%]   .carousel-arrow-disabled[_ngcontent-%COMP%]{cursor:default;opacity:.5}[_nghost-%COMP%]   .carousel-dots[_ngcontent-%COMP%]{bottom:0;left:0;position:absolute;right:0;text-align:center;z-index:10}[_nghost-%COMP%]   .carousel-dots[_ngcontent-%COMP%]   .carousel-dot[_ngcontent-%COMP%]{border:2px solid #fff;border-radius:100px;display:inline-block;height:8px;margin:4px;width:8px}[_nghost-%COMP%]   .carousel-dots[_ngcontent-%COMP%]   .carousel-dot-active[_ngcontent-%COMP%]{background-color:#fff}"] });
+CarouselComponent.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }
+];
+CarouselComponent.propDecorators = {
+    events: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    id: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    height: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    width: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    autoplay: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    autoplayInterval: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    pauseOnHover: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    dots: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    borderRadius: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    margin: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    objectFit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    minSwipeDistance: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    transitionDuration: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    transitionTimingFunction: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    videoProperties: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    counterSeparator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    overflowCellsLimit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    listeners: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    cellsToShow: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    cellsToScroll: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    freeScroll: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    arrows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    arrowsOutside: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    arrowsTheme: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    images: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    cellWidth: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"], args: ['cellWidth',] }],
+    isCounter: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"], args: ['counter',] }],
+    loop: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"], args: ['loop',] }],
+    lightDOM: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"], args: ['lightDOM',] }],
+    hostClassCarousel: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['class.carousel',] }],
+    hostStyleHeight: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['style.height',] }],
+    hostStyleWidth: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['style.width',] }],
+    onWindowResize: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['window:resize', ['$event'],] }],
+    onMousemove: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['mousemove', ['$event'],] }],
+    onMouseleave: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['mouseleave', ['$event'],] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CarouselComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'carousel, [carousel]',
+                template: "<div class=\"carousel-counter\" *ngIf=\"isCounter\">{{counter}}</div>\n\n<div class=\"carousel-container\" [class.carousel-moving]=\"isMoving\">\n\t<div class=\"carousel-cells\" #cells (transitionend)=\"handleTransitionendCellContainer($event)\">\n\t\t<ng-content></ng-content>\n\n\t\t<ng-template ngFor let-image [ngForOf]=\"images\" let-i=\"index\">\n\t\t\t<div class=\"carousel-cell\" \n\t\t\t\t[style.width]=\"getCellWidth()+'px'\"\n\t\t\t\t[style.border-radius]=\"borderRadius+'px'\"\n\t\t\t\t*ngIf=\"i < cellLimit\">\n\t\t\t\t<!-- Image -->\n\t\t\t\t<img \n\t\t\t\t\t*ngIf=\"getImage(i) && getImage(i)['image']\" \n\t\t\t\t\t[src]=\"getImage(i)['image']['path']\"\n\t\t\t\t\t[style.object-fit]=\"objectFit\"\n\t\t\t\t\tdraggable=\"false\" />\n\n\t\t\t</div>\n\t\t</ng-template>\n\t</div>\n\n\t<div class=\"carousel-dots\" *ngIf=\"dots\">\n\t\t<div class=\"carousel-dot\" [class.carousel-dot-active]=\"i === activeDotIndex\" *ngFor=\"let dot of dotsArr; index as i\"></div>\n\t</div>\n</div>\n\n<div class=\"carousel-arrows\" \n\t[class.carousel-arrows-outside]=\"arrowsOutside\" \n\t[class.carousel-dark-arrows]=\"arrowsTheme === 'dark'\"\n\t*ngIf=\"isArrows\">\n\t\n\t<div class=\"carousel-arrow carousel-arrow-prev\" [class.carousel-arrow-disabled]=\"isPrevArrowDisabled()\" (click)=\"prev()\"></div>\n\t<div class=\"carousel-arrow carousel-arrow-next\" [class.carousel-arrow-disabled]=\"isNextArrowDisabled()\" (click)=\"next()\"></div>\n</div>",
+                styles: [":host{-moz-user-select:none;-webkit-user-select:none;box-sizing:border-box;display:block;height:100%;left:0;position:relative;top:0;transform-origin:top left;user-select:none;width:100%;z-index:10000}:host .carousel-container{cursor:grab;height:100%;overflow:hidden;width:100%}:host .carousel-container.carousel-moving{cursor:grabbing}:host .carousel-counter{background-color:rgba(23,37,68,.3);border-radius:13px;color:#fff;font-size:11px;line-height:normal;padding:5px 7px;position:absolute;right:24px;text-align:right;top:8px;transition:opacity .2s;z-index:30}:host ::ng-deep .carousel-cells{display:block;height:100%;transition:transform .2s;width:100%;will-change:transform}:host ::ng-deep .carousel-cells .carousel-cell.swiper-prev-image{transform:translate3d(-100%,0,0)}:host ::ng-deep .carousel-cells .carousel-cell.swiper-next-image{transform:translate3d(100%,0,0)}:host ::ng-deep .carousel-cells .carousel-cell{height:100%;overflow:hidden;position:absolute;width:100%}:host ::ng-deep .carousel-cells .carousel-cell img,:host ::ng-deep .carousel-cells .carousel-cell video{height:100%;object-fit:contain;position:relative;width:100%}:host ::ng-deep .carousel-cells .carousel-cell img.swiper-hide{display:none}:host ::ng-deep .carousel-cells .carousel-cell .carousel-play{bottom:0;left:0;position:absolute;right:0;top:0;z-index:1}:host .carousel-arrow{background-color:#fff;background-position:50%;background-repeat:no-repeat;background-size:31px;border-radius:100px;box-shadow:0 0 5px rgba(0,0,0,.15);cursor:pointer;height:40px;margin-top:-20px;position:absolute;top:50%;width:40px;z-index:10}:host .carousel-arrow-prev{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMTUuNDEgMTYuNTlMMTAuODMgMTJsNC41OC00LjU5TDE0IDZsLTYgNiA2IDYgMS40MS0xLjQxeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);left:10px}:host .carousel-arrow-next{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNOC41OSAxNi41OUwxMy4xNyAxMiA4LjU5IDcuNDEgMTAgNmw2IDYtNiA2LTEuNDEtMS40MXoiLz48cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=);right:10px}:host .carousel-arrows-outside .carousel-arrow-prev{left:-60px}:host .carousel-arrows-outside .carousel-arrow-next{right:-60px}:host .carousel-dark-arrows .carousel-arrow{filter:invert(1)}:host .carousel-arrow-disabled{cursor:default;opacity:.5}:host .carousel-dots{bottom:0;left:0;position:absolute;right:0;text-align:center;z-index:10}:host .carousel-dots .carousel-dot{border:2px solid #fff;border-radius:100px;display:inline-block;height:8px;margin:4px;width:8px}:host .carousel-dots .carousel-dot-active{background-color:#fff}"]
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }]; }, { events: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], height: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], autoplay: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], autoplayInterval: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], pauseOnHover: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], dots: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], margin: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], objectFit: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], minSwipeDistance: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], transitionDuration: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], transitionTimingFunction: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], counterSeparator: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], overflowCellsLimit: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], listeners: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], cellsToScroll: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], freeScroll: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], arrows: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], arrowsTheme: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], hostClassCarousel: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"],
+            args: ['class.carousel']
+        }], isCounter: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+            args: ['counter']
+        }], images: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], cellWidth: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+            args: ['cellWidth']
+        }], loop: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+            args: ['loop']
+        }], lightDOM: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+            args: ['lightDOM']
+        }], onWindowResize: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['window:resize', ['$event']]
+        }], onMousemove: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['mousemove', ['$event']]
+        }], onMouseleave: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['mouseleave', ['$event']]
+        }], hostStyleHeight: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"],
+            args: ['style.height']
+        }], hostStyleWidth: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"],
+            args: ['style.width']
+        }], id: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], width: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], borderRadius: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], videoProperties: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], cellsToShow: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], arrowsOutside: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+class IvyCarouselModule {
+}
+IvyCarouselModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: IvyCarouselModule });
+IvyCarouselModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function IvyCarouselModule_Factory(t) { return new (t || IvyCarouselModule)(); }, providers: [], imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](IvyCarouselModule, { declarations: function () { return [CarouselComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]; }, exports: function () { return [CarouselComponent]; } }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](IvyCarouselModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [
+                    CarouselComponent
+                ],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                ],
+                exports: [
+                    CarouselComponent
+                ],
+                providers: [],
+                bootstrap: [],
+                entryComponents: [
+                    CarouselComponent
+                ]
+            }]
+    }], null, null); })();
+
+/*
+ * Public API Surface of angular-responsive-carousel
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=angular-responsive-carousel.js.map
+
+/***/ }),
+
 /***/ "0Pi8":
 /*!******************************************************************!*\
   !*** ./node_modules/rxjs/_esm2015/internal/operators/endWith.js ***!
@@ -12290,6 +14229,1240 @@ function dispatchError(state) {
 
 /***/ }),
 
+/***/ "R0Ic":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js ***!
+  \******************************************************************************/
+/*! exports provided: AUTO_STYLE, AnimationBuilder, AnimationFactory, NoopAnimationPlayer, animate, animateChild, animation, group, keyframes, query, sequence, stagger, state, style, transition, trigger, useAnimation, ɵAnimationGroupPlayer, ɵPRE_STYLE */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AUTO_STYLE", function() { return AUTO_STYLE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnimationBuilder", function() { return AnimationBuilder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnimationFactory", function() { return AnimationFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoopAnimationPlayer", function() { return NoopAnimationPlayer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animate", function() { return animate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animateChild", function() { return animateChild; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animation", function() { return animation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "group", function() { return group; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframes", function() { return keyframes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "query", function() { return query; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sequence", function() { return sequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stagger", function() { return stagger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "state", function() { return state; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "style", function() { return style; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transition", function() { return transition; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trigger", function() { return trigger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useAnimation", function() { return useAnimation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵAnimationGroupPlayer", function() { return AnimationGroupPlayer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵPRE_STYLE", function() { return ɵPRE_STYLE; });
+/**
+ * @license Angular v11.2.3
+ * (c) 2010-2021 Google LLC. https://angular.io/
+ * License: MIT
+ */
+
+/**
+ * An injectable service that produces an animation sequence programmatically within an
+ * Angular component or directive.
+ * Provided by the `BrowserAnimationsModule` or `NoopAnimationsModule`.
+ *
+ * @usageNotes
+ *
+ * To use this service, add it to your component or directive as a dependency.
+ * The service is instantiated along with your component.
+ *
+ * Apps do not typically need to create their own animation players, but if you
+ * do need to, follow these steps:
+ *
+ * 1. Use the `build()` method to create a programmatic animation using the
+ * `animate()` function. The method returns an `AnimationFactory` instance.
+ *
+ * 2. Use the factory object to create an `AnimationPlayer` and attach it to a DOM element.
+ *
+ * 3. Use the player object to control the animation programmatically.
+ *
+ * For example:
+ *
+ * ```ts
+ * // import the service from BrowserAnimationsModule
+ * import {AnimationBuilder} from '@angular/animations';
+ * // require the service as a dependency
+ * class MyCmp {
+ *   constructor(private _builder: AnimationBuilder) {}
+ *
+ *   makeAnimation(element: any) {
+ *     // first define a reusable animation
+ *     const myAnimation = this._builder.build([
+ *       style({ width: 0 }),
+ *       animate(1000, style({ width: '100px' }))
+ *     ]);
+ *
+ *     // use the returned factory object to create a player
+ *     const player = myAnimation.create(element);
+ *
+ *     player.play();
+ *   }
+ * }
+ * ```
+ *
+ * @publicApi
+ */
+class AnimationBuilder {
+}
+/**
+ * A factory object returned from the `AnimationBuilder`.`build()` method.
+ *
+ * @publicApi
+ */
+class AnimationFactory {
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Specifies automatic styling.
+ *
+ * @publicApi
+ */
+const AUTO_STYLE = '*';
+/**
+ * Creates a named animation trigger, containing a  list of `state()`
+ * and `transition()` entries to be evaluated when the expression
+ * bound to the trigger changes.
+ *
+ * @param name An identifying string.
+ * @param definitions  An animation definition object, containing an array of `state()`
+ * and `transition()` declarations.
+ *
+ * @return An object that encapsulates the trigger data.
+ *
+ * @usageNotes
+ * Define an animation trigger in the `animations` section of `@Component` metadata.
+ * In the template, reference the trigger by name and bind it to a trigger expression that
+ * evaluates to a defined animation state, using the following format:
+ *
+ * `[@triggerName]="expression"`
+ *
+ * Animation trigger bindings convert all values to strings, and then match the
+ * previous and current values against any linked transitions.
+ * Booleans can be specified as `1` or `true` and `0` or `false`.
+ *
+ * ### Usage Example
+ *
+ * The following example creates an animation trigger reference based on the provided
+ * name value.
+ * The provided animation value is expected to be an array consisting of state and
+ * transition declarations.
+ *
+ * ```typescript
+ * @Component({
+ *   selector: "my-component",
+ *   templateUrl: "my-component-tpl.html",
+ *   animations: [
+ *     trigger("myAnimationTrigger", [
+ *       state(...),
+ *       state(...),
+ *       transition(...),
+ *       transition(...)
+ *     ])
+ *   ]
+ * })
+ * class MyComponent {
+ *   myStatusExp = "something";
+ * }
+ * ```
+ *
+ * The template associated with this component makes use of the defined trigger
+ * by binding to an element within its template code.
+ *
+ * ```html
+ * <!-- somewhere inside of my-component-tpl.html -->
+ * <div [@myAnimationTrigger]="myStatusExp">...</div>
+ * ```
+ *
+ * ### Using an inline function
+ * The `transition` animation method also supports reading an inline function which can decide
+ * if its associated animation should be run.
+ *
+ * ```typescript
+ * // this method is run each time the `myAnimationTrigger` trigger value changes.
+ * function myInlineMatcherFn(fromState: string, toState: string, element: any, params: {[key:
+ string]: any}): boolean {
+ *   // notice that `element` and `params` are also available here
+ *   return toState == 'yes-please-animate';
+ * }
+ *
+ * @Component({
+ *   selector: 'my-component',
+ *   templateUrl: 'my-component-tpl.html',
+ *   animations: [
+ *     trigger('myAnimationTrigger', [
+ *       transition(myInlineMatcherFn, [
+ *         // the animation sequence code
+ *       ]),
+ *     ])
+ *   ]
+ * })
+ * class MyComponent {
+ *   myStatusExp = "yes-please-animate";
+ * }
+ * ```
+ *
+ * ### Disabling Animations
+ * When true, the special animation control binding `@.disabled` binding prevents
+ * all animations from rendering.
+ * Place the  `@.disabled` binding on an element to disable
+ * animations on the element itself, as well as any inner animation triggers
+ * within the element.
+ *
+ * The following example shows how to use this feature:
+ *
+ * ```typescript
+ * @Component({
+ *   selector: 'my-component',
+ *   template: `
+ *     <div [@.disabled]="isDisabled">
+ *       <div [@childAnimation]="exp"></div>
+ *     </div>
+ *   `,
+ *   animations: [
+ *     trigger("childAnimation", [
+ *       // ...
+ *     ])
+ *   ]
+ * })
+ * class MyComponent {
+ *   isDisabled = true;
+ *   exp = '...';
+ * }
+ * ```
+ *
+ * When `@.disabled` is true, it prevents the `@childAnimation` trigger from animating,
+ * along with any inner animations.
+ *
+ * ### Disable animations application-wide
+ * When an area of the template is set to have animations disabled,
+ * **all** inner components have their animations disabled as well.
+ * This means that you can disable all animations for an app
+ * by placing a host binding set on `@.disabled` on the topmost Angular component.
+ *
+ * ```typescript
+ * import {Component, HostBinding} from '@angular/core';
+ *
+ * @Component({
+ *   selector: 'app-component',
+ *   templateUrl: 'app.component.html',
+ * })
+ * class AppComponent {
+ *   @HostBinding('@.disabled')
+ *   public animationsDisabled = true;
+ * }
+ * ```
+ *
+ * ### Overriding disablement of inner animations
+ * Despite inner animations being disabled, a parent animation can `query()`
+ * for inner elements located in disabled areas of the template and still animate
+ * them if needed. This is also the case for when a sub animation is
+ * queried by a parent and then later animated using `animateChild()`.
+ *
+ * ### Detecting when an animation is disabled
+ * If a region of the DOM (or the entire application) has its animations disabled, the animation
+ * trigger callbacks still fire, but for zero seconds. When the callback fires, it provides
+ * an instance of an `AnimationEvent`. If animations are disabled,
+ * the `.disabled` flag on the event is true.
+ *
+ * @publicApi
+ */
+function trigger(name, definitions) {
+    return { type: 7 /* Trigger */, name, definitions, options: {} };
+}
+/**
+ * Defines an animation step that combines styling information with timing information.
+ *
+ * @param timings Sets `AnimateTimings` for the parent animation.
+ * A string in the format "duration [delay] [easing]".
+ *  - Duration and delay are expressed as a number and optional time unit,
+ * such as "1s" or "10ms" for one second and 10 milliseconds, respectively.
+ * The default unit is milliseconds.
+ *  - The easing value controls how the animation accelerates and decelerates
+ * during its runtime. Value is one of  `ease`, `ease-in`, `ease-out`,
+ * `ease-in-out`, or a `cubic-bezier()` function call.
+ * If not supplied, no easing is applied.
+ *
+ * For example, the string "1s 100ms ease-out" specifies a duration of
+ * 1000 milliseconds, and delay of 100 ms, and the "ease-out" easing style,
+ * which decelerates near the end of the duration.
+ * @param styles Sets AnimationStyles for the parent animation.
+ * A function call to either `style()` or `keyframes()`
+ * that returns a collection of CSS style entries to be applied to the parent animation.
+ * When null, uses the styles from the destination state.
+ * This is useful when describing an animation step that will complete an animation;
+ * see "Animating to the final state" in `transitions()`.
+ * @returns An object that encapsulates the animation step.
+ *
+ * @usageNotes
+ * Call within an animation `sequence()`, `{@link animations/group group()}`, or
+ * `transition()` call to specify an animation step
+ * that applies given style data to the parent animation for a given amount of time.
+ *
+ * ### Syntax Examples
+ * **Timing examples**
+ *
+ * The following examples show various `timings` specifications.
+ * - `animate(500)` : Duration is 500 milliseconds.
+ * - `animate("1s")` : Duration is 1000 milliseconds.
+ * - `animate("100ms 0.5s")` : Duration is 100 milliseconds, delay is 500 milliseconds.
+ * - `animate("5s ease-in")` : Duration is 5000 milliseconds, easing in.
+ * - `animate("5s 10ms cubic-bezier(.17,.67,.88,.1)")` : Duration is 5000 milliseconds, delay is 10
+ * milliseconds, easing according to a bezier curve.
+ *
+ * **Style examples**
+ *
+ * The following example calls `style()` to set a single CSS style.
+ * ```typescript
+ * animate(500, style({ background: "red" }))
+ * ```
+ * The following example calls `keyframes()` to set a CSS style
+ * to different values for successive keyframes.
+ * ```typescript
+ * animate(500, keyframes(
+ *  [
+ *   style({ background: "blue" }),
+ *   style({ background: "red" })
+ *  ])
+ * ```
+ *
+ * @publicApi
+ */
+function animate(timings, styles = null) {
+    return { type: 4 /* Animate */, styles, timings };
+}
+/**
+ * @description Defines a list of animation steps to be run in parallel.
+ *
+ * @param steps An array of animation step objects.
+ * - When steps are defined by `style()` or `animate()`
+ * function calls, each call within the group is executed instantly.
+ * - To specify offset styles to be applied at a later time, define steps with
+ * `keyframes()`, or use `animate()` calls with a delay value.
+ * For example:
+ *
+ * ```typescript
+ * group([
+ *   animate("1s", style({ background: "black" })),
+ *   animate("2s", style({ color: "white" }))
+ * ])
+ * ```
+ *
+ * @param options An options object containing a delay and
+ * developer-defined parameters that provide styling defaults and
+ * can be overridden on invocation.
+ *
+ * @return An object that encapsulates the group data.
+ *
+ * @usageNotes
+ * Grouped animations are useful when a series of styles must be
+ * animated at different starting times and closed off at different ending times.
+ *
+ * When called within a `sequence()` or a
+ * `transition()` call, does not continue to the next
+ * instruction until all of the inner animation steps have completed.
+ *
+ * @publicApi
+ */
+function group(steps, options = null) {
+    return { type: 3 /* Group */, steps, options };
+}
+/**
+ * Defines a list of animation steps to be run sequentially, one by one.
+ *
+ * @param steps An array of animation step objects.
+ * - Steps defined by `style()` calls apply the styling data immediately.
+ * - Steps defined by `animate()` calls apply the styling data over time
+ *   as specified by the timing data.
+ *
+ * ```typescript
+ * sequence([
+ *   style({ opacity: 0 }),
+ *   animate("1s", style({ opacity: 1 }))
+ * ])
+ * ```
+ *
+ * @param options An options object containing a delay and
+ * developer-defined parameters that provide styling defaults and
+ * can be overridden on invocation.
+ *
+ * @return An object that encapsulates the sequence data.
+ *
+ * @usageNotes
+ * When you pass an array of steps to a
+ * `transition()` call, the steps run sequentially by default.
+ * Compare this to the `{@link animations/group group()}` call, which runs animation steps in
+ *parallel.
+ *
+ * When a sequence is used within a `{@link animations/group group()}` or a `transition()` call,
+ * execution continues to the next instruction only after each of the inner animation
+ * steps have completed.
+ *
+ * @publicApi
+ **/
+function sequence(steps, options = null) {
+    return { type: 2 /* Sequence */, steps, options };
+}
+/**
+ * Declares a key/value object containing CSS properties/styles that
+ * can then be used for an animation `state`, within an animation `sequence`,
+ * or as styling data for calls to `animate()` and `keyframes()`.
+ *
+ * @param tokens A set of CSS styles or HTML styles associated with an animation state.
+ * The value can be any of the following:
+ * - A key-value style pair associating a CSS property with a value.
+ * - An array of key-value style pairs.
+ * - An asterisk (*), to use auto-styling, where styles are derived from the element
+ * being animated and applied to the animation when it starts.
+ *
+ * Auto-styling can be used to define a state that depends on layout or other
+ * environmental factors.
+ *
+ * @return An object that encapsulates the style data.
+ *
+ * @usageNotes
+ * The following examples create animation styles that collect a set of
+ * CSS property values:
+ *
+ * ```typescript
+ * // string values for CSS properties
+ * style({ background: "red", color: "blue" })
+ *
+ * // numerical pixel values
+ * style({ width: 100, height: 0 })
+ * ```
+ *
+ * The following example uses auto-styling to allow a component to animate from
+ * a height of 0 up to the height of the parent element:
+ *
+ * ```
+ * style({ height: 0 }),
+ * animate("1s", style({ height: "*" }))
+ * ```
+ *
+ * @publicApi
+ **/
+function style(tokens) {
+    return { type: 6 /* Style */, styles: tokens, offset: null };
+}
+/**
+ * Declares an animation state within a trigger attached to an element.
+ *
+ * @param name One or more names for the defined state in a comma-separated string.
+ * The following reserved state names can be supplied to define a style for specific use
+ * cases:
+ *
+ * - `void` You can associate styles with this name to be used when
+ * the element is detached from the application. For example, when an `ngIf` evaluates
+ * to false, the state of the associated element is void.
+ *  - `*` (asterisk) Indicates the default state. You can associate styles with this name
+ * to be used as the fallback when the state that is being animated is not declared
+ * within the trigger.
+ *
+ * @param styles A set of CSS styles associated with this state, created using the
+ * `style()` function.
+ * This set of styles persists on the element once the state has been reached.
+ * @param options Parameters that can be passed to the state when it is invoked.
+ * 0 or more key-value pairs.
+ * @return An object that encapsulates the new state data.
+ *
+ * @usageNotes
+ * Use the `trigger()` function to register states to an animation trigger.
+ * Use the `transition()` function to animate between states.
+ * When a state is active within a component, its associated styles persist on the element,
+ * even when the animation ends.
+ *
+ * @publicApi
+ **/
+function state(name, styles, options) {
+    return { type: 0 /* State */, name, styles, options };
+}
+/**
+ * Defines a set of animation styles, associating each style with an optional `offset` value.
+ *
+ * @param steps A set of animation styles with optional offset data.
+ * The optional `offset` value for a style specifies a percentage of the total animation
+ * time at which that style is applied.
+ * @returns An object that encapsulates the keyframes data.
+ *
+ * @usageNotes
+ * Use with the `animate()` call. Instead of applying animations
+ * from the current state
+ * to the destination state, keyframes describe how each style entry is applied and at what point
+ * within the animation arc.
+ * Compare [CSS Keyframe Animations](https://www.w3schools.com/css/css3_animations.asp).
+ *
+ * ### Usage
+ *
+ * In the following example, the offset values describe
+ * when each `backgroundColor` value is applied. The color is red at the start, and changes to
+ * blue when 20% of the total time has elapsed.
+ *
+ * ```typescript
+ * // the provided offset values
+ * animate("5s", keyframes([
+ *   style({ backgroundColor: "red", offset: 0 }),
+ *   style({ backgroundColor: "blue", offset: 0.2 }),
+ *   style({ backgroundColor: "orange", offset: 0.3 }),
+ *   style({ backgroundColor: "black", offset: 1 })
+ * ]))
+ * ```
+ *
+ * If there are no `offset` values specified in the style entries, the offsets
+ * are calculated automatically.
+ *
+ * ```typescript
+ * animate("5s", keyframes([
+ *   style({ backgroundColor: "red" }) // offset = 0
+ *   style({ backgroundColor: "blue" }) // offset = 0.33
+ *   style({ backgroundColor: "orange" }) // offset = 0.66
+ *   style({ backgroundColor: "black" }) // offset = 1
+ * ]))
+ *```
+
+ * @publicApi
+ */
+function keyframes(steps) {
+    return { type: 5 /* Keyframes */, steps };
+}
+/**
+ * Declares an animation transition as a sequence of animation steps to run when a given
+ * condition is satisfied. The condition is a Boolean expression or function that compares
+ * the previous and current animation states, and returns true if this transition should occur.
+ * When the state criteria of a defined transition are met, the associated animation is
+ * triggered.
+ *
+ * @param stateChangeExpr A Boolean expression or function that compares the previous and current
+ * animation states, and returns true if this transition should occur. Note that  "true" and "false"
+ * match 1 and 0, respectively. An expression is evaluated each time a state change occurs in the
+ * animation trigger element.
+ * The animation steps run when the expression evaluates to true.
+ *
+ * - A state-change string takes the form "state1 => state2", where each side is a defined animation
+ * state, or an asterix (*) to refer to a dynamic start or end state.
+ *   - The expression string can contain multiple comma-separated statements;
+ * for example "state1 => state2, state3 => state4".
+ *   - Special values `:enter` and `:leave` initiate a transition on the entry and exit states,
+ * equivalent to  "void => *"  and "* => void".
+ *   - Special values `:increment` and `:decrement` initiate a transition when a numeric value has
+ * increased or decreased in value.
+ * - A function is executed each time a state change occurs in the animation trigger element.
+ * The animation steps run when the function returns true.
+ *
+ * @param steps One or more animation objects, as returned by the `animate()` or
+ * `sequence()` function, that form a transformation from one state to another.
+ * A sequence is used by default when you pass an array.
+ * @param options An options object that can contain a delay value for the start of the animation,
+ * and additional developer-defined parameters. Provided values for additional parameters are used
+ * as defaults, and override values can be passed to the caller on invocation.
+ * @returns An object that encapsulates the transition data.
+ *
+ * @usageNotes
+ * The template associated with a component binds an animation trigger to an element.
+ *
+ * ```HTML
+ * <!-- somewhere inside of my-component-tpl.html -->
+ * <div [@myAnimationTrigger]="myStatusExp">...</div>
+ * ```
+ *
+ * All transitions are defined within an animation trigger,
+ * along with named states that the transitions change to and from.
+ *
+ * ```typescript
+ * trigger("myAnimationTrigger", [
+ *  // define states
+ *  state("on", style({ background: "green" })),
+ *  state("off", style({ background: "grey" })),
+ *  ...]
+ * ```
+ *
+ * Note that when you call the `sequence()` function within a `{@link animations/group group()}`
+ * or a `transition()` call, execution does not continue to the next instruction
+ * until each of the inner animation steps have completed.
+ *
+ * ### Syntax examples
+ *
+ * The following examples define transitions between the two defined states (and default states),
+ * using various options:
+ *
+ * ```typescript
+ * // Transition occurs when the state value
+ * // bound to "myAnimationTrigger" changes from "on" to "off"
+ * transition("on => off", animate(500))
+ * // Run the same animation for both directions
+ * transition("on <=> off", animate(500))
+ * // Define multiple state-change pairs separated by commas
+ * transition("on => off, off => void", animate(500))
+ * ```
+ *
+ * ### Special values for state-change expressions
+ *
+ * - Catch-all state change for when an element is inserted into the page and the
+ * destination state is unknown:
+ *
+ * ```typescript
+ * transition("void => *", [
+ *  style({ opacity: 0 }),
+ *  animate(500)
+ *  ])
+ * ```
+ *
+ * - Capture a state change between any states:
+ *
+ *  `transition("* => *", animate("1s 0s"))`
+ *
+ * - Entry and exit transitions:
+ *
+ * ```typescript
+ * transition(":enter", [
+ *   style({ opacity: 0 }),
+ *   animate(500, style({ opacity: 1 }))
+ *   ]),
+ * transition(":leave", [
+ *   animate(500, style({ opacity: 0 }))
+ *   ])
+ * ```
+ *
+ * - Use `:increment` and `:decrement` to initiate transitions:
+ *
+ * ```typescript
+ * transition(":increment", group([
+ *  query(':enter', [
+ *     style({ left: '100%' }),
+ *     animate('0.5s ease-out', style('*'))
+ *   ]),
+ *  query(':leave', [
+ *     animate('0.5s ease-out', style({ left: '-100%' }))
+ *  ])
+ * ]))
+ *
+ * transition(":decrement", group([
+ *  query(':enter', [
+ *     style({ left: '100%' }),
+ *     animate('0.5s ease-out', style('*'))
+ *   ]),
+ *  query(':leave', [
+ *     animate('0.5s ease-out', style({ left: '-100%' }))
+ *  ])
+ * ]))
+ * ```
+ *
+ * ### State-change functions
+ *
+ * Here is an example of a `fromState` specified as a state-change function that invokes an
+ * animation when true:
+ *
+ * ```typescript
+ * transition((fromState, toState) =>
+ *  {
+ *   return fromState == "off" && toState == "on";
+ *  },
+ *  animate("1s 0s"))
+ * ```
+ *
+ * ### Animating to the final state
+ *
+ * If the final step in a transition is a call to `animate()` that uses a timing value
+ * with no style data, that step is automatically considered the final animation arc,
+ * for the element to reach the final state. Angular automatically adds or removes
+ * CSS styles to ensure that the element is in the correct final state.
+ *
+ * The following example defines a transition that starts by hiding the element,
+ * then makes sure that it animates properly to whatever state is currently active for trigger:
+ *
+ * ```typescript
+ * transition("void => *", [
+ *   style({ opacity: 0 }),
+ *   animate(500)
+ *  ])
+ * ```
+ * ### Boolean value matching
+ * If a trigger binding value is a Boolean, it can be matched using a transition expression
+ * that compares true and false or 1 and 0. For example:
+ *
+ * ```
+ * // in the template
+ * <div [@openClose]="open ? true : false">...</div>
+ * // in the component metadata
+ * trigger('openClose', [
+ *   state('true', style({ height: '*' })),
+ *   state('false', style({ height: '0px' })),
+ *   transition('false <=> true', animate(500))
+ * ])
+ * ```
+ *
+ * @publicApi
+ **/
+function transition(stateChangeExpr, steps, options = null) {
+    return { type: 1 /* Transition */, expr: stateChangeExpr, animation: steps, options };
+}
+/**
+ * Produces a reusable animation that can be invoked in another animation or sequence,
+ * by calling the `useAnimation()` function.
+ *
+ * @param steps One or more animation objects, as returned by the `animate()`
+ * or `sequence()` function, that form a transformation from one state to another.
+ * A sequence is used by default when you pass an array.
+ * @param options An options object that can contain a delay value for the start of the
+ * animation, and additional developer-defined parameters.
+ * Provided values for additional parameters are used as defaults,
+ * and override values can be passed to the caller on invocation.
+ * @returns An object that encapsulates the animation data.
+ *
+ * @usageNotes
+ * The following example defines a reusable animation, providing some default parameter
+ * values.
+ *
+ * ```typescript
+ * var fadeAnimation = animation([
+ *   style({ opacity: '{{ start }}' }),
+ *   animate('{{ time }}',
+ *   style({ opacity: '{{ end }}'}))
+ *   ],
+ *   { params: { time: '1000ms', start: 0, end: 1 }});
+ * ```
+ *
+ * The following invokes the defined animation with a call to `useAnimation()`,
+ * passing in override parameter values.
+ *
+ * ```js
+ * useAnimation(fadeAnimation, {
+ *   params: {
+ *     time: '2s',
+ *     start: 1,
+ *     end: 0
+ *   }
+ * })
+ * ```
+ *
+ * If any of the passed-in parameter values are missing from this call,
+ * the default values are used. If one or more parameter values are missing before a step is
+ * animated, `useAnimation()` throws an error.
+ *
+ * @publicApi
+ */
+function animation(steps, options = null) {
+    return { type: 8 /* Reference */, animation: steps, options };
+}
+/**
+ * Executes a queried inner animation element within an animation sequence.
+ *
+ * @param options An options object that can contain a delay value for the start of the
+ * animation, and additional override values for developer-defined parameters.
+ * @return An object that encapsulates the child animation data.
+ *
+ * @usageNotes
+ * Each time an animation is triggered in Angular, the parent animation
+ * has priority and any child animations are blocked. In order
+ * for a child animation to run, the parent animation must query each of the elements
+ * containing child animations, and run them using this function.
+ *
+ * Note that this feature is designed to be used with `query()` and it will only work
+ * with animations that are assigned using the Angular animation library. CSS keyframes
+ * and transitions are not handled by this API.
+ *
+ * @publicApi
+ */
+function animateChild(options = null) {
+    return { type: 9 /* AnimateChild */, options };
+}
+/**
+ * Starts a reusable animation that is created using the `animation()` function.
+ *
+ * @param animation The reusable animation to start.
+ * @param options An options object that can contain a delay value for the start of
+ * the animation, and additional override values for developer-defined parameters.
+ * @return An object that contains the animation parameters.
+ *
+ * @publicApi
+ */
+function useAnimation(animation, options = null) {
+    return { type: 10 /* AnimateRef */, animation, options };
+}
+/**
+ * Finds one or more inner elements within the current element that is
+ * being animated within a sequence. Use with `animate()`.
+ *
+ * @param selector The element to query, or a set of elements that contain Angular-specific
+ * characteristics, specified with one or more of the following tokens.
+ *  - `query(":enter")` or `query(":leave")` : Query for newly inserted/removed elements.
+ *  - `query(":animating")` : Query all currently animating elements.
+ *  - `query("@triggerName")` : Query elements that contain an animation trigger.
+ *  - `query("@*")` : Query all elements that contain an animation triggers.
+ *  - `query(":self")` : Include the current element into the animation sequence.
+ *
+ * @param animation One or more animation steps to apply to the queried element or elements.
+ * An array is treated as an animation sequence.
+ * @param options An options object. Use the 'limit' field to limit the total number of
+ * items to collect.
+ * @return An object that encapsulates the query data.
+ *
+ * @usageNotes
+ * Tokens can be merged into a combined query selector string. For example:
+ *
+ * ```typescript
+ *  query(':self, .record:enter, .record:leave, @subTrigger', [...])
+ * ```
+ *
+ * The `query()` function collects multiple elements and works internally by using
+ * `element.querySelectorAll`. Use the `limit` field of an options object to limit
+ * the total number of items to be collected. For example:
+ *
+ * ```js
+ * query('div', [
+ *   animate(...),
+ *   animate(...)
+ * ], { limit: 1 })
+ * ```
+ *
+ * By default, throws an error when zero items are found. Set the
+ * `optional` flag to ignore this error. For example:
+ *
+ * ```js
+ * query('.some-element-that-may-not-be-there', [
+ *   animate(...),
+ *   animate(...)
+ * ], { optional: true })
+ * ```
+ *
+ * ### Usage Example
+ *
+ * The following example queries for inner elements and animates them
+ * individually using `animate()`.
+ *
+ * ```typescript
+ * @Component({
+ *   selector: 'inner',
+ *   template: `
+ *     <div [@queryAnimation]="exp">
+ *       <h1>Title</h1>
+ *       <div class="content">
+ *         Blah blah blah
+ *       </div>
+ *     </div>
+ *   `,
+ *   animations: [
+ *    trigger('queryAnimation', [
+ *      transition('* => goAnimate', [
+ *        // hide the inner elements
+ *        query('h1', style({ opacity: 0 })),
+ *        query('.content', style({ opacity: 0 })),
+ *
+ *        // animate the inner elements in, one by one
+ *        query('h1', animate(1000, style({ opacity: 1 }))),
+ *        query('.content', animate(1000, style({ opacity: 1 }))),
+ *      ])
+ *    ])
+ *  ]
+ * })
+ * class Cmp {
+ *   exp = '';
+ *
+ *   goAnimate() {
+ *     this.exp = 'goAnimate';
+ *   }
+ * }
+ * ```
+ *
+ * @publicApi
+ */
+function query(selector, animation, options = null) {
+    return { type: 11 /* Query */, selector, animation, options };
+}
+/**
+ * Use within an animation `query()` call to issue a timing gap after
+ * each queried item is animated.
+ *
+ * @param timings A delay value.
+ * @param animation One ore more animation steps.
+ * @returns An object that encapsulates the stagger data.
+ *
+ * @usageNotes
+ * In the following example, a container element wraps a list of items stamped out
+ * by an `ngFor`. The container element contains an animation trigger that will later be set
+ * to query for each of the inner items.
+ *
+ * Each time items are added, the opacity fade-in animation runs,
+ * and each removed item is faded out.
+ * When either of these animations occur, the stagger effect is
+ * applied after each item's animation is started.
+ *
+ * ```html
+ * <!-- list.component.html -->
+ * <button (click)="toggle()">Show / Hide Items</button>
+ * <hr />
+ * <div [@listAnimation]="items.length">
+ *   <div *ngFor="let item of items">
+ *     {{ item }}
+ *   </div>
+ * </div>
+ * ```
+ *
+ * Here is the component code:
+ *
+ * ```typescript
+ * import {trigger, transition, style, animate, query, stagger} from '@angular/animations';
+ * @Component({
+ *   templateUrl: 'list.component.html',
+ *   animations: [
+ *     trigger('listAnimation', [
+ *     ...
+ *     ])
+ *   ]
+ * })
+ * class ListComponent {
+ *   items = [];
+ *
+ *   showItems() {
+ *     this.items = [0,1,2,3,4];
+ *   }
+ *
+ *   hideItems() {
+ *     this.items = [];
+ *   }
+ *
+ *   toggle() {
+ *     this.items.length ? this.hideItems() : this.showItems();
+ *    }
+ *  }
+ * ```
+ *
+ * Here is the animation trigger code:
+ *
+ * ```typescript
+ * trigger('listAnimation', [
+ *   transition('* => *', [ // each time the binding value changes
+ *     query(':leave', [
+ *       stagger(100, [
+ *         animate('0.5s', style({ opacity: 0 }))
+ *       ])
+ *     ]),
+ *     query(':enter', [
+ *       style({ opacity: 0 }),
+ *       stagger(100, [
+ *         animate('0.5s', style({ opacity: 1 }))
+ *       ])
+ *     ])
+ *   ])
+ * ])
+ * ```
+ *
+ * @publicApi
+ */
+function stagger(timings, animation) {
+    return { type: 12 /* Stagger */, timings, animation };
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+function scheduleMicroTask(cb) {
+    Promise.resolve(null).then(cb);
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * An empty programmatic controller for reusable animations.
+ * Used internally when animations are disabled, to avoid
+ * checking for the null case when an animation player is expected.
+ *
+ * @see `animate()`
+ * @see `AnimationPlayer`
+ * @see `GroupPlayer`
+ *
+ * @publicApi
+ */
+class NoopAnimationPlayer {
+    constructor(duration = 0, delay = 0) {
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._onDestroyFns = [];
+        this._started = false;
+        this._destroyed = false;
+        this._finished = false;
+        this._position = 0;
+        this.parentPlayer = null;
+        this.totalTime = duration + delay;
+    }
+    _onFinish() {
+        if (!this._finished) {
+            this._finished = true;
+            this._onDoneFns.forEach(fn => fn());
+            this._onDoneFns = [];
+        }
+    }
+    onStart(fn) {
+        this._onStartFns.push(fn);
+    }
+    onDone(fn) {
+        this._onDoneFns.push(fn);
+    }
+    onDestroy(fn) {
+        this._onDestroyFns.push(fn);
+    }
+    hasStarted() {
+        return this._started;
+    }
+    init() { }
+    play() {
+        if (!this.hasStarted()) {
+            this._onStart();
+            this.triggerMicrotask();
+        }
+        this._started = true;
+    }
+    /** @internal */
+    triggerMicrotask() {
+        scheduleMicroTask(() => this._onFinish());
+    }
+    _onStart() {
+        this._onStartFns.forEach(fn => fn());
+        this._onStartFns = [];
+    }
+    pause() { }
+    restart() { }
+    finish() {
+        this._onFinish();
+    }
+    destroy() {
+        if (!this._destroyed) {
+            this._destroyed = true;
+            if (!this.hasStarted()) {
+                this._onStart();
+            }
+            this.finish();
+            this._onDestroyFns.forEach(fn => fn());
+            this._onDestroyFns = [];
+        }
+    }
+    reset() { }
+    setPosition(position) {
+        this._position = this.totalTime ? position * this.totalTime : 1;
+    }
+    getPosition() {
+        return this.totalTime ? this._position / this.totalTime : 1;
+    }
+    /** @internal */
+    triggerCallback(phaseName) {
+        const methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
+        methods.forEach(fn => fn());
+        methods.length = 0;
+    }
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A programmatic controller for a group of reusable animations.
+ * Used internally to control animations.
+ *
+ * @see `AnimationPlayer`
+ * @see `{@link animations/group group()}`
+ *
+ */
+class AnimationGroupPlayer {
+    constructor(_players) {
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._finished = false;
+        this._started = false;
+        this._destroyed = false;
+        this._onDestroyFns = [];
+        this.parentPlayer = null;
+        this.totalTime = 0;
+        this.players = _players;
+        let doneCount = 0;
+        let destroyCount = 0;
+        let startCount = 0;
+        const total = this.players.length;
+        if (total == 0) {
+            scheduleMicroTask(() => this._onFinish());
+        }
+        else {
+            this.players.forEach(player => {
+                player.onDone(() => {
+                    if (++doneCount == total) {
+                        this._onFinish();
+                    }
+                });
+                player.onDestroy(() => {
+                    if (++destroyCount == total) {
+                        this._onDestroy();
+                    }
+                });
+                player.onStart(() => {
+                    if (++startCount == total) {
+                        this._onStart();
+                    }
+                });
+            });
+        }
+        this.totalTime = this.players.reduce((time, player) => Math.max(time, player.totalTime), 0);
+    }
+    _onFinish() {
+        if (!this._finished) {
+            this._finished = true;
+            this._onDoneFns.forEach(fn => fn());
+            this._onDoneFns = [];
+        }
+    }
+    init() {
+        this.players.forEach(player => player.init());
+    }
+    onStart(fn) {
+        this._onStartFns.push(fn);
+    }
+    _onStart() {
+        if (!this.hasStarted()) {
+            this._started = true;
+            this._onStartFns.forEach(fn => fn());
+            this._onStartFns = [];
+        }
+    }
+    onDone(fn) {
+        this._onDoneFns.push(fn);
+    }
+    onDestroy(fn) {
+        this._onDestroyFns.push(fn);
+    }
+    hasStarted() {
+        return this._started;
+    }
+    play() {
+        if (!this.parentPlayer) {
+            this.init();
+        }
+        this._onStart();
+        this.players.forEach(player => player.play());
+    }
+    pause() {
+        this.players.forEach(player => player.pause());
+    }
+    restart() {
+        this.players.forEach(player => player.restart());
+    }
+    finish() {
+        this._onFinish();
+        this.players.forEach(player => player.finish());
+    }
+    destroy() {
+        this._onDestroy();
+    }
+    _onDestroy() {
+        if (!this._destroyed) {
+            this._destroyed = true;
+            this._onFinish();
+            this.players.forEach(player => player.destroy());
+            this._onDestroyFns.forEach(fn => fn());
+            this._onDestroyFns = [];
+        }
+    }
+    reset() {
+        this.players.forEach(player => player.reset());
+        this._destroyed = false;
+        this._finished = false;
+        this._started = false;
+    }
+    setPosition(p) {
+        const timeAtPosition = p * this.totalTime;
+        this.players.forEach(player => {
+            const position = player.totalTime ? Math.min(1, timeAtPosition / player.totalTime) : 1;
+            player.setPosition(position);
+        });
+    }
+    getPosition() {
+        const longestPlayer = this.players.reduce((longestSoFar, player) => {
+            const newPlayerIsLongest = longestSoFar === null || player.totalTime > longestSoFar.totalTime;
+            return newPlayerIsLongest ? player : longestSoFar;
+        }, null);
+        return longestPlayer != null ? longestPlayer.getPosition() : 0;
+    }
+    beforeDestroy() {
+        this.players.forEach(player => {
+            if (player.beforeDestroy) {
+                player.beforeDestroy();
+            }
+        });
+    }
+    /** @internal */
+    triggerCallback(phaseName) {
+        const methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
+        methods.forEach(fn => fn());
+        methods.length = 0;
+    }
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+const ɵPRE_STYLE = '!';
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=animations.js.map
+
+/***/ }),
+
 /***/ "RUbi":
 /*!************************************************************************!*\
   !*** ./node_modules/rxjs/_esm2015/internal/scheduler/AsapScheduler.js ***!
@@ -13827,6 +17000,3803 @@ function concatMap(project, resultSelector) {
     return Object(_mergeMap__WEBPACK_IMPORTED_MODULE_0__["mergeMap"])(project, resultSelector, 1);
 }
 //# sourceMappingURL=concatMap.js.map
+
+/***/ }),
+
+/***/ "bhfF":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/ngx-owl-carousel-o/__ivy_ngcc__/fesm2015/ngx-owl-carousel-o.js ***!
+  \*************************************************************************************/
+/*! exports provided: CarouselComponent, CarouselModule, CarouselSlideDirective, OwlRouterLinkDirective, OwlRouterLinkWithHrefDirective, SlidesOutputData, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵu, ɵv, ɵw, ɵx */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarouselComponent", function() { return CarouselComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarouselModule", function() { return CarouselModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarouselSlideDirective", function() { return CarouselSlideDirective; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OwlRouterLinkDirective", function() { return OwlRouterLinkDirective; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OwlRouterLinkWithHrefDirective", function() { return OwlRouterLinkWithHrefDirective; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SlidesOutputData", function() { return SlidesOutputData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return NavigationService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return CarouselService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return OwlLogger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return AutoplayService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return WINDOW; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return WindowRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return BrowserWindowRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return windowFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵi", function() { return browserWindowProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵj", function() { return windowProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵk", function() { return WINDOW_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵl", function() { return DOCUMENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵm", function() { return DocumentRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵn", function() { return BrowserDocumentRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵo", function() { return documentFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵp", function() { return browserDocumentProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵq", function() { return documentProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵr", function() { return DOCUMENT_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵs", function() { return LazyLoadService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵt", function() { return AnimateService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵu", function() { return AutoHeightService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵv", function() { return HashService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵw", function() { return ResizeService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵx", function() { return StageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "qCKp");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/animations */ "R0Ic");
+
+
+
+
+
+
+
+
+
+
+
+
+
+const _c0 = function (a0, a1) { return { "isMouseDragable": a0, "isTouchDragable": a1 }; };
+function CarouselComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "owl-stage", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("owlDraggable", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction2"](3, _c0, ctx_r1.owlDOMData == null ? null : ctx_r1.owlDOMData.isMouseDragable, ctx_r1.owlDOMData == null ? null : ctx_r1.owlDOMData.isTouchDragable))("stageData", ctx_r1.stageData)("slidesData", ctx_r1.slidesData);
+} }
+const _c1 = function (a0, a1) { return { "active": a0, "owl-dot-text": a1 }; };
+function CarouselComponent_ng_container_3_div_5_Template(rf, ctx) { if (rf & 1) {
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CarouselComponent_ng_container_3_div_5_Template_div_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); const dot_r4 = ctx.$implicit; const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r5.moveByDot(dot_r4.id); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const dot_r4 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction2"](2, _c1, dot_r4.active, dot_r4.showInnerContent));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", dot_r4.innerContent, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+} }
+const _c2 = function (a0) { return { "disabled": a0 }; };
+function CarouselComponent_ng_container_3_Template(rf, ctx) { if (rf & 1) {
+    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CarouselComponent_ng_container_3_Template_div_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r7.prev(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CarouselComponent_ng_container_3_Template_div_click_3_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r9.next(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, CarouselComponent_ng_container_3_div_5_Template, 2, 5, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](7, _c2, ctx_r2.navData == null ? null : ctx_r2.navData.disabled));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](9, _c2, ctx_r2.navData == null ? null : ctx_r2.navData.prev == null ? null : ctx_r2.navData.prev.disabled))("innerHTML", ctx_r2.navData == null ? null : ctx_r2.navData.prev == null ? null : ctx_r2.navData.prev.htmlText, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](11, _c2, ctx_r2.navData == null ? null : ctx_r2.navData.next == null ? null : ctx_r2.navData.next.disabled))("innerHTML", ctx_r2.navData == null ? null : ctx_r2.navData.next == null ? null : ctx_r2.navData.next.htmlText, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](13, _c2, ctx_r2.dotsData == null ? null : ctx_r2.dotsData.disabled));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r2.dotsData == null ? null : ctx_r2.dotsData.dots);
+} }
+const _c3 = function (a0, a1, a2, a3, a4) { return { "owl-rtl": a0, "owl-loaded": a1, "owl-responsive": a2, "owl-drag": a3, "owl-grab": a4 }; };
+function StageComponent_ng_container_2_2_ng_template_0_Template(rf, ctx) { }
+function StageComponent_ng_container_2_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, StageComponent_ng_container_2_2_ng_template_0_Template, 0, 0, "ng-template", 4);
+} if (rf & 2) {
+    const slide_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", slide_r1.tplRef);
+} }
+const _c4 = function (a0, a1, a2, a3) { return { "width": a0, "margin-left": a1, "margin-right": a2, "left": a3 }; };
+function StageComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
+    const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("animationend", function StageComponent_ng_container_2_Template_div_animationend_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7); const slide_r1 = ctx.$implicit; const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r6.clear(slide_r1.id); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, StageComponent_ng_container_2_2_Template, 1, 1, undefined, 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    const slide_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", slide_r1.classes)("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction4"](4, _c4, slide_r1.width + "px", slide_r1.marginL ? slide_r1.marginL + "px" : "", slide_r1.marginR ? slide_r1.marginR + "px" : "", slide_r1.left))("@autoHeight", slide_r1.heightState);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", slide_r1.load);
+} }
+const _c5 = function (a0, a1, a2, a3, a4) { return { "width": a0, "transform": a1, "transition": a2, "padding-left": a3, "padding-right": a4 }; };
+class ResizeService {
+    constructor(eventManager) {
+        this.eventManager = eventManager;
+        this.resizeSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this.eventManager.addGlobalEventListener('window', 'resize', this.onResize.bind(this));
+        this.eventManager.addGlobalEventListener('window', 'onload', this.onLoaded.bind(this));
+    }
+    /**
+     * Makes resizeSubject become Observable
+     * @returns Observable of resizeSubject
+     */
+    get onResize$() {
+        return this.resizeSubject.asObservable();
+    }
+    /**
+     * Handler of 'resize' event. Passes data throw resizeSubject
+     * @param event Event Object of 'resize' event
+     */
+    onResize(event) {
+        this.resizeSubject.next(event.target);
+    }
+    /**
+     * Handler of 'onload' event. Defines the width of window
+     * @param event Event Object of 'onload' event
+     */
+    onLoaded(event) {
+        this.windowWidth = event.target;
+    }
+}
+ResizeService.ɵfac = function ResizeService_Factory(t) { return new (t || ResizeService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["EventManager"])); };
+ResizeService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ResizeService, factory: ResizeService.ɵfac });
+ResizeService.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["EventManager"] }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ResizeService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["EventManager"] }]; }, null); })();
+
+/**
+ * Defaults value of options
+ */
+class OwlCarouselOConfig {
+    constructor() {
+        this.items = 3;
+        this.skip_validateItems = false;
+        this.loop = false;
+        this.center = false;
+        this.rewind = false;
+        this.mouseDrag = true;
+        this.touchDrag = true;
+        this.pullDrag = true;
+        this.freeDrag = false;
+        this.margin = 0;
+        this.stagePadding = 0;
+        this.merge = false;
+        this.mergeFit = true;
+        this.autoWidth = false;
+        this.startPosition = 0;
+        this.rtl = false;
+        this.smartSpeed = 250;
+        this.fluidSpeed = false;
+        this.dragEndSpeed = false;
+        this.responsive = {};
+        this.responsiveRefreshRate = 200;
+        // defaults to Navigation
+        this.nav = false;
+        this.navText = ['prev', 'next'];
+        this.navSpeed = false;
+        this.slideBy = 1; // stage moves on 1 width of slide; if slideBy = 2, stage moves on 2 widths of slide
+        this.dots = true;
+        this.dotsEach = false;
+        this.dotsData = false;
+        this.dotsSpeed = false;
+        // defaults to Autoplay
+        this.autoplay = false;
+        this.autoplayTimeout = 5000;
+        this.autoplayHoverPause = false;
+        this.autoplaySpeed = false;
+        this.autoplayMouseleaveTimeout = 1;
+        // defaults to LazyLoading
+        this.lazyLoad = false;
+        this.lazyLoadEager = 0;
+        // defaults to Animate
+        this.slideTransition = '';
+        this.animateOut = false;
+        this.animateIn = false;
+        // defaults to AutoHeight
+        this.autoHeight = false;
+        // defaults to Hash
+        this.URLhashListener = false;
+    }
+}
+/**
+ * we can't read types from OwlOptions in javascript because of props have undefined value and types of those props are used for validating inputs
+ * class below is copy of OwlOptions but its all props have string value showing certain type;
+ * this is class is being used just in method _validateOptions() of CarouselService;
+ */
+class OwlOptionsMockedTypes {
+    constructor() {
+        this.items = 'number';
+        this.skip_validateItems = 'boolean';
+        this.loop = 'boolean';
+        this.center = 'boolean';
+        this.rewind = 'boolean';
+        this.mouseDrag = 'boolean';
+        this.touchDrag = 'boolean';
+        this.pullDrag = 'boolean';
+        this.freeDrag = 'boolean';
+        this.margin = 'number';
+        this.stagePadding = 'number';
+        this.merge = 'boolean';
+        this.mergeFit = 'boolean';
+        this.autoWidth = 'boolean';
+        this.startPosition = 'number|string';
+        this.rtl = 'boolean';
+        this.smartSpeed = 'number';
+        this.fluidSpeed = 'boolean';
+        this.dragEndSpeed = 'number|boolean';
+        this.responsive = {};
+        this.responsiveRefreshRate = 'number';
+        // defaults to Navigation
+        this.nav = 'boolean';
+        this.navText = 'string[]';
+        this.navSpeed = 'number|boolean';
+        this.slideBy = 'number|string'; // stage moves on 1 width of slide; if slideBy = 2, stage moves on 2 widths of slide
+        this.dots = 'boolean';
+        this.dotsEach = 'number|boolean';
+        this.dotsData = 'boolean';
+        this.dotsSpeed = 'number|boolean';
+        // defaults to Autoplay
+        this.autoplay = 'boolean';
+        this.autoplayTimeout = 'number';
+        this.autoplayHoverPause = 'boolean';
+        this.autoplaySpeed = 'number|boolean';
+        this.autoplayMouseleaveTimeout = 'number';
+        // defaults to LazyLoading
+        this.lazyLoad = 'boolean';
+        this.lazyLoadEager = 'number';
+        // defaults to Animate
+        this.slideTransition = 'string';
+        this.animateOut = 'string|boolean';
+        this.animateIn = 'string|boolean';
+        // defaults to AutoHeight
+        this.autoHeight = 'boolean';
+        // defaults to Hash
+        this.URLhashListener = "boolean";
+    }
+}
+
+class OwlLogger {
+    constructor(errorHandler) {
+        this.errorHandler = errorHandler;
+    }
+    log(value, ...rest) {
+        if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()) {
+            console.log(value, ...rest);
+        }
+    }
+    error(error) {
+        this.errorHandler.handleError(error);
+    }
+    warn(value, ...rest) {
+        console.warn(value, ...rest);
+    }
+}
+OwlLogger.ɵfac = function OwlLogger_Factory(t) { return new (t || OwlLogger)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"])); };
+OwlLogger.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: OwlLogger, factory: OwlLogger.ɵfac });
+OwlLogger.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"] }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](OwlLogger, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"] }]; }, null); })();
+
+/**
+ * Current state information and their tags.
+ */
+class States {
+}
+/**
+ * Enumeration for types.
+ * @enum {String}
+ */
+var Type;
+(function (Type) {
+    Type["Event"] = "event";
+    Type["State"] = "state";
+})(Type || (Type = {}));
+;
+/**
+ * Enumeration for width.
+ * @enum {String}
+ */
+var Width;
+(function (Width) {
+    Width["Default"] = "default";
+    Width["Inner"] = "inner";
+    Width["Outer"] = "outer";
+})(Width || (Width = {}));
+;
+/**
+ * Model for coords of .owl-stage
+ */
+class Coords {
+}
+/**
+ * Model for all current data of carousel
+ */
+class CarouselCurrentData {
+}
+class CarouselService {
+    constructor(logger) {
+        this.logger = logger;
+        /**
+       * Subject for passing data needed for managing View
+       */
+        this._viewSettingsShipper$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the carousel got initializes
+       */
+        this._initializedCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the carousel's settings start changinf
+       */
+        this._changeSettingsCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the carousel's settings have changed
+       */
+        this._changedSettingsCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the carousel starts translating or moving
+       */
+        this._translateCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the carousel stopped translating or moving
+       */
+        this._translatedCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the carousel's rebuilding caused by 'resize' event starts
+       */
+        this._resizeCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification  when the carousel's rebuilding caused by 'resize' event is ended
+       */
+        this._resizedCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the refresh of carousel starts
+       */
+        this._refreshCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the refresh of carousel is ended
+       */
+        this._refreshedCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the dragging of carousel starts
+       */
+        this._dragCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+       * Subject for notification when the dragging of carousel is ended
+       */
+        this._draggedCarousel$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+         * Current settings for the carousel.
+         */
+        this.settings = {
+            items: 0
+        };
+        /**
+       * Initial data for setting classes to element .owl-carousel
+       */
+        this.owlDOMData = {
+            rtl: false,
+            isResponsive: false,
+            isRefreshed: false,
+            isLoaded: false,
+            isLoading: false,
+            isMouseDragable: false,
+            isGrab: false,
+            isTouchDragable: false
+        };
+        /**
+       * Initial data of .owl-stage
+       */
+        this.stageData = {
+            transform: 'translate3d(0px,0px,0px)',
+            transition: '0s',
+            width: 0,
+            paddingL: 0,
+            paddingR: 0
+        };
+        /**
+         * All real items.
+         */
+        this._items = []; // is equal to this.slides
+        /**
+       * Array with width of every slide.
+       */
+        this._widths = [];
+        /**
+       * Currently suppressed events to prevent them from beeing retriggered.
+       */
+        this._supress = {};
+        /**
+         * References to the running plugins of this carousel.
+         */
+        this._plugins = {};
+        /**
+       * Absolute current position.
+       */
+        this._current = null;
+        /**
+       * All cloned items.
+       */
+        this._clones = [];
+        /**
+         * Merge values of all items.
+         * @todo Maybe this could be part of a plugin.
+         */
+        this._mergers = [];
+        /**
+       * Animation speed in milliseconds.
+       */
+        this._speed = null;
+        /**
+       * Coordinates of all items in pixel.
+       * @todo The name of this member is missleading.
+       */
+        this._coordinates = [];
+        /**
+       * Current breakpoint.
+       * @todo Real media queries would be nice.
+       */
+        this._breakpoint = null;
+        /**
+         * Prefix for id of cloned slides
+         */
+        this.clonedIdPrefix = 'cloned-';
+        /**
+         * Current options set by the caller including defaults.
+         */
+        this._options = {};
+        /**
+         * Invalidated parts within the update process.
+         */
+        this._invalidated = {};
+        /**
+         * Current state information and their tags.
+         */
+        this._states = {
+            current: {},
+            tags: {
+                initializing: ['busy'],
+                animating: ['busy'],
+                dragging: ['interacting']
+            }
+        };
+        /**
+         * Ordered list of workers for the update process.
+       */
+        this._pipe = [
+            // {
+            //   filter: ['width', 'settings'],
+            //   run: () => {
+            //     this._width = this.carouselWindowWidth;
+            //   }
+            // },
+            {
+                filter: ['width', 'items', 'settings'],
+                run: cache => {
+                    cache.current = this._items && this._items[this.relative(this._current)].id;
+                }
+            },
+            // {
+            //   filter: ['items', 'settings'],
+            //   run: function() {
+            //     // this.$stage.children('.cloned').remove();
+            //   }
+            // },
+            {
+                filter: ['width', 'items', 'settings'],
+                run: (cache) => {
+                    const margin = this.settings.margin || '', grid = !this.settings.autoWidth, rtl = this.settings.rtl, css = {
+                        'margin-left': rtl ? margin : '',
+                        'margin-right': rtl ? '' : margin
+                    };
+                    if (!grid) {
+                        this.slidesData.forEach(slide => {
+                            slide.marginL = css['margin-left'];
+                            slide.marginR = css['margin-right'];
+                        });
+                    }
+                    cache.css = css;
+                }
+            },
+            {
+                filter: ['width', 'items', 'settings'],
+                run: (cache) => {
+                    const width = +(this.width() / this.settings.items).toFixed(3) - this.settings.margin, grid = !this.settings.autoWidth, widths = [];
+                    let merge = null, iterator = this._items.length;
+                    cache.items = {
+                        merge: false,
+                        width: width
+                    };
+                    while (iterator--) {
+                        merge = this._mergers[iterator];
+                        merge = this.settings.mergeFit && Math.min(merge, this.settings.items) || merge;
+                        cache.items.merge = merge > 1 || cache.items.merge;
+                        widths[iterator] = !grid ? this._items[iterator].width ? this._items[iterator].width : width : width * merge;
+                    }
+                    this._widths = widths;
+                    this.slidesData.forEach((slide, i) => {
+                        slide.width = this._widths[i];
+                        slide.marginR = cache.css['margin-right'];
+                        slide.marginL = cache.css['margin-left'];
+                    });
+                }
+            }, {
+                filter: ['items', 'settings'],
+                run: () => {
+                    const clones = [], items = this._items, settings = this.settings, 
+                    // TODO: Should be computed from number of min width items in stage
+                    view = Math.max(settings.items * 2, 4), size = Math.ceil(items.length / 2) * 2;
+                    let append = [], prepend = [], repeat = settings.loop && items.length ? settings.rewind ? view : Math.max(view, size) : 0;
+                    repeat /= 2;
+                    while (repeat--) {
+                        // Switch to only using appended clones
+                        clones.push(this.normalize(clones.length / 2, true));
+                        append.push(Object.assign({}, this.slidesData[clones[clones.length - 1]]));
+                        clones.push(this.normalize(items.length - 1 - (clones.length - 1) / 2, true));
+                        prepend.unshift(Object.assign({}, this.slidesData[clones[clones.length - 1]]));
+                    }
+                    this._clones = clones;
+                    append = append.map(slide => {
+                        slide.id = `${this.clonedIdPrefix}${slide.id}`;
+                        slide.isActive = false;
+                        slide.isCloned = true;
+                        return slide;
+                    });
+                    prepend = prepend.map(slide => {
+                        slide.id = `${this.clonedIdPrefix}${slide.id}`;
+                        slide.isActive = false;
+                        slide.isCloned = true;
+                        return slide;
+                    });
+                    this.slidesData = prepend.concat(this.slidesData).concat(append);
+                }
+            },
+            {
+                filter: ['width', 'items', 'settings'],
+                run: () => {
+                    const rtl = this.settings.rtl ? 1 : -1, size = this._clones.length + this._items.length, coordinates = [];
+                    let iterator = -1, previous = 0, current = 0;
+                    while (++iterator < size) {
+                        previous = coordinates[iterator - 1] || 0;
+                        current = this._widths[this.relative(iterator)] + this.settings.margin;
+                        coordinates.push(previous + current * rtl);
+                    }
+                    this._coordinates = coordinates;
+                }
+            }, {
+                filter: ['width', 'items', 'settings'],
+                run: () => {
+                    const padding = this.settings.stagePadding, coordinates = this._coordinates, css = {
+                        'width': Math.ceil(Math.abs(coordinates[coordinates.length - 1])) + padding * 2,
+                        'padding-left': padding || '',
+                        'padding-right': padding || ''
+                    };
+                    this.stageData.width = css.width; // use this property in *ngIf directive for .owl-stage element
+                    this.stageData.paddingL = css['padding-left'];
+                    this.stageData.paddingR = css['padding-right'];
+                }
+            }, {
+                //   filter: [ 'width', 'items', 'settings' ],
+                //   run: cache => {
+                // 		// this method sets the width for every slide, but I set it in different way earlier
+                // 		const grid = !this.settings.autoWidth,
+                // 		items = this.$stage.children(); // use this.slidesData
+                //     let iterator = this._coordinates.length;
+                //     if (grid && cache.items.merge) {
+                //       while (iterator--) {
+                //         cache.css.width = this._widths[this.relative(iterator)];
+                //         items.eq(iterator).css(cache.css);
+                //       }
+                //     } else if (grid) {
+                //       cache.css.width = cache.items.width;
+                //       items.css(cache.css);
+                //     }
+                //   }
+                // }, {
+                //   filter: [ 'items' ],
+                //   run: function() {
+                //     this._coordinates.length < 1 && this.$stage.removeAttr('style');
+                //   }
+                // }, {
+                filter: ['width', 'items', 'settings'],
+                run: cache => {
+                    let current = cache.current ? this.slidesData.findIndex(slide => slide.id === cache.current) : 0;
+                    current = Math.max(this.minimum(), Math.min(this.maximum(), current));
+                    this.reset(current);
+                }
+            }, {
+                filter: ['position'],
+                run: () => {
+                    this.animate(this.coordinates(this._current));
+                }
+            }, {
+                filter: ['width', 'position', 'items', 'settings'],
+                run: () => {
+                    const rtl = this.settings.rtl ? 1 : -1, padding = this.settings.stagePadding * 2, matches = [];
+                    let begin, end, inner, outer, i, n;
+                    begin = this.coordinates(this.current());
+                    if (typeof begin === 'number') {
+                        begin += padding;
+                    }
+                    else {
+                        begin = 0;
+                    }
+                    end = begin + this.width() * rtl;
+                    if (rtl === -1 && this.settings.center) {
+                        const result = this._coordinates.filter(element => {
+                            return this.settings.items % 2 === 1 ? element >= begin : element > begin;
+                        });
+                        begin = result.length ? result[result.length - 1] : begin;
+                    }
+                    for (i = 0, n = this._coordinates.length; i < n; i++) {
+                        inner = Math.ceil(this._coordinates[i - 1] || 0);
+                        outer = Math.ceil(Math.abs(this._coordinates[i]) + padding * rtl);
+                        if ((this._op(inner, '<=', begin) && (this._op(inner, '>', end)))
+                            || (this._op(outer, '<', begin) && this._op(outer, '>', end))) {
+                            matches.push(i);
+                        }
+                    }
+                    this.slidesData.forEach(slide => {
+                        slide.isActive = false;
+                        return slide;
+                    });
+                    matches.forEach(item => {
+                        this.slidesData[item].isActive = true;
+                    });
+                    if (this.settings.center) {
+                        this.slidesData.forEach(slide => {
+                            slide.isCentered = false;
+                            return slide;
+                        });
+                        this.slidesData[this.current()].isCentered = true;
+                    }
+                }
+            }
+        ];
+    }
+    // Is needed for tests
+    get invalidated() {
+        return this._invalidated;
+    }
+    // is needed for tests
+    get states() {
+        return this._states;
+    }
+    /**
+     * Makes _viewSettingsShipper$ Subject become Observable
+     * @returns Observable of _viewSettingsShipper$ Subject
+     */
+    getViewCurSettings() {
+        return this._viewSettingsShipper$.asObservable();
+    }
+    /**
+     * Makes _initializedCarousel$ Subject become Observable
+     * @returns Observable of _initializedCarousel$ Subject
+     */
+    getInitializedState() {
+        return this._initializedCarousel$.asObservable();
+    }
+    /**
+     * Makes _changeSettingsCarousel$ Subject become Observable
+     * @returns Observable of _changeSettingsCarousel$ Subject
+     */
+    getChangeState() {
+        return this._changeSettingsCarousel$.asObservable();
+    }
+    /**
+     * Makes _changedSettingsCarousel$ Subject become Observable
+     * @returns Observable of _changedSettingsCarousel$ Subject
+     */
+    getChangedState() {
+        return this._changedSettingsCarousel$.asObservable();
+    }
+    /**
+     * Makes _translateCarousel$ Subject become Observable
+     * @returns Observable of _translateCarousel$ Subject
+     */
+    getTranslateState() {
+        return this._translateCarousel$.asObservable();
+    }
+    /**
+     * Makes _translatedCarousel$ Subject become Observable
+     * @returns Observable of _translatedCarousel$ Subject
+     */
+    getTranslatedState() {
+        return this._translatedCarousel$.asObservable();
+    }
+    /**
+     * Makes _resizeCarousel$ Subject become Observable
+     * @returns Observable of _resizeCarousel$ Subject
+     */
+    getResizeState() {
+        return this._resizeCarousel$.asObservable();
+    }
+    /**
+     * Makes _resizedCarousel$ Subject become Observable
+     * @returns Observable of _resizedCarousel$ Subject
+     */
+    getResizedState() {
+        return this._resizedCarousel$.asObservable();
+    }
+    /**
+     * Makes _refreshCarousel$ Subject become Observable
+     * @returns Observable of _refreshCarousel$ Subject
+     */
+    getRefreshState() {
+        return this._refreshCarousel$.asObservable();
+    }
+    /**
+     * Makes _refreshedCarousel$ Subject become Observable
+     * @returns Observable of _refreshedCarousel$ Subject
+     */
+    getRefreshedState() {
+        return this._refreshedCarousel$.asObservable();
+    }
+    /**
+     * Makes _dragCarousel$ Subject become Observable
+     * @returns Observable of _dragCarousel$ Subject
+     */
+    getDragState() {
+        return this._dragCarousel$.asObservable();
+    }
+    /**
+     * Makes _draggedCarousel$ Subject become Observable
+     * @returns Observable of _draggedCarousel$ Subject
+     */
+    getDraggedState() {
+        return this._draggedCarousel$.asObservable();
+    }
+    /**
+     * Setups custom options expanding default options
+     * @param options custom options
+     */
+    setOptions(options) {
+        const configOptions = new OwlCarouselOConfig();
+        const checkedOptions = this._validateOptions(options, configOptions);
+        this._options = Object.assign(Object.assign({}, configOptions), checkedOptions);
+    }
+    /**
+     * Checks whether user's option are set properly. Cheking is based on typings;
+     * @param options options set by user
+     * @param configOptions default options
+     * @returns checked and modified (if it's needed) user's options
+     *
+     * Notes:
+     * 	- if user set option with wrong type, it'll be written in console
+     */
+    _validateOptions(options, configOptions) {
+        const checkedOptions = Object.assign({}, options);
+        const mockedTypes = new OwlOptionsMockedTypes();
+        const setRightOption = (type, key) => {
+            this.logger.log(`options.${key} must be type of ${type}; ${key}=${options[key]} skipped to defaults: ${key}=${configOptions[key]}`);
+            return configOptions[key];
+        };
+        for (const key in checkedOptions) {
+            if (checkedOptions.hasOwnProperty(key)) {
+                // condition could be shortened but it gets harder for understanding
+                if (mockedTypes[key] === 'number') {
+                    if (this._isNumeric(checkedOptions[key])) {
+                        checkedOptions[key] = +checkedOptions[key];
+                        checkedOptions[key] = key === 'items' ? this._validateItems(checkedOptions[key], checkedOptions.skip_validateItems) : checkedOptions[key];
+                    }
+                    else {
+                        checkedOptions[key] = setRightOption(mockedTypes[key], key);
+                    }
+                }
+                else if (mockedTypes[key] === 'boolean' && typeof checkedOptions[key] !== 'boolean') {
+                    checkedOptions[key] = setRightOption(mockedTypes[key], key);
+                }
+                else if (mockedTypes[key] === 'number|boolean' && !this._isNumberOrBoolean(checkedOptions[key])) {
+                    checkedOptions[key] = setRightOption(mockedTypes[key], key);
+                }
+                else if (mockedTypes[key] === 'number|string' && !this._isNumberOrString(checkedOptions[key])) {
+                    checkedOptions[key] = setRightOption(mockedTypes[key], key);
+                }
+                else if (mockedTypes[key] === 'string|boolean' && !this._isStringOrBoolean(checkedOptions[key])) {
+                    checkedOptions[key] = setRightOption(mockedTypes[key], key);
+                }
+                else if (mockedTypes[key] === 'string[]') {
+                    if (Array.isArray(checkedOptions[key])) {
+                        let isString = false;
+                        checkedOptions[key].forEach(element => {
+                            isString = typeof element === 'string' ? true : false;
+                        });
+                        if (!isString) {
+                            checkedOptions[key] = setRightOption(mockedTypes[key], key);
+                        }
+                        ;
+                    }
+                    else {
+                        checkedOptions[key] = setRightOption(mockedTypes[key], key);
+                    }
+                }
+            }
+        }
+        return checkedOptions;
+    }
+    /**
+     * Checks the option `items` set by user and if it bigger than number of slides, the function returns number of slides
+     * @param items option items set by user
+     * @param skip_validateItems option `skip_validateItems` set by user
+     * @returns right number of items
+     */
+    _validateItems(items, skip_validateItems) {
+        let result = items;
+        if (items > this._items.length) {
+            if (skip_validateItems) {
+                this.logger.log('The option \'items\' in your options is bigger than the number of slides. The navigation got disabled');
+            }
+            else {
+                result = this._items.length;
+                this.logger.log('The option \'items\' in your options is bigger than the number of slides. This option is updated to the current number of slides and the navigation got disabled');
+            }
+        }
+        else {
+            if (items === this._items.length && (this.settings.dots || this.settings.nav)) {
+                this.logger.log('Option \'items\' in your options is equal to the number of slides. So the navigation got disabled');
+            }
+        }
+        return result;
+    }
+    /**
+     * Set current width of carousel
+     * @param width width of carousel Window
+     */
+    setCarouselWidth(width) {
+        this._width = width;
+    }
+    /**
+       * Setups the current settings.
+       * @todo Remove responsive classes. Why should adaptive designs be brought into IE8?
+       * @todo Support for media queries by using `matchMedia` would be nice.
+       * @param carouselWidth width of carousel
+       * @param slides array of slides
+       * @param options options set by user
+       */
+    setup(carouselWidth, slides, options) {
+        this.setCarouselWidth(carouselWidth);
+        this.setItems(slides);
+        this._defineSlidesData();
+        this.setOptions(options);
+        this.settings = Object.assign({}, this._options);
+        this.setOptionsForViewport();
+        this._trigger('change', { property: { name: 'settings', value: this.settings } });
+        this.invalidate('settings'); // must be call of this function;
+        this._trigger('changed', { property: { name: 'settings', value: this.settings } });
+    }
+    /**
+     * Set options for current viewport
+     */
+    setOptionsForViewport() {
+        const viewport = this._width, overwrites = this._options.responsive;
+        let match = -1;
+        if (!Object.keys(overwrites).length) {
+            return;
+        }
+        if (!viewport) {
+            this.settings.items = 1;
+            return;
+        }
+        for (const key in overwrites) {
+            if (overwrites.hasOwnProperty(key)) {
+                if (+key <= viewport && +key > match) {
+                    match = Number(key);
+                }
+            }
+        }
+        this.settings = Object.assign(Object.assign(Object.assign({}, this._options), overwrites[match]), { items: (overwrites[match] && overwrites[match].items) ? this._validateItems(overwrites[match].items, this._options.skip_validateItems) : this._options.items });
+        // if (typeof this.settings.stagePadding === 'function') {
+        // 	this.settings.stagePadding = this.settings.stagePadding();
+        // }
+        delete this.settings.responsive;
+        this.owlDOMData.isResponsive = true;
+        this.owlDOMData.isMouseDragable = this.settings.mouseDrag;
+        this.owlDOMData.isTouchDragable = this.settings.touchDrag;
+        const mergers = [];
+        this._items.forEach(item => {
+            const mergeN = this.settings.merge ? item.dataMerge : 1;
+            mergers.push(mergeN);
+        });
+        this._mergers = mergers;
+        this._breakpoint = match;
+        this.invalidate('settings');
+    }
+    /**
+     * Initializes the carousel.
+     * @param slides array of CarouselSlideDirective
+     */
+    initialize(slides) {
+        this.enter('initializing');
+        // this.trigger('initialize');
+        this.owlDOMData.rtl = this.settings.rtl;
+        if (this._mergers.length) {
+            this._mergers = [];
+        }
+        slides.forEach(item => {
+            const mergeN = this.settings.merge ? item.dataMerge : 1;
+            this._mergers.push(mergeN);
+        });
+        this._clones = [];
+        this.reset(this._isNumeric(this.settings.startPosition) ? +this.settings.startPosition : 0);
+        this.invalidate('items');
+        this.refresh();
+        this.owlDOMData.isLoaded = true;
+        this.owlDOMData.isMouseDragable = this.settings.mouseDrag;
+        this.owlDOMData.isTouchDragable = this.settings.touchDrag;
+        this.sendChanges();
+        this.leave('initializing');
+        this._trigger('initialized');
+    }
+    ;
+    /**
+     * Sends all data needed for View
+     */
+    sendChanges() {
+        this._viewSettingsShipper$.next({
+            owlDOMData: this.owlDOMData,
+            stageData: this.stageData,
+            slidesData: this.slidesData,
+            navData: this.navData,
+            dotsData: this.dotsData
+        });
+    }
+    /**
+       * Updates option logic if necessery
+       */
+    _optionsLogic() {
+        if (this.settings.autoWidth) {
+            this.settings.stagePadding = 0;
+            this.settings.merge = false;
+        }
+    }
+    /**
+     * Updates the view
+     */
+    update() {
+        let i = 0;
+        const n = this._pipe.length, filter = item => this._invalidated[item], cache = {};
+        while (i < n) {
+            const filteredPipe = this._pipe[i].filter.filter(filter);
+            if (this._invalidated.all || filteredPipe.length > 0) {
+                this._pipe[i].run(cache);
+            }
+            i++;
+        }
+        this.slidesData.forEach(slide => slide.classes = this.setCurSlideClasses(slide));
+        this.sendChanges();
+        this._invalidated = {};
+        if (!this.is('valid')) {
+            this.enter('valid');
+        }
+    }
+    /**
+       * Gets the width of the view.
+       * @param [dimension=Width.Default] The dimension to return
+       * @returns The width of the view in pixel.
+       */
+    width(dimension) {
+        dimension = dimension || Width.Default;
+        switch (dimension) {
+            case Width.Inner:
+            case Width.Outer:
+                return this._width;
+            default:
+                return this._width - this.settings.stagePadding * 2 + this.settings.margin;
+        }
+    }
+    /**
+       * Refreshes the carousel primarily for adaptive purposes.
+       */
+    refresh() {
+        this.enter('refreshing');
+        this._trigger('refresh');
+        this._defineSlidesData();
+        this.setOptionsForViewport();
+        this._optionsLogic();
+        // this.$element.addClass(this.options.refreshClass);
+        this.update();
+        // this.$element.removeClass(this.options.refreshClass);
+        this.leave('refreshing');
+        this._trigger('refreshed');
+    }
+    /**
+       * Checks window `resize` event.
+       * @param curWidth width of .owl-carousel
+       */
+    onResize(curWidth) {
+        if (!this._items.length) {
+            return false;
+        }
+        this.setCarouselWidth(curWidth);
+        this.enter('resizing');
+        // if (this.trigger('resize').isDefaultPrevented()) {
+        // 	this.leave('resizing');
+        // 	return false;
+        // }
+        this._trigger('resize');
+        this.invalidate('width');
+        this.refresh();
+        this.leave('resizing');
+        this._trigger('resized');
+    }
+    /**
+       * Prepares data for dragging carousel. It starts after firing `touchstart` and `mousedown` events.
+       * @todo Horizontal swipe threshold as option
+       * @todo #261
+       * @param event - The event arguments.
+       * @returns stage - object with 'x' and 'y' coordinates of .owl-stage
+       */
+    prepareDragging(event) {
+        let stage = null, transformArr;
+        // could be 5 commented lines below; However there's stage transform in stageData and in updates after each move of stage
+        // stage = getComputedStyle(this.el.nativeElement).transform.replace(/.*\(|\)| /g, '').split(',');
+        // stage = {
+        //   x: stage[stage.length === 16 ? 12 : 4],
+        //   y: stage[stage.length === 16 ? 13 : 5]
+        // };
+        transformArr = this.stageData.transform.replace(/.*\(|\)| |[^,-\d]\w|\)/g, '').split(',');
+        stage = {
+            x: +transformArr[0],
+            y: +transformArr[1]
+        };
+        if (this.is('animating')) {
+            this.invalidate('position');
+        }
+        if (event.type === 'mousedown') {
+            this.owlDOMData.isGrab = true;
+        }
+        this.speed(0);
+        return stage;
+    }
+    /**
+     * Enters into a 'dragging' state
+     */
+    enterDragging() {
+        this.enter('dragging');
+        this._trigger('drag');
+    }
+    /**
+       * Defines new coords for .owl-stage while dragging it
+       * @todo #261
+       * @param event the event arguments.
+       * @param dragData initial data got after starting dragging
+       * @returns coords or false
+       */
+    defineNewCoordsDrag(event, dragData) {
+        let minimum = null, maximum = null, pull = null;
+        const delta = this.difference(dragData.pointer, this.pointer(event)), stage = this.difference(dragData.stage.start, delta);
+        if (!this.is('dragging')) {
+            return false;
+        }
+        if (this.settings.loop) {
+            minimum = this.coordinates(this.minimum());
+            maximum = +this.coordinates(this.maximum() + 1) - minimum;
+            stage.x = (((stage.x - minimum) % maximum + maximum) % maximum) + minimum;
+        }
+        else {
+            minimum = this.settings.rtl ? this.coordinates(this.maximum()) : this.coordinates(this.minimum());
+            maximum = this.settings.rtl ? this.coordinates(this.minimum()) : this.coordinates(this.maximum());
+            pull = this.settings.pullDrag ? -1 * delta.x / 5 : 0;
+            stage.x = Math.max(Math.min(stage.x, minimum + pull), maximum + pull);
+        }
+        return stage;
+    }
+    /**
+       * Finishes dragging of carousel when `touchend` and `mouseup` events fire.
+       * @todo #261
+       * @todo Threshold for click event
+       * @param event the event arguments.
+       * @param dragObj the object with dragging settings and states
+       * @param clickAttacher function which attaches click handler to slide or its children elements in order to prevent event bubling
+       */
+    finishDragging(event, dragObj, clickAttacher) {
+        const directions = ['right', 'left'], delta = this.difference(dragObj.pointer, this.pointer(event)), stage = dragObj.stage.current, direction = directions[+(this.settings.rtl ? delta.x < +this.settings.rtl : delta.x > +this.settings.rtl)];
+        let currentSlideI, current, newCurrent;
+        if (delta.x !== 0 && this.is('dragging') || !this.is('valid')) {
+            this.speed(+this.settings.dragEndSpeed || this.settings.smartSpeed);
+            currentSlideI = this.closest(stage.x, delta.x !== 0 ? direction : dragObj.direction);
+            current = this.current();
+            newCurrent = this.current(currentSlideI === -1 ? undefined : currentSlideI);
+            if (current !== newCurrent) {
+                this.invalidate('position');
+                this.update();
+            }
+            dragObj.direction = direction;
+            if (Math.abs(delta.x) > 3 || new Date().getTime() - dragObj.time > 300) {
+                clickAttacher();
+            }
+        }
+        if (!this.is('dragging')) {
+            return;
+        }
+        this.leave('dragging');
+        this._trigger('dragged');
+    }
+    /**
+       * Gets absolute position of the closest item for a coordinate.
+       * @todo Setting `freeDrag` makes `closest` not reusable. See #165.
+       * @param coordinate The coordinate in pixel.
+       * @param direction The direction to check for the closest item. Ether `left` or `right`.
+       * @returns The absolute position of the closest item.
+       */
+    closest(coordinate, direction) {
+        const pull = 30, width = this.width();
+        let coordinates = this.coordinates(), position = -1;
+        if (this.settings.center) {
+            coordinates = coordinates.map(item => {
+                if (item === 0) {
+                    item += 0.000001;
+                }
+                return item;
+            });
+        }
+        // option 'freeDrag' doesn't have realization and using it here creates problem:
+        // variable 'position' stays unchanged (it equals -1 at the begging) and thus method returns -1
+        // Returning value is consumed by method current(), which taking -1 as argument calculates the index of new current slide
+        // In case of having 5 slides ans 'loop=false; calling 'current(-1)' sets props '_current' as 4. Just last slide remains visible instead of 3 last slides.
+        // if (!this.settings.freeDrag) {
+        // check closest item
+        for (let i = 0; i < coordinates.length; i++) {
+            if (direction === 'left' && coordinate > coordinates[i] - pull && coordinate < coordinates[i] + pull) {
+                position = i;
+                // on a right pull, check on previous index
+                // to do so, subtract width from value and set position = index + 1
+            }
+            else if (direction === 'right' && coordinate > coordinates[i] - width - pull && coordinate < coordinates[i] - width + pull) {
+                position = i + 1;
+            }
+            else if (this._op(coordinate, '<', coordinates[i])
+                && this._op(coordinate, '>', coordinates[i + 1] || coordinates[i] - width)) {
+                position = direction === 'left' ? i + 1 : i;
+            }
+            else if (direction === null && coordinate > coordinates[i] - pull && coordinate < coordinates[i] + pull) {
+                position = i;
+            }
+            if (position !== -1) {
+                break;
+            }
+            ;
+        }
+        // }
+        if (!this.settings.loop) {
+            // non loop boundries
+            if (this._op(coordinate, '>', coordinates[this.minimum()])) {
+                position = coordinate = this.minimum();
+            }
+            else if (this._op(coordinate, '<', coordinates[this.maximum()])) {
+                position = coordinate = this.maximum();
+            }
+        }
+        return position;
+    }
+    /**
+       * Animates the stage.
+       * @todo #270
+       * @param coordinate The coordinate in pixels.
+       */
+    animate(coordinate) {
+        const animate = this.speed() > 0;
+        if (this.is('animating')) {
+            this.onTransitionEnd();
+        }
+        if (animate) {
+            this.enter('animating');
+            this._trigger('translate');
+        }
+        this.stageData.transform = 'translate3d(' + coordinate + 'px,0px,0px)';
+        this.stageData.transition = (this.speed() / 1000) + 's' + (this.settings.slideTransition ? ' ' + this.settings.slideTransition : '');
+        // also there was transition by means of JQuery.animate or css-changing property left
+    }
+    /**
+       * Checks whether the carousel is in a specific state or not.
+       * @param state The state to check.
+       * @returns The flag which indicates if the carousel is busy.
+       */
+    is(state) {
+        return this._states.current[state] && this._states.current[state] > 0;
+    }
+    ;
+    /**
+       * Sets the absolute position of the current item.
+       * @param position The new absolute position or nothing to leave it unchanged.
+       * @returns The absolute position of the current item.
+       */
+    current(position) {
+        if (position === undefined) {
+            return this._current;
+        }
+        if (this._items.length === 0) {
+            return undefined;
+        }
+        position = this.normalize(position);
+        if (this._current !== position) {
+            const event = this._trigger('change', { property: { name: 'position', value: position } });
+            // if (event.data !== undefined) {
+            // 	position = this.normalize(event.data);
+            // }
+            this._current = position;
+            this.invalidate('position');
+            this._trigger('changed', { property: { name: 'position', value: this._current } });
+        }
+        return this._current;
+    }
+    /**
+       * Invalidates the given part of the update routine.
+       * @param part The part to invalidate.
+       * @returns The invalidated parts.
+       */
+    invalidate(part) {
+        if (typeof part === 'string') {
+            this._invalidated[part] = true;
+            if (this.is('valid')) {
+                this.leave('valid');
+            }
+        }
+        return Object.keys(this._invalidated);
+    }
+    ;
+    /**
+     * Resets the absolute position of the current item.
+     * @param position the absolute position of the new item.
+     */
+    reset(position) {
+        position = this.normalize(position);
+        if (position === undefined) {
+            return;
+        }
+        this._speed = 0;
+        this._current = position;
+        this._suppress(['translate', 'translated']);
+        this.animate(this.coordinates(position));
+        this._release(['translate', 'translated']);
+    }
+    /**
+       * Normalizes an absolute or a relative position of an item.
+       * @param position The absolute or relative position to normalize.
+       * @param relative Whether the given position is relative or not.
+       * @returns The normalized position.
+       */
+    normalize(position, relative) {
+        const n = this._items.length, m = relative ? 0 : this._clones.length;
+        if (!this._isNumeric(position) || n < 1) {
+            position = undefined;
+        }
+        else if (position < 0 || position >= n + m) {
+            position = ((position - m / 2) % n + n) % n + m / 2;
+        }
+        return position;
+    }
+    /**
+       * Converts an absolute position of an item into a relative one.
+       * @param position The absolute position to convert.
+       * @returns The converted position.
+       */
+    relative(position) {
+        position -= this._clones.length / 2;
+        return this.normalize(position, true);
+    }
+    /**
+       * Gets the maximum position for the current item.
+       * @param relative Whether to return an absolute position or a relative position.
+       * @returns number of maximum position
+       */
+    maximum(relative = false) {
+        const settings = this.settings;
+        let maximum = this._coordinates.length, iterator, reciprocalItemsWidth, elementWidth;
+        if (settings.loop) {
+            maximum = this._clones.length / 2 + this._items.length - 1;
+        }
+        else if (settings.autoWidth || settings.merge) {
+            iterator = this._items.length;
+            reciprocalItemsWidth = this.slidesData[--iterator].width;
+            elementWidth = this._width;
+            while (iterator--) {
+                // it could be use this._items instead of this.slidesData;
+                reciprocalItemsWidth += +this.slidesData[iterator].width + this.settings.margin;
+                if (reciprocalItemsWidth > elementWidth) {
+                    break;
+                }
+            }
+            maximum = iterator + 1;
+        }
+        else if (settings.center) {
+            maximum = this._items.length - 1;
+        }
+        else {
+            maximum = this._items.length - settings.items;
+        }
+        if (relative) {
+            maximum -= this._clones.length / 2;
+        }
+        return Math.max(maximum, 0);
+    }
+    /**
+       * Gets the minimum position for the current item.
+       * @param relative Whether to return an absolute position or a relative position.
+       * @returns number of minimum position
+       */
+    minimum(relative = false) {
+        return relative ? 0 : this._clones.length / 2;
+    }
+    /**
+       * Gets an item at the specified relative position.
+       * @param position The relative position of the item.
+       * @returns The item at the given position or all items if no position was given.
+       */
+    items(position) {
+        if (position === undefined) {
+            return this._items.slice();
+        }
+        position = this.normalize(position, true);
+        return [this._items[position]];
+    }
+    /**
+       * Gets an item at the specified relative position.
+       * @param position The relative position of the item.
+       * @returns The item at the given position or all items if no position was given.
+       */
+    mergers(position) {
+        if (position === undefined) {
+            return this._mergers.slice();
+        }
+        position = this.normalize(position, true);
+        return this._mergers[position];
+    }
+    /**
+       * Gets the absolute positions of clones for an item.
+       * @param position The relative position of the item.
+       * @returns The absolute positions of clones for the item or all if no position was given.
+       */
+    clones(position) {
+        const odd = this._clones.length / 2, even = odd + this._items.length, map = index => index % 2 === 0 ? even + index / 2 : odd - (index + 1) / 2;
+        if (position === undefined) {
+            return this._clones.map((v, i) => map(i));
+        }
+        return this._clones.map((v, i) => v === position ? map(i) : null).filter(item => item);
+    }
+    /**
+       * Sets the current animation speed.
+       * @param speed The animation speed in milliseconds or nothing to leave it unchanged.
+       * @returns The current animation speed in milliseconds.
+       */
+    speed(speed) {
+        if (speed !== undefined) {
+            this._speed = speed;
+        }
+        return this._speed;
+    }
+    /**
+       * Gets the coordinate of an item.
+       * @todo The name of this method is missleanding.
+       * @param position The absolute position of the item within `minimum()` and `maximum()`.
+       * @returns The coordinate of the item in pixel or all coordinates.
+       */
+    coordinates(position) {
+        let multiplier = 1, newPosition = position - 1, coordinate, result;
+        if (position === undefined) {
+            result = this._coordinates.map((item, index) => {
+                return this.coordinates(index);
+            });
+            return result;
+        }
+        if (this.settings.center) {
+            if (this.settings.rtl) {
+                multiplier = -1;
+                newPosition = position + 1;
+            }
+            coordinate = this._coordinates[position];
+            coordinate += (this.width() - coordinate + (this._coordinates[newPosition] || 0)) / 2 * multiplier;
+        }
+        else {
+            coordinate = this._coordinates[newPosition] || 0;
+        }
+        coordinate = Math.ceil(coordinate);
+        return coordinate;
+    }
+    /**
+       * Calculates the speed for a translation.
+       * @param from The absolute position of the start item.
+       * @param to The absolute position of the target item.
+       * @param factor [factor=undefined] - The time factor in milliseconds.
+       * @returns The time in milliseconds for the translation.
+       */
+    _duration(from, to, factor) {
+        if (factor === 0) {
+            return 0;
+        }
+        return Math.min(Math.max(Math.abs(to - from), 1), 6) * Math.abs((+factor || this.settings.smartSpeed));
+    }
+    /**
+       * Slides to the specified item.
+       * @param position The position of the item.
+       * @param speed The time in milliseconds for the transition.
+       */
+    to(position, speed) {
+        let current = this.current(), revert = null, distance = position - this.relative(current), maximum = this.maximum(), delayForLoop = 0;
+        const direction = +(distance > 0) - +(distance < 0), items = this._items.length, minimum = this.minimum();
+        if (this.settings.loop) {
+            if (!this.settings.rewind && Math.abs(distance) > items / 2) {
+                distance += direction * -1 * items;
+            }
+            position = current + distance;
+            revert = ((position - minimum) % items + items) % items + minimum;
+            if (revert !== position && revert - distance <= maximum && revert - distance > 0) {
+                current = revert - distance;
+                position = revert;
+                delayForLoop = 30;
+                this.reset(current);
+                this.sendChanges();
+            }
+        }
+        else if (this.settings.rewind) {
+            maximum += 1;
+            position = (position % maximum + maximum) % maximum;
+        }
+        else {
+            position = Math.max(minimum, Math.min(maximum, position));
+        }
+        setTimeout(() => {
+            this.speed(this._duration(current, position, speed));
+            this.current(position);
+            this.update();
+        }, delayForLoop);
+    }
+    /**
+       * Slides to the next item.
+       * @param speed The time in milliseconds for the transition.
+       */
+    next(speed) {
+        speed = speed || false;
+        this.to(this.relative(this.current()) + 1, speed);
+    }
+    /**
+       * Slides to the previous item.
+       * @param speed The time in milliseconds for the transition.
+       */
+    prev(speed) {
+        speed = speed || false;
+        this.to(this.relative(this.current()) - 1, speed);
+    }
+    /**
+       * Handles the end of an animation.
+       * @param event - The event arguments.
+       */
+    onTransitionEnd(event) {
+        // if css2 animation then event object is undefined
+        if (event !== undefined) {
+            // event.stopPropagation();
+            // // Catch only owl-stage transitionEnd event
+            // if ((event.target || event.srcElement || event.originalTarget) !== this.$stage.get(0)	) {
+            // 	return false;
+            // }
+            return false;
+        }
+        this.leave('animating');
+        this._trigger('translated');
+    }
+    /**
+       * Gets viewport width.
+       * @returns - The width in pixel.
+       */
+    _viewport() {
+        let width;
+        if (this._width) {
+            width = this._width;
+        }
+        else {
+            this.logger.log('Can not detect viewport width.');
+        }
+        return width;
+    }
+    /**
+       * Sets _items
+       * @param content The list of slides put into CarouselSlideDirectives.
+       */
+    setItems(content) {
+        this._items = content;
+    }
+    /**
+     * Sets slidesData using this._items
+     */
+    _defineSlidesData() {
+        // Maybe creating and using loadMap would be better in LazyLoadService.
+        // Hovewer in that case when 'resize' event fires, prop 'load' of all slides will get 'false' and such state of prop will be seen by View during its updating. Accordingly the code will remove slides's content from DOM even if it was loaded before.
+        // Thus it would be needed to add that content into DOM again.
+        // In order to avoid additional removing/adding loaded slides's content we use loadMap here and set restore state of prop 'load' before the View will get it.
+        let loadMap;
+        if (this.slidesData && this.slidesData.length) {
+            loadMap = new Map();
+            this.slidesData.forEach(item => {
+                if (item.load) {
+                    loadMap.set(item.id, item.load);
+                }
+            });
+        }
+        this.slidesData = this._items.map(slide => {
+            return {
+                id: `${slide.id}`,
+                isActive: false,
+                tplRef: slide.tplRef,
+                dataMerge: slide.dataMerge,
+                width: 0,
+                isCloned: false,
+                load: loadMap ? loadMap.get(slide.id) : false,
+                hashFragment: slide.dataHash
+            };
+        });
+    }
+    /**
+     * Sets current classes for slide
+     * @param slide Slide of carousel
+     * @returns object with names of css-classes which are keys and true/false values
+     */
+    setCurSlideClasses(slide) {
+        // CSS classes: added/removed per current state of component properties
+        const currentClasses = {
+            'active': slide.isActive,
+            'center': slide.isCentered,
+            'cloned': slide.isCloned,
+            'animated': slide.isAnimated,
+            'owl-animated-in': slide.isDefAnimatedIn,
+            'owl-animated-out': slide.isDefAnimatedOut
+        };
+        if (this.settings.animateIn) {
+            currentClasses[this.settings.animateIn] = slide.isCustomAnimatedIn;
+        }
+        if (this.settings.animateOut) {
+            currentClasses[this.settings.animateOut] = slide.isCustomAnimatedOut;
+        }
+        return currentClasses;
+    }
+    /**
+       * Operators to calculate right-to-left and left-to-right.
+       * @param a - The left side operand.
+       * @param o - The operator.
+       * @param b - The right side operand.
+       * @returns true/false meaning right-to-left or left-to-right
+       */
+    _op(a, o, b) {
+        const rtl = this.settings.rtl;
+        switch (o) {
+            case '<':
+                return rtl ? a > b : a < b;
+            case '>':
+                return rtl ? a < b : a > b;
+            case '>=':
+                return rtl ? a <= b : a >= b;
+            case '<=':
+                return rtl ? a >= b : a <= b;
+            default:
+                break;
+        }
+    }
+    /**
+       * Triggers a public event.
+       * @todo Remove `status`, `relatedTarget` should be used instead.
+       * @param name The event name.
+       * @param data The event data.
+       * @param namespace The event namespace.
+       * @param state The state which is associated with the event.
+       * @param enter Indicates if the call enters the specified state or not.
+       */
+    _trigger(name, data, namespace, state, enter) {
+        switch (name) {
+            case 'initialized':
+                this._initializedCarousel$.next(name);
+                break;
+            case 'change':
+                this._changeSettingsCarousel$.next(data);
+                break;
+            case 'changed':
+                this._changedSettingsCarousel$.next(data);
+                break;
+            case 'drag':
+                this._dragCarousel$.next(name);
+                break;
+            case 'dragged':
+                this._draggedCarousel$.next(name);
+                break;
+            case 'resize':
+                this._resizeCarousel$.next(name);
+                break;
+            case 'resized':
+                this._resizedCarousel$.next(name);
+                break;
+            case 'refresh':
+                this._refreshCarousel$.next(name);
+                break;
+            case 'refreshed':
+                this._refreshedCarousel$.next(name);
+                break;
+            case 'translate':
+                this._translateCarousel$.next(name);
+                break;
+            case 'translated':
+                this._translatedCarousel$.next(name);
+                break;
+            default:
+                break;
+        }
+    }
+    /**
+     * Enters a state.
+     * @param name - The state name.
+     */
+    enter(name) {
+        [name].concat(this._states.tags[name] || []).forEach((stateName) => {
+            if (this._states.current[stateName] === undefined) {
+                this._states.current[stateName] = 0;
+            }
+            this._states.current[stateName]++;
+        });
+    }
+    ;
+    /**
+       * Leaves a state.
+       * @param name - The state name.
+       */
+    leave(name) {
+        [name].concat(this._states.tags[name] || []).forEach((stateName) => {
+            if (this._states.current[stateName] === 0 || !!this._states.current[stateName]) {
+                this._states.current[stateName]--;
+            }
+        });
+    }
+    ;
+    /**
+       * Registers an event or state.
+       * @param object - The event or state to register.
+       */
+    register(object) {
+        if (object.type === Type.State) {
+            if (!this._states.tags[object.name]) {
+                this._states.tags[object.name] = object.tags;
+            }
+            else {
+                this._states.tags[object.name] = this._states.tags[object.name].concat(object.tags);
+            }
+            this._states.tags[object.name] = this._states.tags[object.name].filter((tag, i) => {
+                return this._states.tags[object.name].indexOf(tag) === i;
+            });
+        }
+    }
+    /**
+       * Suppresses events.
+       * @param events The events to suppress.
+       */
+    _suppress(events) {
+        events.forEach(event => {
+            this._supress[event] = true;
+        });
+    }
+    /**
+       * Releases suppressed events.
+       * @param events The events to release.
+       */
+    _release(events) {
+        events.forEach(event => {
+            delete this._supress[event];
+        });
+    }
+    /**
+       * Gets unified pointer coordinates from event.
+       * @todo #261
+       * @param event The `mousedown` or `touchstart` event.
+       * @returns Object Coords which contains `x` and `y` coordinates of current pointer position.
+       */
+    pointer(event) {
+        const result = { x: null, y: null };
+        event = event.originalEvent || event || window.event;
+        event = event.touches && event.touches.length ?
+            event.touches[0] : event.changedTouches && event.changedTouches.length ?
+            event.changedTouches[0] : event;
+        if (event.pageX) {
+            result.x = event.pageX;
+            result.y = event.pageY;
+        }
+        else {
+            result.x = event.clientX;
+            result.y = event.clientY;
+        }
+        return result;
+    }
+    /**
+       * Determines if the input is a Number or something that can be coerced to a Number
+       * @param number The input to be tested
+       * @returns An indication if the input is a Number or can be coerced to a Number
+       */
+    _isNumeric(number) {
+        return !isNaN(parseFloat(number));
+    }
+    /**
+     * Determines whether value is number or boolean type
+     * @param value The input to be tested
+     * @returns An indication if the input is a Number or can be coerced to a Number, or Boolean
+     */
+    _isNumberOrBoolean(value) {
+        return this._isNumeric(value) || typeof value === 'boolean';
+    }
+    /**
+     * Determines whether value is number or string type
+     * @param value The input to be tested
+     * @returns An indication if the input is a Number or can be coerced to a Number, or String
+     */
+    _isNumberOrString(value) {
+        return this._isNumeric(value) || typeof value === 'string';
+    }
+    /**
+     * Determines whether value is number or string type
+     * @param value The input to be tested
+     * @returns An indication if the input is a Number or can be coerced to a Number, or String
+     */
+    _isStringOrBoolean(value) {
+        return typeof value === 'string' || typeof value === 'boolean';
+    }
+    /**
+       * Gets the difference of two vectors.
+       * @todo #261
+       * @param first The first vector.
+       * @param second- The second vector.
+       * @returns The difference.
+       */
+    difference(first, second) {
+        return {
+            x: first.x - second.x,
+            y: first.y - second.y
+        };
+    }
+}
+CarouselService.ɵfac = function CarouselService_Factory(t) { return new (t || CarouselService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](OwlLogger)); };
+CarouselService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: CarouselService, factory: CarouselService.ɵfac });
+CarouselService.ctorParameters = () => [
+    { type: OwlLogger }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CarouselService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: OwlLogger }]; }, null); })();
+
+class NavigationService {
+    constructor(carouselService) {
+        this.carouselService = carouselService;
+        /**
+         * Indicates whether the plugin is initialized or not.
+         */
+        this._initialized = false;
+        /**
+         * The current paging indexes.
+         */
+        this._pages = [];
+        /**
+         * Data for navigation elements of the user interface.
+         */
+        this._navData = {
+            disabled: false,
+            prev: {
+                disabled: false,
+                htmlText: ''
+            },
+            next: {
+                disabled: false,
+                htmlText: ''
+            },
+        };
+        /**
+         * Data for dot elements of the user interface.
+         */
+        this._dotsData = {
+            disabled: false,
+            dots: []
+        };
+        this.spyDataStreams();
+    }
+    ngOnDestroy() {
+        this.navSubscription.unsubscribe();
+    }
+    /**
+     * Defines Observables which service must observe
+     */
+    spyDataStreams() {
+        const initializedCarousel$ = this.carouselService.getInitializedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(state => {
+            this.initialize();
+            this._updateNavPages();
+            this.draw();
+            this.update();
+            this.carouselService.sendChanges();
+        }));
+        // mostly changes in carouselService and carousel at all causes carouselService.to(). It moves stage right-left by its code and calling needed functions
+        // Thus this method by calling carouselService.current(position) notifies about changes
+        const changedSettings$ = this.carouselService.getChangedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(data => data.property.name === 'position'), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            this.update();
+            // should be the call of the function written at the end of comment
+            // but the method carouselServive.to() has setTimeout(f, 0) which contains carouselServive.update() which calls sendChanges() method.
+            // carouselService.navData and carouselService.dotsData update earlier than carouselServive.update() gets called
+            // updates of carouselService.navData and carouselService.dotsData are being happening withing carouselService.current(position) method which calls next() of _changedSettingsCarousel$
+            // carouselService.current(position) is being calling earlier than carouselServive.update();
+            // this.carouselService.sendChanges();
+        }));
+        const refreshedCarousel$ = this.carouselService.getRefreshedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            this._updateNavPages();
+            this.draw();
+            this.update();
+            this.carouselService.sendChanges();
+        }));
+        const navMerge$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(initializedCarousel$, changedSettings$, refreshedCarousel$);
+        this.navSubscription = navMerge$.subscribe(() => { });
+    }
+    /**
+       * Initializes the layout of the plugin and extends the carousel.
+       */
+    initialize() {
+        this._navData.disabled = true;
+        this._navData.prev.htmlText = this.carouselService.settings.navText[0];
+        this._navData.next.htmlText = this.carouselService.settings.navText[1];
+        this._dotsData.disabled = true;
+        this.carouselService.navData = this._navData;
+        this.carouselService.dotsData = this._dotsData;
+    }
+    /**
+     * Calculates internal states and updates prop _pages
+     */
+    _updateNavPages() {
+        let i, j, k;
+        const lower = this.carouselService.clones().length / 2, upper = lower + this.carouselService.items().length, maximum = this.carouselService.maximum(true), pages = [], settings = this.carouselService.settings;
+        let size = settings.center || settings.autoWidth || settings.dotsData
+            ? 1 : settings.dotsEach || settings.items;
+        size = +size;
+        if (settings.slideBy !== 'page') {
+            settings.slideBy = Math.min(+settings.slideBy, settings.items);
+        }
+        if (settings.dots || settings.slideBy === 'page') {
+            for (i = lower, j = 0, k = 0; i < upper; i++) {
+                if (j >= size || j === 0) {
+                    pages.push({
+                        start: Math.min(maximum, i - lower),
+                        end: i - lower + size - 1
+                    });
+                    if (Math.min(maximum, i - lower) === maximum) {
+                        break;
+                    }
+                    j = 0, ++k;
+                }
+                j += this.carouselService.mergers(this.carouselService.relative(i));
+            }
+        }
+        this._pages = pages;
+    }
+    /**
+       * Draws the user interface.
+       * @todo The option `dotsData` wont work.
+       */
+    draw() {
+        let difference;
+        const settings = this.carouselService.settings, items = this.carouselService.items(), disabled = items.length <= settings.items;
+        this._navData.disabled = !settings.nav || disabled;
+        this._dotsData.disabled = !settings.dots || disabled;
+        if (settings.dots) {
+            difference = this._pages.length - this._dotsData.dots.length;
+            if (settings.dotsData && difference !== 0) {
+                this._dotsData.dots = [];
+                items.forEach(item => {
+                    this._dotsData.dots.push({
+                        active: false,
+                        id: `dot-${item.id}`,
+                        innerContent: item.dotContent,
+                        showInnerContent: true
+                    });
+                });
+            }
+            else if (difference > 0) {
+                const startI = this._dotsData.dots.length > 0 ? this._dotsData.dots.length : 0;
+                for (let i = 0; i < difference; i++) {
+                    this._dotsData.dots.push({
+                        active: false,
+                        id: `dot-${i + startI}`,
+                        innerContent: '',
+                        showInnerContent: false
+                    });
+                }
+            }
+            else if (difference < 0) {
+                this._dotsData.dots.splice(difference, Math.abs(difference));
+            }
+        }
+        this.carouselService.navData = this._navData;
+        this.carouselService.dotsData = this._dotsData;
+    }
+    ;
+    /**
+     * Updates navigation buttons's and dots's states
+     */
+    update() {
+        this._updateNavButtons();
+        this._updateDots();
+    }
+    /**
+     * Changes state of nav buttons (disabled, enabled)
+     */
+    _updateNavButtons() {
+        const settings = this.carouselService.settings, loop = settings.loop || settings.rewind, index = this.carouselService.relative(this.carouselService.current());
+        if (settings.nav) {
+            this._navData.prev.disabled = !loop && index <= this.carouselService.minimum(true);
+            this._navData.next.disabled = !loop && index >= this.carouselService.maximum(true);
+        }
+        this.carouselService.navData = this._navData;
+    }
+    /**
+     * Changes active dot if page becomes changed
+     */
+    _updateDots() {
+        let curActiveDotI;
+        if (!this.carouselService.settings.dots) {
+            return;
+        }
+        this._dotsData.dots.forEach(item => {
+            if (item.active === true) {
+                item.active = false;
+            }
+        });
+        curActiveDotI = this._current();
+        if (this._dotsData.dots.length) {
+            this._dotsData.dots[curActiveDotI].active = true;
+        }
+        this.carouselService.dotsData = this._dotsData;
+    }
+    /**
+       * Gets the current page position of the carousel.
+       * @returns the current page position of the carousel
+       */
+    _current() {
+        const current = this.carouselService.relative(this.carouselService.current());
+        let finalCurrent;
+        const pages = this._pages.filter((page, index) => {
+            return page.start <= current && page.end >= current;
+        }).pop();
+        finalCurrent = this._pages.findIndex(page => {
+            return page.start === pages.start && page.end === pages.end;
+        });
+        return finalCurrent;
+    }
+    ;
+    /**
+       * Gets the current succesor/predecessor position.
+     * @param sussessor position of slide
+       * @returns the current succesor/predecessor position
+       */
+    _getPosition(successor) {
+        let position, length;
+        const settings = this.carouselService.settings;
+        if (settings.slideBy === 'page') {
+            position = this._current();
+            length = this._pages.length;
+            successor ? ++position : --position;
+            position = this._pages[((position % length) + length) % length].start;
+        }
+        else {
+            position = this.carouselService.relative(this.carouselService.current());
+            length = this.carouselService.items().length;
+            successor ? position += +settings.slideBy : position -= +settings.slideBy;
+        }
+        return position;
+    }
+    ;
+    /**
+       * Slides to the next item or page.
+       * @param speed The time in milliseconds for the transition.
+       */
+    next(speed) {
+        this.carouselService.to(this._getPosition(true), speed);
+    }
+    ;
+    /**
+     * Slides to the previous item or page.
+     * @param speed The time in milliseconds for the transition.
+     */
+    prev(speed) {
+        this.carouselService.to(this._getPosition(false), speed);
+    }
+    ;
+    /**
+     * Slides to the specified item or page.
+     * @param position - The position of the item or page.
+     * @param speed - The time in milliseconds for the transition.
+     * @param standard - Whether to use the standard behaviour or not. Default meaning false
+     */
+    to(position, speed, standard) {
+        let length;
+        if (!standard && this._pages.length) {
+            length = this._pages.length;
+            this.carouselService.to(this._pages[((position % length) + length) % length].start, speed);
+        }
+        else {
+            this.carouselService.to(position, speed);
+        }
+    }
+    ;
+    /**
+     * Moves carousel after user's clicking on any dots
+     */
+    moveByDot(dotId) {
+        const index = this._dotsData.dots.findIndex(dot => dotId === dot.id);
+        this.to(index, this.carouselService.settings.dotsSpeed);
+    }
+    /**
+     * rewinds carousel to slide with needed id
+     * @param id id of slide
+     */
+    toSlideById(id) {
+        const position = this.carouselService.slidesData.findIndex(slide => slide.id === id && slide.isCloned === false);
+        if (position === -1 || position === this.carouselService.current()) {
+            return;
+        }
+        this.carouselService.to(this.carouselService.relative(position), false);
+    }
+}
+NavigationService.ɵfac = function NavigationService_Factory(t) { return new (t || NavigationService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](CarouselService)); };
+NavigationService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: NavigationService, factory: NavigationService.ɵfac });
+NavigationService.ctorParameters = () => [
+    { type: CarouselService }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NavigationService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: CarouselService }]; }, null); })();
+
+// import { Injectable } from '@angular/core';
+/**
+ * Create a new injection token for injecting the window into a component.
+ */
+const WINDOW = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('WindowToken');
+/**
+ * Define abstract class for obtaining reference to the global window object.
+ */
+class WindowRef {
+    get nativeWindow() {
+        throw new Error('Not implemented.');
+    }
+}
+/**
+ * Define class that implements the abstract class and returns the native window object.
+ */
+class BrowserWindowRef extends WindowRef {
+    constructor() {
+        super();
+    }
+    /**
+     * @returns window object
+     */
+    get nativeWindow() {
+        return window;
+    }
+}
+BrowserWindowRef.ɵfac = function BrowserWindowRef_Factory(t) { return new (t || BrowserWindowRef)(); };
+BrowserWindowRef.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: BrowserWindowRef, factory: BrowserWindowRef.ɵfac });
+BrowserWindowRef.ctorParameters = () => [];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BrowserWindowRef, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return []; }, null); })();
+/**
+ * Create an factory function that returns the native window object.
+ * @param browserWindowRef Native window object
+ * @param platformId id of platform
+ * @returns type of platform of empty object
+ */
+function windowFactory(browserWindowRef, platformId) {
+    if (Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["isPlatformBrowser"])(platformId)) {
+        return browserWindowRef.nativeWindow;
+    }
+    const obj = {
+        setTimeout: (func, time) => { },
+        clearTimeout: (a) => { }
+    };
+    return obj;
+}
+/**
+ * Create a injectable provider for the WindowRef token that uses the BrowserWindowRef class.
+ */
+const browserWindowProvider = {
+    provide: WindowRef,
+    useClass: BrowserWindowRef
+};
+/**
+ * Create an injectable provider that uses the windowFactory function for returning the native window object.
+ */
+const windowProvider = {
+    provide: WINDOW,
+    useFactory: windowFactory,
+    deps: [WindowRef, _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]
+};
+/**
+ * Create an array of providers.
+ */
+const WINDOW_PROVIDERS = [browserWindowProvider, windowProvider];
+
+/**
+ * Create a new injection token for injecting the Document into a component.
+ */
+const DOCUMENT = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('DocumentToken');
+/**
+ * Define abstract class for obtaining reference to the global Document object.
+ */
+class DocumentRef {
+    get nativeDocument() {
+        throw new Error('Not implemented.');
+    }
+}
+/**
+ * Define class that implements the abstract class and returns the native Document object.
+ */
+class BrowserDocumentRef extends DocumentRef {
+    constructor() {
+        super();
+    }
+    /**
+     * @returns Document object
+     */
+    get nativeDocument() {
+        return document;
+    }
+}
+BrowserDocumentRef.ɵfac = function BrowserDocumentRef_Factory(t) { return new (t || BrowserDocumentRef)(); };
+BrowserDocumentRef.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: BrowserDocumentRef, factory: BrowserDocumentRef.ɵfac });
+BrowserDocumentRef.ctorParameters = () => [];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BrowserDocumentRef, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return []; }, null); })();
+/**
+ * Create an factory function that returns the native Document object.
+ * @param browserDocumentRef Native Document object
+ * @param platformId id of platform
+ * @returns type of platform of empty object
+ */
+function documentFactory(browserDocumentRef, platformId) {
+    if (Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["isPlatformBrowser"])(platformId)) {
+        return browserDocumentRef.nativeDocument;
+    }
+    const doc = {
+        hidden: false,
+        visibilityState: 'visible'
+    };
+    return doc;
+}
+/**
+ * Create a injectable provider for the DocumentRef token that uses the BrowserDocumentRef class.
+ */
+const browserDocumentProvider = {
+    provide: DocumentRef,
+    useClass: BrowserDocumentRef
+};
+/**
+ * Create an injectable provider that uses the DocumentFactory function for returning the native Document object.
+ */
+const documentProvider = {
+    provide: DOCUMENT,
+    useFactory: documentFactory,
+    deps: [DocumentRef, _angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]
+};
+/**
+ * Create an array of providers.
+ */
+const DOCUMENT_PROVIDERS = [browserDocumentProvider, documentProvider];
+
+class AutoplayService {
+    constructor(carouselService, winRef, docRef) {
+        this.carouselService = carouselService;
+        /**
+         * The autoplay timeout.
+         */
+        this._timeout = null;
+        /**
+         * Indicates whenever the autoplay is paused.
+         */
+        this._paused = false;
+        this.winRef = winRef;
+        this.docRef = docRef;
+        this.spyDataStreams();
+    }
+    ngOnDestroy() {
+        this.autoplaySubscription.unsubscribe();
+    }
+    /**
+     * Defines Observables which service must observe
+     */
+    spyDataStreams() {
+        const initializedCarousel$ = this.carouselService.getInitializedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            if (this.carouselService.settings.autoplay) {
+                this.play();
+            }
+        }));
+        const changedSettings$ = this.carouselService.getChangedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            this._handleChangeObservable(data);
+        }));
+        const resized$ = this.carouselService.getResizedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            if (this.carouselService.settings.autoplay) {
+                this.play();
+            }
+            else {
+                this.stop();
+            }
+        }));
+        // original Autoplay Plugin has listeners on play.owl.core and stop.owl.core events.
+        // They are triggered by Video Plugin
+        const autoplayMerge$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(initializedCarousel$, changedSettings$, resized$);
+        this.autoplaySubscription = autoplayMerge$.subscribe(() => { });
+    }
+    /**
+       * Starts the autoplay.
+       * @param timeout The interval before the next animation starts.
+       * @param speed The animation speed for the animations.
+       */
+    play(timeout, speed) {
+        if (this._paused) {
+            this._paused = false;
+            this._setAutoPlayInterval(this.carouselService.settings.autoplayMouseleaveTimeout);
+        }
+        if (this.carouselService.is('rotating')) {
+            return;
+        }
+        this.carouselService.enter('rotating');
+        this._setAutoPlayInterval();
+    }
+    ;
+    /**
+       * Gets a new timeout
+       * @param timeout - The interval before the next animation starts.
+       * @param speed - The animation speed for the animations.
+       * @return
+       */
+    _getNextTimeout(timeout, speed) {
+        if (this._timeout) {
+            this.winRef.clearTimeout(this._timeout);
+        }
+        this._isArtificialAutoplayTimeout = timeout ? true : false;
+        return this.winRef.setTimeout(() => {
+            if (this._paused || this.carouselService.is('busy') || this.carouselService.is('interacting') || this.docRef.hidden) {
+                return;
+            }
+            this.carouselService.next(speed || this.carouselService.settings.autoplaySpeed);
+        }, timeout || this.carouselService.settings.autoplayTimeout);
+    }
+    ;
+    /**
+       * Sets autoplay in motion.
+       */
+    _setAutoPlayInterval(timeout) {
+        this._timeout = this._getNextTimeout(timeout);
+    }
+    ;
+    /**
+     * Stops the autoplay.
+     */
+    stop() {
+        if (!this.carouselService.is('rotating')) {
+            return;
+        }
+        this._paused = true;
+        this.winRef.clearTimeout(this._timeout);
+        this.carouselService.leave('rotating');
+    }
+    ;
+    /**
+       * Stops the autoplay.
+       */
+    pause() {
+        if (!this.carouselService.is('rotating')) {
+            return;
+        }
+        this._paused = true;
+    }
+    ;
+    /**
+     * Manages by autoplaying according to data passed by _changedSettingsCarousel$ Obsarvable
+     * @param data object with current position of carousel and type of change
+     */
+    _handleChangeObservable(data) {
+        if (data.property.name === 'settings') {
+            if (this.carouselService.settings.autoplay) {
+                this.play();
+            }
+            else {
+                this.stop();
+            }
+        }
+        else if (data.property.name === 'position') {
+            //console.log('play?', e);
+            if (this.carouselService.settings.autoplay) {
+                this._setAutoPlayInterval();
+            }
+        }
+    }
+    /**
+     * Starts autoplaying of the carousel in the case when user leaves the carousel before it starts translateing (moving)
+     */
+    _playAfterTranslated() {
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])('translated').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(data => this.carouselService.getTranslatedState()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(() => this._isArtificialAutoplayTimeout), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => this._setAutoPlayInterval())).subscribe(() => { });
+    }
+    /**
+     * Starts pausing
+     */
+    startPausing() {
+        if (this.carouselService.settings.autoplayHoverPause && this.carouselService.is('rotating')) {
+            this.pause();
+        }
+    }
+    /**
+     * Starts playing after mouse leaves carousel
+     */
+    startPlayingMouseLeave() {
+        if (this.carouselService.settings.autoplayHoverPause && this.carouselService.is('rotating')) {
+            this.play();
+            this._playAfterTranslated();
+        }
+    }
+    /**
+     * Starts playing after touch ends
+     */
+    startPlayingTouchEnd() {
+        if (this.carouselService.settings.autoplayHoverPause && this.carouselService.is('rotating')) {
+            this.play();
+            this._playAfterTranslated();
+        }
+    }
+}
+AutoplayService.ɵfac = function AutoplayService_Factory(t) { return new (t || AutoplayService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](CarouselService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](WINDOW), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](DOCUMENT)); };
+AutoplayService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AutoplayService, factory: AutoplayService.ɵfac });
+AutoplayService.ctorParameters = () => [
+    { type: CarouselService },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [WINDOW,] }] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [DOCUMENT,] }] }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AutoplayService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: CarouselService }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [WINDOW]
+            }] }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [DOCUMENT]
+            }] }]; }, null); })();
+
+class LazyLoadService {
+    constructor(carouselService) {
+        this.carouselService = carouselService;
+        this.spyDataStreams();
+    }
+    ngOnDestroy() {
+        this.lazyLoadSubscription.unsubscribe();
+    }
+    /**
+     * Defines Observables which service must observe
+     */
+    spyDataStreams() {
+        const initializedCarousel$ = this.carouselService.getInitializedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            const isLazyLoad = this.carouselService.settings && !this.carouselService.settings.lazyLoad;
+            this.carouselService.slidesData.forEach(item => item.load = isLazyLoad ? true : false);
+        }));
+        const changeSettings$ = this.carouselService.getChangeState();
+        const resizedCarousel$ = this.carouselService.getResizedState();
+        const lazyLoadMerge$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(initializedCarousel$, changeSettings$, resizedCarousel$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => this._defineLazyLoadSlides(data)));
+        this.lazyLoadSubscription = lazyLoadMerge$.subscribe(() => { });
+    }
+    _defineLazyLoadSlides(data) {
+        if (!this.carouselService.settings || !this.carouselService.settings.lazyLoad) {
+            return;
+        }
+        if ((data.property && data.property.name === 'position') || data === 'initialized' || data === "resized") {
+            const settings = this.carouselService.settings, clones = this.carouselService.clones().length;
+            let n = (settings.center && Math.ceil(settings.items / 2) || settings.items), i = ((settings.center && n * -1) || 0), position = (data.property && data.property.value !== undefined ? data.property.value : this.carouselService.current()) + i;
+            // load = $.proxy(function(i, v) { this.load(v) }, this);
+            //TODO: Need documentation for this new option
+            if (settings.lazyLoadEager > 0) {
+                n += settings.lazyLoadEager;
+                // If the carousel is looping also preload images that are to the "left"
+                if (settings.loop) {
+                    position -= settings.lazyLoadEager;
+                    n++;
+                }
+            }
+            while (i++ < n) {
+                this._load(clones / 2 + this.carouselService.relative(position));
+                if (clones) {
+                    this.carouselService.clones(this.carouselService.relative(position)).forEach(value => this._load(value));
+                }
+                position++;
+            }
+        }
+    }
+    /**
+       * Loads all resources of an item at the specified position.
+       * @param position - The absolute position of the item.
+       */
+    _load(position) {
+        if (this.carouselService.slidesData[position].load) {
+            return;
+        }
+        this.carouselService.slidesData[position].load = true;
+    }
+}
+LazyLoadService.ɵfac = function LazyLoadService_Factory(t) { return new (t || LazyLoadService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](CarouselService)); };
+LazyLoadService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: LazyLoadService, factory: LazyLoadService.ɵfac });
+LazyLoadService.ctorParameters = () => [
+    { type: CarouselService }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](LazyLoadService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: CarouselService }]; }, null); })();
+
+class AnimateService {
+    constructor(carouselService) {
+        this.carouselService = carouselService;
+        /**
+         * s
+         */
+        this.swapping = true;
+        /**
+         * active slide before translating
+         */
+        this.previous = undefined;
+        /**
+         * new active slide after translating
+         */
+        this.next = undefined;
+        this.spyDataStreams();
+    }
+    ngOnDestroy() {
+        this.animateSubscription.unsubscribe();
+    }
+    /**
+     * Defines Observables which service must observe
+     */
+    spyDataStreams() {
+        const changeSettings$ = this.carouselService.getChangeState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            if (data.property.name === 'position') {
+                this.previous = this.carouselService.current();
+                this.next = data.property.value;
+            }
+        }));
+        const dragCarousel$ = this.carouselService.getDragState();
+        const draggedCarousel$ = this.carouselService.getDraggedState();
+        const translatedCarousel$ = this.carouselService.getTranslatedState();
+        const dragTranslatedMerge$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(dragCarousel$, draggedCarousel$, translatedCarousel$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => this.swapping = data === 'translated'));
+        const translateCarousel$ = this.carouselService.getTranslateState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            if (this.swapping && (this.carouselService._options.animateOut || this.carouselService._options.animateIn)) {
+                this._swap();
+            }
+        }));
+        const animateMerge$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(changeSettings$, translateCarousel$, dragTranslatedMerge$).pipe();
+        this.animateSubscription = animateMerge$.subscribe(() => { });
+    }
+    /**
+       * Toggles the animation classes whenever an translations starts.
+       * @returns
+       */
+    _swap() {
+        if (this.carouselService.settings.items !== 1) {
+            return;
+        }
+        // if (!$.support.animation || !$.support.transition) {
+        // 	return;
+        // }
+        this.carouselService.speed(0);
+        let left;
+        const previous = this.carouselService.slidesData[this.previous], next = this.carouselService.slidesData[this.next], incoming = this.carouselService.settings.animateIn, outgoing = this.carouselService.settings.animateOut;
+        if (this.carouselService.current() === this.previous) {
+            return;
+        }
+        if (outgoing) {
+            left = +this.carouselService.coordinates(this.previous) - +this.carouselService.coordinates(this.next);
+            this.carouselService.slidesData.forEach(slide => {
+                if (slide.id === previous.id) {
+                    slide.left = `${left}px`;
+                    slide.isAnimated = true;
+                    slide.isDefAnimatedOut = true;
+                    slide.isCustomAnimatedOut = true;
+                }
+            });
+        }
+        if (incoming) {
+            this.carouselService.slidesData.forEach(slide => {
+                if (slide.id === next.id) {
+                    slide.isAnimated = true;
+                    slide.isDefAnimatedIn = true;
+                    slide.isCustomAnimatedIn = true;
+                }
+            });
+        }
+    }
+    ;
+    /**
+     * Handles the end of 'animationend' event
+     * @param id Id of slides
+     */
+    clear(id) {
+        this.carouselService.slidesData.forEach(slide => {
+            if (slide.id === id) {
+                slide.left = '';
+                slide.isAnimated = false;
+                slide.isDefAnimatedOut = false;
+                slide.isCustomAnimatedOut = false;
+                slide.isDefAnimatedIn = false;
+                slide.isCustomAnimatedIn = false;
+                slide.classes = this.carouselService.setCurSlideClasses(slide);
+            }
+        });
+        this.carouselService.onTransitionEnd();
+    }
+    ;
+}
+AnimateService.ɵfac = function AnimateService_Factory(t) { return new (t || AnimateService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](CarouselService)); };
+AnimateService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AnimateService, factory: AnimateService.ɵfac });
+AnimateService.ctorParameters = () => [
+    { type: CarouselService }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AnimateService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: CarouselService }]; }, null); })();
+
+class AutoHeightService {
+    constructor(carouselService) {
+        this.carouselService = carouselService;
+        this.spyDataStreams();
+    }
+    ngOnDestroy() {
+        this.autoHeightSubscription.unsubscribe();
+    }
+    /**
+     * Defines Observables which service must observe
+     */
+    spyDataStreams() {
+        const initializedCarousel$ = this.carouselService.getInitializedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            if (this.carouselService.settings.autoHeight) {
+                this.update();
+            }
+            else {
+                this.carouselService.slidesData.forEach(slide => slide.heightState = 'full');
+            }
+        }));
+        const changedSettings$ = this.carouselService.getChangedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            if (this.carouselService.settings.autoHeight && data.property.name === 'position') {
+                this.update();
+            }
+        }));
+        const refreshedCarousel$ = this.carouselService.getRefreshedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            if (this.carouselService.settings.autoHeight) {
+                this.update();
+            }
+        }));
+        const autoHeight$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(initializedCarousel$, changedSettings$, refreshedCarousel$);
+        this.autoHeightSubscription = autoHeight$.subscribe(() => { });
+    }
+    /**
+     * Updates the prop 'heightState' of slides
+     */
+    update() {
+        const items = this.carouselService.settings.items;
+        let start = this.carouselService.current(), end = start + items;
+        if (this.carouselService.settings.center) {
+            start = items % 2 === 1 ? start - (items - 1) / 2 : start - items / 2;
+            end = items % 2 === 1 ? start + items : start + items + 1;
+        }
+        this.carouselService.slidesData.forEach((slide, i) => {
+            slide.heightState = (i >= start && i < end) ? 'full' : 'nulled';
+        });
+    }
+}
+AutoHeightService.ɵfac = function AutoHeightService_Factory(t) { return new (t || AutoHeightService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](CarouselService)); };
+AutoHeightService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AutoHeightService, factory: AutoHeightService.ɵfac });
+AutoHeightService.ctorParameters = () => [
+    { type: CarouselService }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AutoHeightService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: CarouselService }]; }, null); })();
+
+class HashService {
+    constructor(carouselService, route, router) {
+        this.carouselService = carouselService;
+        this.route = route;
+        this.router = router;
+        this.spyDataStreams();
+        if (!this.route) {
+            this.route = {
+                fragment: Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])('no route').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(1))
+            };
+        }
+        ;
+        if (!this.router) {
+            this.router = {
+                navigate: (commands, extras) => { return; }
+            };
+        }
+    }
+    ngOnDestroy() {
+        this.hashSubscription.unsubscribe();
+    }
+    /**
+     * Defines Observables which service must observe
+     */
+    spyDataStreams() {
+        const initializedCarousel$ = this.carouselService.getInitializedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => this.listenToRoute()));
+        const changedSettings$ = this.carouselService.getChangedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            if (this.carouselService.settings.URLhashListener && data.property.name === 'position') {
+                const newCurSlide = this.carouselService.current();
+                const newCurFragment = this.carouselService.slidesData[newCurSlide].hashFragment;
+                if (!newCurFragment || newCurFragment === this.currentHashFragment) {
+                    return;
+                }
+                this.router.navigate(['./'], { fragment: newCurFragment, relativeTo: this.route });
+            }
+        }));
+        const hashFragment$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(initializedCarousel$, changedSettings$);
+        this.hashSubscription = hashFragment$.subscribe(() => { });
+    }
+    /**
+     * rewinds carousel to slide which has the same hashFragment as fragment of current url
+     * @param fragment fragment of url
+     */
+    rewind(fragment) {
+        const position = this.carouselService.slidesData.findIndex(slide => slide.hashFragment === fragment && slide.isCloned === false);
+        if (position === -1 || position === this.carouselService.current()) {
+            return;
+        }
+        this.carouselService.to(this.carouselService.relative(position), false);
+    }
+    /**
+     * Initiate listening to ActivatedRoute.fragment
+     */
+    listenToRoute() {
+        const count = this.carouselService.settings.startPosition === 'URLHash' ? 0 : 2;
+        this.route.fragment.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["skip"])(count))
+            .subscribe(fragment => {
+            this.currentHashFragment = fragment;
+            this.rewind(fragment);
+        });
+    }
+}
+HashService.ɵfac = function HashService_Factory(t) { return new (t || HashService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](CarouselService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], 8)); };
+HashService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: HashService, factory: HashService.ɵfac });
+HashService.ctorParameters = () => [
+    { type: CarouselService },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }] }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HashService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: CarouselService }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+            }] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+            }] }]; }, null); })();
+
+let nextId = 0;
+class CarouselSlideDirective {
+    constructor(tplRef) {
+        this.tplRef = tplRef;
+        /**
+         * Unique slide identifier. Must be unique for the entire document for proper accessibility support.
+         * Will be auto-generated if not provided.
+         */
+        this.id = `owl-slide-${nextId++}`;
+        /**
+         * Defines how much widths of common slide will current slide have
+         * e.g. if _mergeData=2, the slide will twice wider then slides with _mergeData=1
+         */
+        this._dataMerge = 1;
+        /**
+         * Width of slide
+         */
+        this.width = 0;
+        /**
+         * Inner content of dot for certain slide; can be html-markup
+         */
+        this.dotContent = '';
+        /**
+         * Hash (fragment) of url which corresponds to certain slide
+         */
+        this.dataHash = '';
+    }
+    set dataMerge(data) {
+        this._dataMerge = this.isNumeric(data) ? data : 1;
+    }
+    ;
+    get dataMerge() { return this._dataMerge; }
+    /**
+       * Determines if the input is a Number or something that can be coerced to a Number
+       * @param - The input to be tested
+       * @returns - An indication if the input is a Number or can be coerced to a Number
+       */
+    isNumeric(number) {
+        return !isNaN(parseFloat(number));
+    }
+}
+CarouselSlideDirective.ɵfac = function CarouselSlideDirective_Factory(t) { return new (t || CarouselSlideDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"])); };
+CarouselSlideDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: CarouselSlideDirective, selectors: [["ng-template", "carouselSlide", ""]], inputs: { id: "id", width: "width", dotContent: "dotContent", dataHash: "dataHash", dataMerge: "dataMerge" } });
+CarouselSlideDirective.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] }
+];
+CarouselSlideDirective.propDecorators = {
+    id: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    dataMerge: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    width: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    dotContent: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    dataHash: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CarouselSlideDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{ selector: 'ng-template[carouselSlide]' }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] }]; }, { id: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], width: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], dotContent: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], dataHash: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], dataMerge: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+/**
+ * Data which will be passed out after ending of transition of carousel
+ */
+class SlidesOutputData {
+}
+;
+class CarouselComponent {
+    constructor(el, resizeService, carouselService, navigationService, autoplayService, lazyLoadService, animateService, autoHeightService, hashService, logger, changeDetectorRef, docRef) {
+        this.el = el;
+        this.resizeService = resizeService;
+        this.carouselService = carouselService;
+        this.navigationService = navigationService;
+        this.autoplayService = autoplayService;
+        this.lazyLoadService = lazyLoadService;
+        this.animateService = animateService;
+        this.autoHeightService = autoHeightService;
+        this.hashService = hashService;
+        this.logger = logger;
+        this.changeDetectorRef = changeDetectorRef;
+        this.translated = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.dragging = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.change = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.changed = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.initialized = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /**
+           *  Data of every slide
+           */
+        this.slidesData = [];
+        /**
+         * Shows whether carousel is loaded of not.
+         */
+        this.carouselLoaded = false;
+        this.docRef = docRef;
+    }
+    onVisibilityChange(ev) {
+        if (!this.carouselService.settings.autoplay)
+            return;
+        switch (this.docRef.visibilityState) {
+            case 'visible':
+                this.autoplayService.play();
+                break;
+            case 'hidden':
+                this.autoplayService.stop();
+                break;
+            default:
+                break;
+        }
+    }
+    ;
+    ngOnInit() {
+        this.spyDataStreams();
+        this.carouselWindowWidth = this.el.nativeElement.querySelector('.owl-carousel').clientWidth;
+    }
+    ngAfterContentChecked() {
+    }
+    // ngAfterContentChecked() END
+    ngAfterContentInit() {
+        if (this.slides.toArray().length) {
+            this.carouselService.setup(this.carouselWindowWidth, this.slides.toArray(), this.options);
+            this.carouselService.initialize(this.slides.toArray());
+            this._winResizeWatcher();
+        }
+        else {
+            this.logger.log(`There are no slides to show. So the carousel won't be rendered`);
+        }
+        this._slidesChangesSubscription = this.slides.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])((slides) => {
+            if (slides.toArray().length) {
+                // this.carouselService.setItems(slides.toArray());
+                this.carouselService.setup(this.carouselWindowWidth, slides.toArray(), this.options);
+                this.carouselService.initialize(slides.toArray());
+            }
+            else {
+                this.carouselLoaded = false;
+                this.logger.log(`There are no slides to show. So the carousel won't be re-rendered`);
+            }
+        })).subscribe(() => { });
+    }
+    ngOnDestroy() {
+        if (this.resizeSubscription) {
+            this.resizeSubscription.unsubscribe();
+        }
+        if (this._slidesChangesSubscription) {
+            this._slidesChangesSubscription.unsubscribe();
+        }
+        if (this._allObservSubscription) {
+            this._allObservSubscription.unsubscribe();
+        }
+    }
+    /**
+     * Joins the observable login in one place: sets values to some observables, merges this observables and
+     * subcribes to merge func
+     */
+    spyDataStreams() {
+        this._viewCurSettings$ = this.carouselService.getViewCurSettings().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(data => {
+            this.owlDOMData = data.owlDOMData;
+            this.stageData = data.stageData;
+            this.slidesData = data.slidesData;
+            if (!this.carouselLoaded) {
+                this.carouselLoaded = true;
+            }
+            this.navData = data.navData;
+            this.dotsData = data.dotsData;
+            this.changeDetectorRef.markForCheck();
+        }));
+        this._initializedCarousel$ = this.carouselService.getInitializedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            this.gatherTranslatedData();
+            this.initialized.emit(this.slidesOutputData);
+            // this.slidesOutputData = {};
+        }));
+        this._translatedCarousel$ = this.carouselService.getTranslatedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            this.gatherTranslatedData();
+            this.translated.emit(this.slidesOutputData);
+            // this.slidesOutputData = {};
+        }));
+        this._changeCarousel$ = this.carouselService.getChangeState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            this.gatherTranslatedData();
+            this.change.emit(this.slidesOutputData);
+            // this.slidesOutputData = {};
+        }));
+        this._changedCarousel$ = this.carouselService.getChangeState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(value => {
+            const changedPosition = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(() => value.property.name === 'position'), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(() => Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(this.slidesData)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["skip"])(value.property.value), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(this.carouselService.settings.items), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(slide => {
+                const clonedIdPrefix = this.carouselService.clonedIdPrefix;
+                const id = slide.id.indexOf(clonedIdPrefix) >= 0 ? slide.id.slice(clonedIdPrefix.length) : slide.id;
+                return Object.assign(Object.assign({}, slide), { id: id, isActive: true });
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["toArray"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(slides => {
+                return {
+                    slides: slides,
+                    startPosition: this.carouselService.relative(value.property.value)
+                };
+            }));
+            // const changedSetting: Observable<SlidesOutputData> = of(value).pipe(
+            //   filter(() => value.property.name === 'settings'),
+            //   map(() => {
+            //     return {
+            //       slides: [],
+            //       startPosition: this.carouselService.relative(value.property.value)
+            //     }
+            //   })
+            // )
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(changedPosition);
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(slidesData => {
+            this.gatherTranslatedData();
+            this.changed.emit(slidesData.slides.length ? slidesData : this.slidesOutputData);
+            // console.log(this.slidesOutputData);
+            // this.slidesOutputData = {};
+        }));
+        this._draggingCarousel$ = this.carouselService.getDragState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            this.gatherTranslatedData();
+            this.dragging.emit({ dragging: true, data: this.slidesOutputData });
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(() => this.carouselService.getDraggedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(() => !!this.carouselService.is('animating')))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(anim => {
+            if (anim) {
+                return this.carouselService.getTranslatedState().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])());
+            }
+            else {
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])('not animating');
+            }
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+            this.dragging.emit({ dragging: false, data: this.slidesOutputData });
+        }));
+        this._carouselMerge$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(this._viewCurSettings$, this._translatedCarousel$, this._draggingCarousel$, this._changeCarousel$, this._changedCarousel$, this._initializedCarousel$);
+        this._allObservSubscription = this._carouselMerge$.subscribe(() => { });
+    }
+    /**
+     * Init subscription to resize event and attaches handler for this event
+     */
+    _winResizeWatcher() {
+        if (Object.keys(this.carouselService._options.responsive).length) {
+            this.resizeSubscription = this.resizeService.onResize$
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(() => this.carouselWindowWidth !== this.el.nativeElement.querySelector('.owl-carousel').clientWidth), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["delay"])(this.carouselService.settings.responsiveRefreshRate))
+                .subscribe(() => {
+                this.carouselService.onResize(this.el.nativeElement.querySelector('.owl-carousel').clientWidth);
+                this.carouselWindowWidth = this.el.nativeElement.querySelector('.owl-carousel').clientWidth;
+            });
+        }
+    }
+    /**
+     * Handler for transitioend event
+     */
+    onTransitionEnd() {
+        this.carouselService.onTransitionEnd();
+    }
+    /**
+     * Handler for click event, attached to next button
+     */
+    next() {
+        if (!this.carouselLoaded)
+            return;
+        this.navigationService.next(this.carouselService.settings.navSpeed);
+    }
+    /**
+     * Handler for click event, attached to prev button
+     */
+    prev() {
+        if (!this.carouselLoaded)
+            return;
+        this.navigationService.prev(this.carouselService.settings.navSpeed);
+    }
+    /**
+     * Handler for click event, attached to dots
+     */
+    moveByDot(dotId) {
+        if (!this.carouselLoaded)
+            return;
+        this.navigationService.moveByDot(dotId);
+    }
+    /**
+     * rewinds carousel to slide with needed id
+     * @param id fragment of url
+     */
+    to(id) {
+        // if (!this.carouselLoaded || ((this.navData && this.navData.disabled) && (this.dotsData && this.dotsData.disabled))) return;
+        if (!this.carouselLoaded)
+            return;
+        this.navigationService.toSlideById(id);
+    }
+    /**
+     * Gathers and prepares data intended for passing to the user by means of firing event translatedCarousel
+     */
+    gatherTranslatedData() {
+        let startPosition;
+        const clonedIdPrefix = this.carouselService.clonedIdPrefix;
+        const activeSlides = this.slidesData
+            .filter(slide => slide.isActive === true)
+            .map(slide => {
+            const id = slide.id.indexOf(clonedIdPrefix) >= 0 ? slide.id.slice(clonedIdPrefix.length) : slide.id;
+            return {
+                id: id,
+                width: slide.width,
+                marginL: slide.marginL,
+                marginR: slide.marginR,
+                center: slide.isCentered
+            };
+        });
+        startPosition = this.carouselService.relative(this.carouselService.current());
+        this.slidesOutputData = {
+            startPosition: startPosition,
+            slides: activeSlides
+        };
+    }
+    /**
+     * Starts pausing
+     */
+    startPausing() {
+        this.autoplayService.startPausing();
+    }
+    /**
+     * Starts playing after mouse leaves carousel
+     */
+    startPlayML() {
+        this.autoplayService.startPlayingMouseLeave();
+    }
+    /**
+     * Starts playing after touch ends
+     */
+    startPlayTE() {
+        this.autoplayService.startPlayingTouchEnd();
+    }
+}
+CarouselComponent.ɵfac = function CarouselComponent_Factory(t) { return new (t || CarouselComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ResizeService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](CarouselService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](NavigationService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](AutoplayService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](LazyLoadService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](AnimateService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](AutoHeightService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](HashService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](OwlLogger), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](DOCUMENT)); };
+CarouselComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CarouselComponent, selectors: [["owl-carousel-o"]], contentQueries: function CarouselComponent_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵcontentQuery"](dirIndex, CarouselSlideDirective, 0);
+    } if (rf & 2) {
+        let _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.slides = _t);
+    } }, hostBindings: function CarouselComponent_HostBindings(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("visibilitychange", function CarouselComponent_visibilitychange_HostBindingHandler($event) { return ctx.onVisibilityChange($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
+    } }, inputs: { options: "options" }, outputs: { translated: "translated", dragging: "dragging", change: "change", changed: "changed", initialized: "initialized" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([
+            NavigationService,
+            AutoplayService,
+            CarouselService,
+            LazyLoadService,
+            AnimateService,
+            AutoHeightService,
+            HashService
+        ])], decls: 4, vars: 9, consts: [[1, "owl-carousel", "owl-theme", 3, "ngClass", "mouseover", "mouseleave", "touchstart", "touchend"], ["owlCarousel", ""], ["class", "owl-stage-outer", 4, "ngIf"], [4, "ngIf"], [1, "owl-stage-outer"], [3, "owlDraggable", "stageData", "slidesData"], [1, "owl-nav", 3, "ngClass"], [1, "owl-prev", 3, "ngClass", "innerHTML", "click"], [1, "owl-next", 3, "ngClass", "innerHTML", "click"], [1, "owl-dots", 3, "ngClass"], ["class", "owl-dot", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "owl-dot", 3, "ngClass", "click"], [3, "innerHTML"]], template: function CarouselComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function CarouselComponent_Template_div_mouseover_0_listener() { return ctx.startPausing(); })("mouseleave", function CarouselComponent_Template_div_mouseleave_0_listener() { return ctx.startPlayML(); })("touchstart", function CarouselComponent_Template_div_touchstart_0_listener() { return ctx.startPausing(); })("touchend", function CarouselComponent_Template_div_touchend_0_listener() { return ctx.startPlayTE(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, CarouselComponent_div_2_Template, 2, 6, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, CarouselComponent_ng_container_3_Template, 6, 15, "ng-container", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction5"](3, _c3, ctx.owlDOMData == null ? null : ctx.owlDOMData.rtl, ctx.owlDOMData == null ? null : ctx.owlDOMData.isLoaded, ctx.owlDOMData == null ? null : ctx.owlDOMData.isResponsive, ctx.owlDOMData == null ? null : ctx.owlDOMData.isMouseDragable, ctx.owlDOMData == null ? null : ctx.owlDOMData.isGrab));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.carouselLoaded);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.slides.toArray().length);
+    } }, directives: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], StageComponent, _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]]; }, styles: [".owl-theme[_ngcontent-%COMP%] { display: block; }"] });
+CarouselComponent.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
+    { type: ResizeService },
+    { type: CarouselService },
+    { type: NavigationService },
+    { type: AutoplayService },
+    { type: LazyLoadService },
+    { type: AnimateService },
+    { type: AutoHeightService },
+    { type: HashService },
+    { type: OwlLogger },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [DOCUMENT,] }] }
+];
+CarouselComponent.propDecorators = {
+    slides: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"], args: [CarouselSlideDirective,] }],
+    translated: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    dragging: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    change: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    changed: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    initialized: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    options: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    onVisibilityChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['document:visibilitychange', ['$event'],] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CarouselComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'owl-carousel-o',
+                template: `
+    <div class="owl-carousel owl-theme" #owlCarousel
+      [ngClass]="{'owl-rtl': owlDOMData?.rtl,
+                  'owl-loaded': owlDOMData?.isLoaded,
+                  'owl-responsive': owlDOMData?.isResponsive,
+                  'owl-drag': owlDOMData?.isMouseDragable,
+                  'owl-grab': owlDOMData?.isGrab}"
+      (mouseover)="startPausing()"
+      (mouseleave)="startPlayML()"
+      (touchstart)="startPausing()"
+      (touchend)="startPlayTE()">
+
+      <div *ngIf="carouselLoaded" class="owl-stage-outer">
+        <owl-stage [owlDraggable]="{'isMouseDragable': owlDOMData?.isMouseDragable, 'isTouchDragable': owlDOMData?.isTouchDragable}"
+                    [stageData]="stageData"
+                    [slidesData]="slidesData"></owl-stage>
+      </div> <!-- /.owl-stage-outer -->
+      <ng-container *ngIf="slides.toArray().length">
+        <div class="owl-nav" [ngClass]="{'disabled': navData?.disabled}">
+          <div class="owl-prev" [ngClass]="{'disabled': navData?.prev?.disabled}" (click)="prev()" [innerHTML]="navData?.prev?.htmlText"></div>
+          <div class="owl-next" [ngClass]="{'disabled': navData?.next?.disabled}" (click)="next()" [innerHTML]="navData?.next?.htmlText"></div>
+        </div> <!-- /.owl-nav -->
+        <div class="owl-dots" [ngClass]="{'disabled': dotsData?.disabled}">
+          <div *ngFor="let dot of dotsData?.dots" class="owl-dot" [ngClass]="{'active': dot.active, 'owl-dot-text': dot.showInnerContent}" (click)="moveByDot(dot.id)">
+            <span [innerHTML]="dot.innerContent"></span>
+          </div>
+        </div> <!-- /.owl-dots -->
+      </ng-container>
+    </div> <!-- /.owl-carousel owl-loaded -->
+  `,
+                providers: [
+                    NavigationService,
+                    AutoplayService,
+                    CarouselService,
+                    LazyLoadService,
+                    AnimateService,
+                    AutoHeightService,
+                    HashService
+                ],
+                styles: [`.owl-theme { display: block; }`]
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: ResizeService }, { type: CarouselService }, { type: NavigationService }, { type: AutoplayService }, { type: LazyLoadService }, { type: AnimateService }, { type: AutoHeightService }, { type: HashService }, { type: OwlLogger }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [DOCUMENT]
+            }] }]; }, { translated: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], dragging: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], change: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], changed: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], initialized: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], onVisibilityChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['document:visibilitychange', ['$event']]
+        }], slides: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"],
+            args: [CarouselSlideDirective]
+        }], options: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+class StageComponent {
+    constructor(zone, el, renderer, carouselService, animateService) {
+        this.zone = zone;
+        this.el = el;
+        this.renderer = renderer;
+        this.carouselService = carouselService;
+        this.animateService = animateService;
+        /**
+         * Object with data needed for dragging
+         */
+        this._drag = {
+            time: null,
+            target: null,
+            pointer: null,
+            stage: {
+                start: null,
+                current: null
+            },
+            direction: null,
+            active: false,
+            moving: false
+        };
+        /**
+         * Subject for notification when the carousel's rebuilding caused by resize event starts
+         */
+        this._oneDragMove$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /**
+         * Passes this to _oneMouseTouchMove();
+         */
+        this.bindOneMouseTouchMove = (ev) => {
+            this._oneMouseTouchMove(ev);
+        };
+        /**
+         * Passes this to _onDragMove();
+         */
+        this.bindOnDragMove = (ev) => {
+            this._onDragMove(ev);
+        };
+        /**
+         * Passes this to _onDragMove();
+         */
+        this.bindOnDragEnd = (ev) => {
+            // this.zone.run(() => {
+            this._onDragEnd(ev);
+            // });
+        };
+        /**
+         * Attaches handler for 'click' event on any element in .owl-stage in order to prevent dragging when moving of cursor is less than 3px
+         */
+        this._oneClickHandler = () => {
+            this.listenerOneClick = this.renderer.listen(this._drag.target, 'click', () => false);
+            this.listenerOneClick();
+        };
+    }
+    onMouseDown(event) {
+        if (this.owlDraggable.isMouseDragable) {
+            this._onDragStart(event);
+        }
+    }
+    onTouchStart(event) {
+        if (this.owlDraggable.isTouchDragable) {
+            this._onDragStart(event);
+        }
+    }
+    onTouchCancel(event) {
+        this._onDragEnd(event);
+    }
+    onDragStart() {
+        if (this.owlDraggable.isMouseDragable) {
+            return false;
+        }
+    }
+    onSelectStart() {
+        if (this.owlDraggable.isMouseDragable) {
+            return false;
+        }
+    }
+    ngOnInit() {
+        this._oneMoveSubsription = this._oneDragMove$
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
+            .subscribe(() => {
+            this._sendChanges();
+        });
+    }
+    ngOnDestroy() {
+        this._oneMoveSubsription.unsubscribe();
+    }
+    /**
+       * Handles `touchstart` and `mousedown` events.
+       * @todo Horizontal swipe threshold as option
+       * @todo #261
+       * @param event - The event arguments.
+       */
+    _onDragStart(event) {
+        let stage = null;
+        if (event.which === 3) {
+            return;
+        }
+        stage = this._prepareDragging(event);
+        this._drag.time = new Date().getTime();
+        this._drag.target = event.target;
+        this._drag.stage.start = stage;
+        this._drag.stage.current = stage;
+        this._drag.pointer = this._pointer(event);
+        this.listenerMouseUp = this.renderer.listen(document, 'mouseup', this.bindOnDragEnd);
+        this.listenerTouchEnd = this.renderer.listen(document, 'touchend', this.bindOnDragEnd);
+        this.zone.runOutsideAngular(() => {
+            this.listenerOneMouseMove = this.renderer.listen(document, 'mousemove', this.bindOneMouseTouchMove);
+            this.listenerOneTouchMove = this.renderer.listen(document, 'touchmove', this.bindOneMouseTouchMove);
+        });
+    }
+    /**
+     * Attaches listeners to `touchmove` and `mousemove` events; initiates updating carousel after starting dragging
+     * @param event event objech of mouse or touch event
+     */
+    _oneMouseTouchMove(event) {
+        const delta = this._difference(this._drag.pointer, this._pointer(event));
+        if (this.listenerATag) {
+            this.listenerATag();
+        }
+        if (Math.abs(delta.x) < 3 && Math.abs(delta.y) < 3 && this._is('valid')) {
+            return;
+        }
+        if ((Math.abs(delta.x) < 3 && Math.abs(delta.x) < Math.abs(delta.y)) && this._is('valid')) {
+            return;
+        }
+        this.listenerOneMouseMove();
+        this.listenerOneTouchMove();
+        this._drag.moving = true;
+        this.blockClickAnchorInDragging(event);
+        this.listenerMouseMove = this.renderer.listen(document, 'mousemove', this.bindOnDragMove);
+        this.listenerTouchMove = this.renderer.listen(document, 'touchmove', this.bindOnDragMove);
+        event.preventDefault();
+        this._enterDragging();
+        this._oneDragMove$.next(event);
+        // this._sendChanges();
+    }
+    /**
+     * Attaches handler to HTMLAnchorElement for preventing click while carousel is being dragged
+     * @param event event object
+     */
+    blockClickAnchorInDragging(event) {
+        let target = event.target;
+        while (target && !(target instanceof HTMLAnchorElement)) {
+            target = target.parentElement;
+        }
+        if (target instanceof HTMLAnchorElement) {
+            this.listenerATag = this.renderer.listen(target, 'click', () => false);
+        }
+    }
+    /**
+     * Handles the `touchmove` and `mousemove` events.
+     * @todo #261
+     * @param event - The event arguments.
+     */
+    _onDragMove(event) {
+        let stage;
+        const stageOrExit = this.carouselService.defineNewCoordsDrag(event, this._drag);
+        if (stageOrExit === false) {
+            return;
+        }
+        stage = stageOrExit;
+        event.preventDefault();
+        this._drag.stage.current = stage;
+        this._animate(stage.x - this._drag.stage.start.x);
+    }
+    ;
+    /**
+     * Moves .owl-stage left-right
+     * @param coordinate coordinate to be set to .owl-stage
+     */
+    _animate(coordinate) {
+        this.renderer.setStyle(this.el.nativeElement.children[0], 'transform', `translate3d(${coordinate}px,0px,0px`);
+        this.renderer.setStyle(this.el.nativeElement.children[0], 'transition', '0s');
+    }
+    /**
+       * Handles the `touchend` and `mouseup` events.
+       * @todo #261
+       * @todo Threshold for click event
+       * @param event - The event arguments.
+       */
+    _onDragEnd(event) {
+        this.carouselService.owlDOMData.isGrab = false;
+        this.listenerOneMouseMove();
+        this.listenerOneTouchMove();
+        if (this._drag.moving) {
+            this.renderer.setStyle(this.el.nativeElement.children[0], 'transform', ``);
+            this.renderer.setStyle(this.el.nativeElement.children[0], 'transition', this.carouselService.speed(+this.carouselService.settings.dragEndSpeed || this.carouselService.settings.smartSpeed) / 1000 + 's');
+            this._finishDragging(event);
+            this.listenerMouseMove();
+            this.listenerTouchMove();
+        }
+        this._drag = {
+            time: null,
+            target: null,
+            pointer: null,
+            stage: {
+                start: null,
+                current: null
+            },
+            direction: null,
+            active: false,
+            moving: false
+        };
+        // this.carouselService.trigger('dragged');
+        this.listenerMouseUp();
+        this.listenerTouchEnd();
+    }
+    ;
+    /**
+       * Prepares data for dragging carousel. It starts after firing `touchstart` and `mousedown` events.
+       * @param event - The event arguments.
+       * @returns stage - object with 'x' and 'y' coordinates of .owl-stage
+       */
+    _prepareDragging(event) {
+        return this.carouselService.prepareDragging(event);
+    }
+    /**
+     * Finishes dragging
+     * @param event object event of 'mouseUp' of 'touchend' events
+     */
+    _finishDragging(event) {
+        this.carouselService.finishDragging(event, this._drag, this._oneClickHandler);
+    }
+    /**
+       * Gets unified pointer coordinates from event.
+       * @param event The `mousedown` or `touchstart` event.
+       * @returns Contains `x` and `y` coordinates of current pointer position.
+       */
+    _pointer(event) {
+        return this.carouselService.pointer(event);
+    }
+    /**
+       * Gets the difference of two vectors.
+       * @param first The first vector.
+       * @param second- The second vector.
+       * @returns The difference.
+       */
+    _difference(firstC, second) {
+        return this.carouselService.difference(firstC, second);
+    }
+    /**
+       * Checks whether the carousel is in a specific state or not.
+       * @param specificState The state to check.
+       * @returns The flag which indicates if the carousel is busy.
+       */
+    _is(specificState) {
+        return this.carouselService.is(specificState);
+    }
+    /**
+    * Enters a state.
+    * @param name The state name.
+    */
+    _enter(name) {
+        this.carouselService.enter(name);
+    }
+    /**
+       * Sends all data needed for View.
+       */
+    _sendChanges() {
+        this.carouselService.sendChanges();
+    }
+    /**
+     * Handler for transitioend event
+     */
+    onTransitionEnd() {
+        this.carouselService.onTransitionEnd();
+    }
+    /**
+       * Enters into a 'dragging' state
+       */
+    _enterDragging() {
+        this.carouselService.enterDragging();
+    }
+    /**
+     * Handles the end of 'animationend' event
+     * @param id Id of slides
+     */
+    clear(id) {
+        this.animateService.clear(id);
+    }
+}
+StageComponent.ɵfac = function StageComponent_Factory(t) { return new (t || StageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](CarouselService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](AnimateService)); };
+StageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: StageComponent, selectors: [["owl-stage"]], hostBindings: function StageComponent_HostBindings(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mousedown", function StageComponent_mousedown_HostBindingHandler($event) { return ctx.onMouseDown($event); })("touchstart", function StageComponent_touchstart_HostBindingHandler($event) { return ctx.onTouchStart($event); })("touchcancel", function StageComponent_touchcancel_HostBindingHandler($event) { return ctx.onTouchCancel($event); })("dragstart", function StageComponent_dragstart_HostBindingHandler() { return ctx.onDragStart(); })("selectstart", function StageComponent_selectstart_HostBindingHandler() { return ctx.onSelectStart(); });
+    } }, inputs: { owlDraggable: "owlDraggable", stageData: "stageData", slidesData: "slidesData" }, decls: 3, vars: 8, consts: [[1, "owl-stage", 3, "ngStyle", "transitionend"], [4, "ngFor", "ngForOf"], [1, "owl-item", 3, "ngClass", "ngStyle", "animationend"], [4, "ngIf"], [3, "ngTemplateOutlet"]], template: function StageComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("transitionend", function StageComponent_Template_div_transitionend_1_listener() { return ctx.onTransitionEnd(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, StageComponent_ng_container_2_Template, 3, 9, "ng-container", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction5"](2, _c5, ctx.stageData.width + "px", ctx.stageData.transform, ctx.stageData.transition, ctx.stageData.paddingL ? ctx.stageData.paddingL + "px" : "", ctx.stageData.paddingR ? ctx.stageData.paddingR + "px" : ""));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.slidesData);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgTemplateOutlet"]], encapsulation: 2, data: { animation: [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["trigger"])('autoHeight', [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["state"])('nulled', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({ height: 0 })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["state"])('full', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({ height: '*' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('full => nulled', [
+                    // style({height: '*'}),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])('700ms 350ms')
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('nulled => full', [
+                    // style({height: 0}),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(350)
+                ]),
+            ])
+        ] } });
+StageComponent.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] },
+    { type: CarouselService },
+    { type: AnimateService }
+];
+StageComponent.propDecorators = {
+    owlDraggable: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    stageData: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    slidesData: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    onMouseDown: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['mousedown', ['$event'],] }],
+    onTouchStart: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['touchstart', ['$event'],] }],
+    onTouchCancel: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['touchcancel', ['$event'],] }],
+    onDragStart: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['dragstart',] }],
+    onSelectStart: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['selectstart',] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](StageComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'owl-stage',
+                template: `
+    <div>
+      <div class="owl-stage" [ngStyle]="{'width': stageData.width + 'px',
+                                        'transform': stageData.transform,
+                                        'transition': stageData.transition,
+                                        'padding-left': stageData.paddingL ? stageData.paddingL + 'px' : '',
+                                        'padding-right': stageData.paddingR ? stageData.paddingR + 'px' : '' }"
+          (transitionend)="onTransitionEnd()">
+        <ng-container *ngFor="let slide of slidesData; let i = index">
+          <div class="owl-item" [ngClass]="slide.classes"
+                                [ngStyle]="{'width': slide.width + 'px',
+                                            'margin-left': slide.marginL ? slide.marginL + 'px' : '',
+                                            'margin-right': slide.marginR ? slide.marginR + 'px' : '',
+                                            'left': slide.left}"
+                                (animationend)="clear(slide.id)"
+                                [@autoHeight]="slide.heightState">
+            <ng-template *ngIf="slide.load" [ngTemplateOutlet]="slide.tplRef"></ng-template>
+          </div><!-- /.owl-item -->
+        </ng-container>
+      </div><!-- /.owl-stage -->
+    </div>
+  `,
+                animations: [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["trigger"])('autoHeight', [
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["state"])('nulled', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({ height: 0 })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["state"])('full', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({ height: '*' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('full => nulled', [
+                            // style({height: '*'}),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])('700ms 350ms')
+                        ]),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('nulled => full', [
+                            // style({height: 0}),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(350)
+                        ]),
+                    ])
+                ]
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: CarouselService }, { type: AnimateService }]; }, { onMouseDown: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['mousedown', ['$event']]
+        }], onTouchStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['touchstart', ['$event']]
+        }], onTouchCancel: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['touchcancel', ['$event']]
+        }], onDragStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['dragstart']
+        }], onSelectStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['selectstart']
+        }], owlDraggable: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], stageData: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], slidesData: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+class OwlRouterLinkDirective {
+    constructor(router, route, tabIndex, renderer, el) {
+        this.router = router;
+        this.route = route;
+        this.stopLink = false;
+        this.commands = [];
+        if (tabIndex == null) {
+            renderer.setAttribute(el.nativeElement, 'tabindex', '0');
+        }
+    }
+    set owlRouterLink(commands) {
+        if (commands != null) {
+            this.commands = Array.isArray(commands) ? commands : [commands];
+        }
+        else {
+            this.commands = [];
+        }
+    }
+    /**
+     * @deprecated 4.0.0 use `queryParamsHandling` instead.
+     */
+    set preserveQueryParams(value) {
+        if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])() && console && console.warn) {
+            console.warn('preserveQueryParams is deprecated!, use queryParamsHandling instead.');
+        }
+        this.preserve = value;
+    }
+    onClick() {
+        const extras = {
+            skipLocationChange: attrBoolValue(this.skipLocationChange),
+            replaceUrl: attrBoolValue(this.replaceUrl),
+        };
+        if (this.stopLink) {
+            return false;
+        }
+        this.router.navigateByUrl(this.urlTree, extras);
+        return true;
+    }
+    get urlTree() {
+        return this.router.createUrlTree(this.commands, {
+            relativeTo: this.route,
+            queryParams: this.queryParams,
+            fragment: this.fragment,
+            queryParamsHandling: this.queryParamsHandling,
+            preserveFragment: attrBoolValue(this.preserveFragment)
+        });
+    }
+}
+OwlRouterLinkDirective.ɵfac = function OwlRouterLinkDirective_Factory(t) { return new (t || OwlRouterLinkDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinjectAttribute"]('tabindex'), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])); };
+OwlRouterLinkDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: OwlRouterLinkDirective, selectors: [["", "owlRouterLink", "", 5, "a"]], hostBindings: function OwlRouterLinkDirective_HostBindings(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function OwlRouterLinkDirective_click_HostBindingHandler() { return ctx.onClick(); });
+    } }, inputs: { stopLink: "stopLink", owlRouterLink: "owlRouterLink", preserveQueryParams: "preserveQueryParams", queryParams: "queryParams", fragment: "fragment", queryParamsHandling: "queryParamsHandling", preserveFragment: "preserveFragment", skipLocationChange: "skipLocationChange", replaceUrl: "replaceUrl" } });
+OwlRouterLinkDirective.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+    { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Attribute"], args: ['tabindex',] }] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }
+];
+OwlRouterLinkDirective.propDecorators = {
+    queryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    fragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    queryParamsHandling: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    preserveFragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    skipLocationChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    replaceUrl: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    stopLink: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    owlRouterLink: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    preserveQueryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    onClick: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['click',] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](OwlRouterLinkDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{ selector: ':not(a)[owlRouterLink]' }]
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] }, { type: String, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Attribute"],
+                args: ['tabindex']
+            }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }]; }, { stopLink: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], owlRouterLink: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], preserveQueryParams: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], onClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['click']
+        }], queryParams: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], fragment: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], queryParamsHandling: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], preserveFragment: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], skipLocationChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], replaceUrl: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+/**
+ * @description
+ *
+ * Lets you link to specific routes in your app.
+ *
+ * See `RouterLink` for more information.
+ *
+ * @ngModule RouterModule
+ *
+ * @publicApi
+ */
+class OwlRouterLinkWithHrefDirective {
+    constructor(router, route, locationStrategy) {
+        this.router = router;
+        this.route = route;
+        this.locationStrategy = locationStrategy;
+        this.stopLink = false;
+        this.commands = [];
+        this.subscription = router.events.subscribe((s) => {
+            if (s instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationEnd"]) {
+                this.updateTargetUrlAndHref();
+            }
+        });
+    }
+    set owlRouterLink(commands) {
+        if (commands != null) {
+            this.commands = Array.isArray(commands) ? commands : [commands];
+        }
+        else {
+            this.commands = [];
+        }
+    }
+    set preserveQueryParams(value) {
+        if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])() && console && console.warn) {
+            console.warn('preserveQueryParams is deprecated, use queryParamsHandling instead.');
+        }
+        this.preserve = value;
+    }
+    ngOnChanges(changes) { this.updateTargetUrlAndHref(); }
+    ngOnDestroy() { this.subscription.unsubscribe(); }
+    onClick(button, ctrlKey, metaKey, shiftKey) {
+        if (button !== 0 || ctrlKey || metaKey || shiftKey) {
+            return true;
+        }
+        if (typeof this.target === 'string' && this.target !== '_self') {
+            return true;
+        }
+        if (this.stopLink) {
+            return false;
+        }
+        const extras = {
+            skipLocationChange: attrBoolValue(this.skipLocationChange),
+            replaceUrl: attrBoolValue(this.replaceUrl),
+        };
+        this.router.navigateByUrl(this.urlTree, extras);
+        return false;
+    }
+    updateTargetUrlAndHref() {
+        this.href = this.locationStrategy.prepareExternalUrl(this.router.serializeUrl(this.urlTree));
+    }
+    get urlTree() {
+        return this.router.createUrlTree(this.commands, {
+            relativeTo: this.route,
+            queryParams: this.queryParams,
+            fragment: this.fragment,
+            queryParamsHandling: this.queryParamsHandling,
+            preserveFragment: attrBoolValue(this.preserveFragment)
+        });
+    }
+}
+OwlRouterLinkWithHrefDirective.ɵfac = function OwlRouterLinkWithHrefDirective_Factory(t) { return new (t || OwlRouterLinkWithHrefDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_1__["LocationStrategy"])); };
+OwlRouterLinkWithHrefDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: OwlRouterLinkWithHrefDirective, selectors: [["a", "owlRouterLink", ""]], hostVars: 2, hostBindings: function OwlRouterLinkWithHrefDirective_HostBindings(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function OwlRouterLinkWithHrefDirective_click_HostBindingHandler($event) { return ctx.onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey); });
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵhostProperty"]("href", ctx.href, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("target", ctx.target);
+    } }, inputs: { stopLink: "stopLink", owlRouterLink: "owlRouterLink", preserveQueryParams: "preserveQueryParams", target: "target", queryParams: "queryParams", fragment: "fragment", queryParamsHandling: "queryParamsHandling", preserveFragment: "preserveFragment", skipLocationChange: "skipLocationChange", replaceUrl: "replaceUrl" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]] });
+OwlRouterLinkWithHrefDirective.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["LocationStrategy"] }
+];
+OwlRouterLinkWithHrefDirective.propDecorators = {
+    target: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['attr.target',] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    queryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    fragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    queryParamsHandling: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    preserveFragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    skipLocationChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    replaceUrl: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    stopLink: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    href: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"] }],
+    owlRouterLink: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    preserveQueryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    onClick: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"], args: ['click', ['$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey'],] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](OwlRouterLinkWithHrefDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{ selector: 'a[owlRouterLink]' }]
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["LocationStrategy"] }]; }, { stopLink: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], owlRouterLink: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], preserveQueryParams: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], onClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+            args: ['click', ['$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey']]
+        }], href: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"]
+        }], target: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"],
+            args: ['attr.target']
+        }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], queryParams: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], fragment: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], queryParamsHandling: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], preserveFragment: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], skipLocationChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], replaceUrl: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+function attrBoolValue(s) {
+    return s === '' || !!s;
+}
+
+const routes = [];
+class CarouselModule {
+}
+CarouselModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: CarouselModule });
+CarouselModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function CarouselModule_Factory(t) { return new (t || CarouselModule)(); }, providers: [WINDOW_PROVIDERS, ResizeService, DOCUMENT_PROVIDERS, OwlLogger], imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](CarouselModule, { declarations: function () { return [CarouselComponent, CarouselSlideDirective, StageComponent, OwlRouterLinkDirective, OwlRouterLinkWithHrefDirective]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]; }, exports: function () { return [CarouselComponent, CarouselSlideDirective, OwlRouterLinkDirective, OwlRouterLinkWithHrefDirective]; } }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CarouselModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                ],
+                declarations: [CarouselComponent, CarouselSlideDirective, StageComponent, OwlRouterLinkDirective, OwlRouterLinkWithHrefDirective],
+                exports: [CarouselComponent, CarouselSlideDirective, OwlRouterLinkDirective, OwlRouterLinkWithHrefDirective],
+                providers: [WINDOW_PROVIDERS, ResizeService, DOCUMENT_PROVIDERS, OwlLogger]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=ngx-owl-carousel-o.js.map
 
 /***/ }),
 

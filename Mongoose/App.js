@@ -96,9 +96,19 @@ var App = /** @class */ (function () {
         });
         //Display menu of a specific restaurant
         router.get('/app/restaurantMenu/:restaurantId', function (req, res) {
-            var id = req.params.restaurantId;
-            console.log('Query single restaurant menu with id: ' + id);
-            _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
+            if (!req.user) {
+                console.log("User not loggedin");
+                //res.redirect('/#/restaurantOwnerLogin');
+                return res.status(401).send({
+                    message: 'Unauthorized user!'
+                });
+            }
+            else {
+                console.log("User loggedin");
+                var id = req.params.restaurantId;
+                console.log('Query single restaurant menu with id: ' + id);
+                _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
+            }
         });
         //Display a specific menu from restaurant menu
         router.get('/app/restaurantMenuItem/:itemId', function (req, res) {
@@ -200,7 +210,6 @@ var App = /** @class */ (function () {
             console.log('CartItem deleted');
             _this.CartDetails.deleteAllCartItem(res);
         });
-
         this.expressApp.use('/', router);
         this.expressApp.use('/', express.static(__dirname + '/dist/EatEZ'));
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));

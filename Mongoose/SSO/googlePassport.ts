@@ -27,19 +27,20 @@ class GooglePassport {
             (accessToken, refreshToken, profile, done) => {
                 console.log("inside new password google strategy");
                 process.nextTick( () => {
+                    console.log(profile);
                     return done(null, profile);
                 }); 
             }
         ));
 
-        passport.serializeUser(function(restauarant, done) {
+        passport.serializeUser(function(user, done) {
             //console.log("In serialize user " + user);
-            done(null, restauarant);
+            done(null, user);
         });
 
-        passport.deserializeUser(function(restauarant, done) {
-            console.log("In de-serialize user " + restauarant);
-            done(null, restauarant);
+        passport.deserializeUser(function(user, done) {
+            console.log("In de-serialize user " + user);
+            done(null, user);
         });
     }
 }

@@ -126,12 +126,23 @@ class App {
         this.Restaurant.retrieveAllRestaurantLists(res);
     });
 
-    //Display menu of a specific restaurant
-    router.get('/app/restaurantMenu/:restaurantId', (req, res) => {
-      var id = req.params.restaurantId;
-      console.log('Query single restaurant menu with id: ' + id);
-      this.RestaurantMenu.retrieveMenuDetails(res, {restaurantId: id});
-  });
+ //Display menu of a specific restaurant
+ router.get('/app/restaurantMenu/:restaurantId', (req, res) => {
+      
+  if(!req.user){
+    console.log("User not loggedin");
+    //res.redirect('/#/restaurantOwnerLogin');
+    return res.status(401).send({
+      message: 'Unauthorized user!'
+   });
+  }
+  else {
+    console.log("User loggedin")
+  var id = req.params.restaurantId;
+  console.log('Query single restaurant menu with id: ' + id);
+  this.RestaurantMenu.retrieveMenuDetails(res, {restaurantId: id});
+  }
+});
 
   //Display a specific menu from restaurant menu
   router.get('/app/restaurantMenuItem/:itemId', (req, res) => {
