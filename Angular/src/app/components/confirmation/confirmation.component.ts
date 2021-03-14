@@ -16,7 +16,9 @@ export class ConfirmationComponent implements OnInit {
 
   ngOnInit() {
     this.RestaurantService.retrieveRestaurantDetails(this.restId).subscribe((restaurantInfo) =>{
-    this.restaurant = JSON.parse(JSON.stringify(restaurantInfo));
+      console.log("restaurantInfo is " +JSON.stringify(restaurantInfo));
+      //this.restaurant = {_id:restaurantInfo._id, restaurantName: restaurantInfo.restaurantName, restaurantAddress: restaurantInfo.restaurantAddress, phoneNumber: restaurantInfo.phoneNumber, restaurantImageUrl: restaurantInfo.restaurantImageUrl}
+    this.restaurant = JSON.parse(JSON.stringify(restaurantInfo[0]))
     console.log(this.restaurant);
   });
  }
