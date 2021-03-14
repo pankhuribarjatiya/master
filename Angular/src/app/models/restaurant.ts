@@ -6,7 +6,6 @@ export interface Restaurant {
                 phoneNumber: string;
                 restaurantImageUrl: string;
                 ownerId:string;
-                restaurantOwner:string;
-
-}
+                restaurantOwner:string;           
+         }
 
