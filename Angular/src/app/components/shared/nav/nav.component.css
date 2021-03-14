@@ -29,3 +29,10 @@
 .topnav-right {
   float: right;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Amiri, Georgia, "Times New Roman", serif;
+}
+a1 {
+  font-family: Amiri, Georgia, "Times New Roman", serif;
+}
