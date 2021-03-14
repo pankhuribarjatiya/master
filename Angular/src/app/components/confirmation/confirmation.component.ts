@@ -11,6 +11,7 @@ export class ConfirmationComponent implements OnInit {
 
   restaurant: Restaurant;
   restId: number = 1;
+  emailId: string = "asupekar@seattleu.edu";
 
   constructor(private RestaurantService: RestaurantService) { }
 
