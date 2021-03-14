@@ -126,6 +126,16 @@ class App {
         this.Restaurant.retrieveAllRestaurantLists(res);
     });
 
+
+     //Display menu of a specific restaurant
+ router.get('/app/restaurantMenuForUser/:restaurantId', (req, res) => {
+      
+    console.log("User loggedin")
+  var id = req.params.restaurantId;
+  console.log('Query single restaurant menu with id: ' + id);
+  this.RestaurantMenu.retrieveMenuDetails(res, {restaurantId: id});
+  
+});
  //Display menu of a specific restaurant
  router.get('/app/restaurantMenu/:restaurantId', (req, res) => {
       

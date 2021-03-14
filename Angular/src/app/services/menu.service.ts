@@ -33,6 +33,10 @@ export class MenuService {
         })
       )
   }
+  
+  retrieveMenuDetailForUser(id: string): Observable<Menu[]> {
+    return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenuForUser/${id}`);
+}
 
   add(menuItem: Menu) {
     return this.http.post('http://127.0.0.1:8080/app/addRestaurantMenuItem', menuItem)

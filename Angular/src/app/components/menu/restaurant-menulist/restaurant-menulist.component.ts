@@ -29,7 +29,7 @@ export class RestaurantMenulistComponent implements OnInit {
 }​​​​
  
 retrieveMenuDetails(id : string) {​​​​
-      this.MenuService.retrieveMenuDetails(id) //model._id; Menu.restaurantId
+      this.MenuService.retrieveMenuDetailForUser(id) //model._id; Menu.restaurantId
       .subscribe(menulist => {​​​​
       console.log(JSON.parse(JSON.stringify(menulist)));
       this.menulist = JSON.parse(JSON.stringify(menulist));

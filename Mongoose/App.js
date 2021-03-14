@@ -95,6 +95,13 @@ var App = /** @class */ (function () {
             _this.Restaurant.retrieveAllRestaurantLists(res);
         });
         //Display menu of a specific restaurant
+        router.get('/app/restaurantMenuForUser/:restaurantId', function (req, res) {
+            console.log("User loggedin");
+            var id = req.params.restaurantId;
+            console.log('Query single restaurant menu with id: ' + id);
+            _this.RestaurantMenu.retrieveMenuDetails(res, { restaurantId: id });
+        });
+        //Display menu of a specific restaurant
         router.get('/app/restaurantMenu/:restaurantId', function (req, res) {
             if (!req.user) {
                 console.log("User not loggedin");
