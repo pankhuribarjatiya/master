@@ -43,7 +43,7 @@ header {
 	position: fixed;
   background-image:url("https://api.dineoncampus.com/files/test/path/ea76905e-6407-415e-a404-8e8ba597f9dc.png");
   background-repeat: no-repeat;
-  background-size: 700px 200px;
+  background-size: 800px 200px;
 	background-position:  center;
   position: absolute !important;
 }

@@ -19,7 +19,7 @@ class RestaurantMenuController {
         this.schema = new Mongoose.Schema(
             {
                 _id: Number,
-                restaurantId: String,
+                restaurantId: Number,
                 itemName: String,
                 itemDescription: String,
                 itemPrice: Number,

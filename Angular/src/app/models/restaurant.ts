@@ -5,6 +5,8 @@ export interface Restaurant {
                 restaurantAddress: string;
                 phoneNumber: string;
                 restaurantImageUrl: string;
+                ownerId:string;
+                restaurantOwner:string;
 
 }
 

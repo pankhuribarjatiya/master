@@ -9,6 +9,10 @@ var RestaurantController_1 = require("./controller/RestaurantController");
 var RestaurantMenuController_1 = require("./controller/RestaurantMenuController");
 var OrderDetailController_1 = require("./controller/OrderDetailController");
 var CartDetailsController_1 = require("./controller/CartDetailsController");
+var passport = require('passport');
+var cookieSession = require('cookie-session');
+var cookieParser = require('cookie-parser');
+var googlePassport_1 = require("./sso/googlePassport");
 // Creates and configures an ExpressJS web server.
 var App = /** @class */ (function () {
     //Run configuration methods on the Express instance.
@@ -25,17 +29,46 @@ var App = /** @class */ (function () {
         this.mIdGenerator = 100;
         this.orderIdGenerator = 100;
         this.cartIdGenerator = 100;
+        this.googlePassportObj = new googlePassport_1["default"]();
     }
     // Configure Express middleware.
     App.prototype.middleware = function () {
         this.expressApp.use(logger('dev'));
         this.expressApp.use(bodyParser.json());
         this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+        this.expressApp.use(cookieParser());
+        this.expressApp.use(cookieSession({ secret: 'EatEZ secret' }));
+        this.expressApp.use(passport.initialize());
+        this.expressApp.use(passport.session());
+    };
+    App.prototype.validateAuth = function (req, res, next) {
+        if (req.isAuthenticated()) {
+            console.log("user is authenticated");
+            return next();
+        }
+        console.log("user is not authenticated");
+        res.redirect('/');
     };
     // Configure API endpoints.
     App.prototype.routes = function () {
         var _this = this;
         var router = express.Router();
+        router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
+        router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
+            _this.Restaurant.model.findOne({ ownerId: req.user.id }).then(function (restaurant) {
+                if (restaurant) {
+                    var obj = JSON.parse(JSON.stringify(restaurant));
+                    res.redirect('/#/restaurantOwner/' + obj._id);
+                }
+                else {
+                    res.json(null);
+                }
+            });
+        });
+        router.get('/auth/logout', function (req, res, next) {
+            req.logout();
+            res.redirect('/#/restaurantOwnerLogin');
+        });
         //Add restaurant
         router.post('/app/addRestaurant/', function (req, res) {
             console.log(req.body);
@@ -167,7 +200,9 @@ var App = /** @class */ (function () {
             console.log('CartItem deleted');
             _this.CartDetails.deleteAllCartItem(res);
         });
+
         this.expressApp.use('/', router);
+        this.expressApp.use('/', express.static(__dirname + '/dist/EatEZ'));
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));
         this.expressApp.use('/images', express.static(__dirname + '/img'));
         this.expressApp.use('/', express.static(__dirname + '/pages'));

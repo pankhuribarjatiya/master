@@ -52,7 +52,9 @@ var RestaurantController = /** @class */ (function () {
             restaurantName: String,
             restaurantAddress: String,
             phoneNumber: String,
-            restaurantImageUrl: String
+            restaurantImageUrl: String,
+            ownerId: String,
+            restaurantOwner: String
         }, { collection: 'restaurants' });
     };
     RestaurantController.prototype.createModel = function () {

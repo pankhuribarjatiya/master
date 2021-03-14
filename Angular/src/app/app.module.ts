@@ -30,6 +30,7 @@ import { MenuItemListComponent } from './components/restaurantOwner/menu-item-li
 import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
 import { ItemOrderDetailComponent } from './components/order-details/item-order-detail/item-order-detail.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { OwnerLoginPageComponent } from './components/restaurantOwner/owner-login-page.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     MenuItemFormComponent,
     ItemOrderDetailComponent,
     ConfirmationComponent,
+    OwnerLoginPageComponent,
   ],
   imports: [
     BrowserModule,

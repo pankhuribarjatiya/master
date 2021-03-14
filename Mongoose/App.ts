@@ -5,6 +5,7 @@ import * as mongodb from 'mongodb';
 import * as url from 'url';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
+import * as session from 'express-session';
 
 import {RestaurantController} from './controller/RestaurantController';
 import {RestaurantMenuController} from './controller/RestaurantMenuController';
@@ -13,6 +14,12 @@ import {CartDetailController} from './controller/CartDetailsController';
 
 import {DataAccess} from './DataAccess';
 import { isThisTypeNode } from 'typescript';
+const passport = require('passport');
+const cookieSession = require('cookie-session');
+const cookieParser = require ('cookie-parser')
+import GooglePassport from './sso/googlePassport';
+import GoogleStrategy from 'passport-google-oauth20'
+import {IRestaurant} from './interfaces/IRestaurant';
 
 // Creates and configures an ExpressJS web server.
 class App {
@@ -27,6 +34,7 @@ class App {
   public mIdGenerator: number;
   public orderIdGenerator: number;
   public cartIdGenerator: number;
+  public googlePassportObj:GooglePassport;
 
   //Run configuration methods on the Express instance.
   constructor() {
@@ -42,7 +50,7 @@ class App {
     this.mIdGenerator = 100;
     this.orderIdGenerator = 100;
     this.cartIdGenerator = 100;
-    
+    this.googlePassportObj = new GooglePassport();
   }
 
   // Configure Express middleware.
@@ -50,12 +58,46 @@ class App {
     this.expressApp.use(logger('dev'));
     this.expressApp.use(bodyParser.json());
     this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+    this.expressApp.use(cookieParser());
+    this.expressApp.use(cookieSession({secret: 'EatEZ secret' }));
+    this.expressApp.use(passport.initialize());
+    this.expressApp.use(passport.session());
   }
+
+  private validateAuth(req, res, next):void {
+    if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
+    console.log("user is not authenticated");
+    res.redirect('/');
+  }
+
 
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
-    
+  
+  router.get('/auth/google', 
+  passport.authenticate('google', {scope: ['profile']}));
+
+
+  router.get('/auth/google/callback', 
+    passport.authenticate('google', { failureRedirect: '/' } ),
+    (req, res) => {
+      this.Restaurant.model.findOne({ownerId : req.user.id}).then((restaurant) => {
+                        if (restaurant) {
+
+                        let obj: IRestaurant = JSON.parse(JSON.stringify(restaurant));
+                        res.redirect('/#/restaurantOwner/'+obj._id);
+                        } else {
+                            res.json(null);
+                        }
+                    })
+    } 
+  );
+
+  router.get('/auth/logout',(req,res,next)=>{
+    req.logout();
+    res.redirect('/#/restaurantOwnerLogin');
+  });
     //Add restaurant
     router.post('/app/addRestaurant/', (req, res) => {​​
       console.log(req.body);
@@ -177,8 +219,6 @@ router.get('/app/OrderDetails/', (req, res) => {
     this.Restaurant.retrieveAllRestaurantLists(res);
 });
 
-
-
    //Display specific order details
    router.get('/app/AllCartDetails/', (req, res) => {
     this.CartDetails.retrieveAllCartDetails(res);
@@ -221,8 +261,10 @@ router.get('/app/OrderDetails/', (req, res) => {
     this.CartDetails.deleteAllCartItem(res);
 });
 
+  
 
 this.expressApp.use('/', router);
+this.expressApp.use('/', express.static(__dirname+'/dist/EatEZ'));
 this.expressApp.use('/app/json/', express.static(__dirname+'/app/json'));
 this.expressApp.use('/images', express.static(__dirname+'/img'));
 this.expressApp.use('/', express.static(__dirname+'/pages'));

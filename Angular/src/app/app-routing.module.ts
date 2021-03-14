@@ -13,6 +13,7 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
 import { MenuItemListComponent } from './components/restaurantOwner/menu-item-list.component';
 import { MenuItemFormComponent } from './components/restaurantOwner/menu-item-form.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { OwnerLoginPageComponent } from './components/restaurantOwner/owner-login-page.component';
 
 const routes: Routes = [
 
@@ -29,12 +30,13 @@ const routes: Routes = [
   { path: 'addMenuItem/:id', component: MenuItemFormComponent},
   { path: 'addToCart/', component: MenuItemFormComponent},
   { path: 'confirmation', component: ConfirmationComponent},
+  { path: 'restaurantOwnerLogin', component: OwnerLoginPageComponent},
   { path: '**', component: PageNotFoundComponent },
   
 
 ];
 @NgModule({imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes,{useHash: true})
   ],
   exports: [
     RouterModule
