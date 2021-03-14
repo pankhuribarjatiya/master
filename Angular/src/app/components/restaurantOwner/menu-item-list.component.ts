@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MenuService} from "../../services/menu.service";
 import { Menu } from "../../models/menu";
+import { Restaurant } from 'src/app/models/restaurant';
+import { RestaurantService} from "../../services/restaurant.service";
 
 @Component({
   selector: 'mw-menu-item-list',
@@ -11,9 +13,11 @@ import { Menu } from "../../models/menu";
 export class MenuItemListComponent implements OnInit {
   menu = '';
   menuItems: Menu[];
+  restaurant: Restaurant;
 
   constructor(
     private menuItemService: MenuService,
+    private restaurantService:RestaurantService,
     private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
@@ -21,6 +25,7 @@ export class MenuItemListComponent implements OnInit {
       .subscribe(paramMap => {
         let restaurantId = paramMap.get('id');
         this.getMenuItems(restaurantId);
+        this.getRestaurant(restaurantId);
       });
   }
 
@@ -40,4 +45,13 @@ export class MenuItemListComponent implements OnInit {
         this.menuItems = JSON.parse(JSON.stringify(menuItems));
       });
   }
+
+  getRestaurant(restaurantId : string) {
+    this.restaurantService.retrieveRestaurant(restaurantId)
+    .subscribe(restaurant => {
+      
+      this.restaurant = JSON.parse(JSON.stringify(restaurant));
+      console.log(this.restaurant);
+    })
+  } 
 }

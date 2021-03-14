@@ -67,7 +67,7 @@ var RestaurantController = /** @class */ (function () {
         });
     };
     RestaurantController.prototype.retrieveRestaurantDetails = function (response, filter) {
-        var query = this.model.find(filter);
+        var query = this.model.findOne(filter);
         query.exec(function (err, itemArray) {
             response.json(itemArray);
         });

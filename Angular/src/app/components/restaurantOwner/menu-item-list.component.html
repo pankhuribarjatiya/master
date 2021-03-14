@@ -73,7 +73,7 @@
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary">
-              <img src="https://api.dineoncampus.com/files/test/path/ea76905e-6407-415e-a404-8e8ba597f9dc.png" width="500" height="200">
+              <img [src]="restaurant.restaurantImageUrl" width="500" height="200">
             </strong>
           </div>
         </div>
@@ -82,11 +82,10 @@
       <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2">
-              <h2>REDHAWKS CAFETERIA</h2>
-              <p>Seattle University,</p>
-              <p> Seattle, WA 98109</p>
-              <p> Ph:+1-9807363543</p>
+            <strong class="d-inline-block mb-2 text-primary">
+              <h2>{{ restaurant.restaurantName }}</h2>
+              <p>{{ restaurant.restaurantAddress }}</p>
+              <p> Ph:{{ restaurant.phoneNumber }}</p>
             </strong>
           </div>
         </div>
@@ -105,7 +104,7 @@
   <br>
   <div class="btn-container">
     <div class="center">
-  <a routerLink="/addMenuItem/1" >
+  <a routerLink="/addMenuItem/{{restaurant._id}}" >
     <button class="button button1">Add Item</button>
   </a>
     </div>
