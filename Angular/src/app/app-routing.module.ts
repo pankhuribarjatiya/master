@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'restaurantOwner/:id', component: MenuItemListComponent },
   { path: 'addMenuItem/:id', component: MenuItemFormComponent},
   { path: 'addToCart/', component: MenuItemFormComponent},
-  { path: 'confirmation', component: ConfirmationComponent},
+  { path: 'confirmation/:restId', component: ConfirmationComponent},
   { path: 'restaurantOwnerLogin', component: OwnerLoginPageComponent},
   { path: '**', component: PageNotFoundComponent },
   

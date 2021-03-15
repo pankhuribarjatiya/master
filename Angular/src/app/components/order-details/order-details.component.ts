@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class OrderDetailsComponent implements OnInit {
 
   cartItems: CartItem[];
+  singleItem : Number;
   custEmailId : string = "asupekar@seattleu.edu";
 
   constructor( 
@@ -27,6 +28,7 @@ export class OrderDetailsComponent implements OnInit {
       .subscribe(cartItems => {​​​​
       console.log(JSON.parse(JSON.stringify(cartItems)));
       this.cartItems = JSON.parse(JSON.stringify(cartItems));
+      this.singleItem = this.cartItems[0].restaurantId;
     }​​​​);
   }
 
