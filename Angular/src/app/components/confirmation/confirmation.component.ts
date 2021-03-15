@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Restaurant } from 'src/app/models/restaurant';
 import { RestaurantService } from "src/app/services/restaurant.service";
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -15,16 +16,17 @@ export class ConfirmationComponent implements OnInit {
   emailId: string = "asupekar@seattleu.edu";
 
   constructor(private RestaurantService: RestaurantService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute, 
+    private cartservice : CartService,
+    ) { }
 
   ngOnInit() {
 
-    console.log("Inside ngOnit before params");
     this.activatedRoute.paramMap.subscribe(paramMap => {​​​​
-      console.log("Printing paramMap " + JSON.stringify(paramMap));
       let restId = Number(paramMap.get('restId'));
       console.log("Printing restId " + JSON.stringify(restId));
       this.retrieveRestaurantDetails(restId);
+      this.onCartAllItemDelete();
     });
  }
 
@@ -33,6 +35,13 @@ export class ConfirmationComponent implements OnInit {
   this.restaurant = JSON.parse(JSON.stringify(restaurantInfo))
 });
 }
+
+  //Delete entire cart
+  onCartAllItemDelete() {
+    this.cartservice.deleteAllCart()
+      .subscribe(() => {
+      });
+  }
 }
 
 
