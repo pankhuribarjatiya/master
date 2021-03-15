@@ -16,7 +16,8 @@ var DataAccess = /** @class */ (function () {
         this.mongooseInstance = Mongoose.connect(this.DB_CONNECTION_STRING);
         return this.mongooseInstance;
     };
-    DataAccess.DB_CONNECTION_STRING = 'mongodb://127.0.0.1:3000/EatEZ';
+    //static DB_CONNECTION_STRING:string = 'mongodb://127.0.0.1:3000/EatEZ';
+    DataAccess.DB_CONNECTION_STRING = 'mongodb+srv://admin:admin123@cluster0.6fkdr.mongodb.net/EatEZ?retryWrites=true&w=majority';
     return DataAccess;
 }());
 exports.DataAccess = DataAccess;

@@ -12,8 +12,7 @@ import { Router } from '@angular/router';
 })
 export class MenuService {
   
-  hostUrl:string = 'http://localhost:8080/';
-  //url:string = 'http://localhost:8080/data/menuList.json';
+  hostUrl:string = '/';
 
   constructor(private router: Router,
     private http: HttpClient) {
@@ -22,7 +21,8 @@ export class MenuService {
 
   //for restaurantOwner.
   retrieveMenuDetails(id: string): Observable<Menu[]> {
-    return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenu/${id}`)
+   // return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenu/${id}`)
+   return this.http.get<Menu[]>(this.hostUrl + 'app/restaurantMenu/' +id)
       .pipe(
         catchError((err) => {
           console.log('error caught in service')
@@ -36,11 +36,13 @@ export class MenuService {
   }
   
   retrieveMenuDetailForUser(id: string): Observable<Menu[]> {
-    return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenuForUser/${id}`);
+    //return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenuForUser/${id}`);
+    return this.http.get<Menu[]>(this.hostUrl + 'app/restaurantMenuForUser' +id);
 }
 
   add(menuItem: Menu) {
-    return this.http.post('http://127.0.0.1:8080/app/addRestaurantMenuItem', menuItem)
+    //return this.http.post('http://127.0.0.1:8080/app/addRestaurantMenuItem', menuItem)
+    return this.http.post(this.hostUrl + 'app/addRestaurantMenuItem',menuItem)
       .pipe(
         catchError(this.handleError)
       );
@@ -49,7 +51,8 @@ export class MenuService {
   delete(menuItem: Menu) {
     ///app/restaurantMenuItem/:itemId'
     console.log('deleteing id ', menuItem._id);
-    return this.http.delete(`http://127.0.0.1:8080/app/restaurantMenuItem/${menuItem._id}`)
+   // return this.http.delete(`http://127.0.0.1:8080/app/restaurantMenuItem/${menuItem._id}`)
+   return this.http.delete(this.hostUrl + 'app/restaurantMenuItem/' + menuItem._id)
     .pipe(
       catchError(this.handleError)
     );

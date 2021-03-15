@@ -14,11 +14,11 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class CartService {
 
-  hostUrl:string = `http://localhost:8080/`;
+  hostUrl:string = '/';
   constructor(private http: HttpClient) { }
 
   retrieveCartDetails(custEmailId:String): Observable<CartItem[]> {
-    return this.http.get<CartItem[]>(this.hostUrl+ `app/cartDetails/${custEmailId}`).pipe(
+    return this.http.get<CartItem[]>(this.hostUrl+ 'app/cartDetails/' +custEmailId).pipe(
       map((result: CartItem[]) => {
         console.log("Result is " + JSON.stringify(result));
         let cartItems: CartItem[] = [];
@@ -56,7 +56,8 @@ export class CartService {
   
   add(cartItem: CartItem) {
     console.log(cartItem)
-    return this.http.post('http://127.0.0.1:8080/app/addCartDetails/', cartItem)
+    //return this.http.post('http://127.0.0.1:8080/app/addCartDetails/', cartItem)
+    return this.http.post(this.hostUrl + 'app/addCartDetails/', cartItem)
       .pipe(
         catchError(this.handleError)
       );
@@ -64,7 +65,8 @@ export class CartService {
 
   delete(cartItem: CartItem) {
     console.log('deleteing id ', cartItem._id);
-    return this.http.delete(`http://127.0.0.1:8080/app/deleteCart/${cartItem._id}`)
+    //return this.http.delete(`http://127.0.0.1:8080/app/deleteCart/${cartItem._id}`)
+    return this.http.delete(this.hostUrl + 'app/deleteCart/' +cartItem._id)
     .pipe(
       catchError(this.handleError)
     );
@@ -72,7 +74,7 @@ export class CartService {
 
   deleteAllCart() {
     console.log("Inside deleteAllCart");
-    return this.http.delete(`http://127.0.0.1:8080/app/deleteCart`)
+    return this.http.delete(this.hostUrl + 'app/deleteCart')
     .pipe(
       catchError(this.handleError)
     );

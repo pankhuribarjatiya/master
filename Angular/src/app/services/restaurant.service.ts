@@ -11,14 +11,15 @@ import { throwError } from 'rxjs';
 })
 export class RestaurantService {
 
-  hostUrl:string = 'http://localhost:8080/';
-  url:string = 'http://localhost:8080/data/restaurantList.json';
+  hostUrl:string = '/';
+  path:string = 'app/restaurantList';
 
   constructor(private http: HttpClient) {
   }
   
   retrieveAllRestaurantLists() {
-        return this.http.get<Restaurant[]>('http://127.0.0.1:8080/app/restaurantList')
+       // return this.http.get<Restaurant[]>('http://127.0.0.1:8080/app/restaurantList')
+       return this.http.get<Restaurant[]>(this.hostUrl + this.path)
         .pipe(
          map((response: Restaurant[]) => {
          return response;

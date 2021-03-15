@@ -17,7 +17,7 @@ import { OwnerLoginPageComponent } from './components/restaurantOwner/owner-logi
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'restaurant', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'cart', component: CartComponent },
   { path: 'restaurant', component: RestaurantComponent },
   { path: 'restaurantList', component: RestaurantListsComponent },
