@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ksraj\project\EatEz_SaaS\Angular\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /Users/pankhuri/Downloads/EatEz_SaaS/Angular/src/polyfills.ts */"hN/g");
 
 
 /***/ }),
