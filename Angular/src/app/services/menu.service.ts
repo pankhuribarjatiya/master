@@ -19,7 +19,8 @@ export class MenuService {
     private http: HttpClient) {
 
   }
-  
+
+  //for restaurantOwner.
   retrieveMenuDetails(id: string): Observable<Menu[]> {
     return this.http.get<Menu[]>(`http://localhost:8080/app/restaurantMenu/${id}`)
       .pipe(
