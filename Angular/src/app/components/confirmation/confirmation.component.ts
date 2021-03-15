@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from 'src/app/models/restaurant';
 import { RestaurantService } from "src/app/services/restaurant.service";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-confirmation',
@@ -10,17 +11,28 @@ import { RestaurantService } from "src/app/services/restaurant.service";
 export class ConfirmationComponent implements OnInit {
 
   restaurant: Restaurant;
-  restId: number = 1;
+  restId: number;
   emailId: string = "asupekar@seattleu.edu";
 
-  constructor(private RestaurantService: RestaurantService) { }
+  constructor(private RestaurantService: RestaurantService,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.RestaurantService.retrieveRestaurantDetails(this.restId).subscribe((restaurantInfo) =>{
-      console.log("restaurantInfo is " +JSON.stringify(restaurantInfo));
-      //this.restaurant = {_id:restaurantInfo._id, restaurantName: restaurantInfo.restaurantName, restaurantAddress: restaurantInfo.restaurantAddress, phoneNumber: restaurantInfo.phoneNumber, restaurantImageUrl: restaurantInfo.restaurantImageUrl}
-    this.restaurant = JSON.parse(JSON.stringify(restaurantInfo[0]))
-    console.log(this.restaurant);
-  });
+
+    console.log("Inside ngOnit before params");
+    this.activatedRoute.paramMap.subscribe(paramMap => {​​​​
+      console.log("Printing paramMap " + JSON.stringify(paramMap));
+      let restId = Number(paramMap.get('restId'));
+      console.log("Printing restId " + JSON.stringify(restId));
+      this.retrieveRestaurantDetails(restId);
+    });
  }
+
+ retrieveRestaurantDetails(restId : number) {​​​​
+  this.RestaurantService.retrieveRestaurantDetails(restId).subscribe((restaurantInfo) =>{
+  this.restaurant = JSON.parse(JSON.stringify(restaurantInfo))
+});
 }
+}
+
+
