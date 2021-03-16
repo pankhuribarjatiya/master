@@ -14,6 +14,8 @@ export class MenuItemListComponent implements OnInit {
   menu = '';
   menuItems: Menu[];
   restaurant: Restaurant;
+  name:string;
+  email:string;
 
   constructor(
     private menuItemService: MenuService,
@@ -26,6 +28,11 @@ export class MenuItemListComponent implements OnInit {
         let restaurantId = paramMap.get('id');
         this.getMenuItems(restaurantId);
         this.getRestaurant(restaurantId);
+      });
+      this.activatedRoute.queryParams
+      .subscribe(params => {
+        this.name = params.name;
+        this.email = params.email;
       });
   }
 

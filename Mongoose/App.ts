@@ -76,7 +76,7 @@ class App {
     let router = express.Router();
   
   router.get('/auth/google', 
-  passport.authenticate('google', {scope: ['profile']}));
+  passport.authenticate('google', {scope: ['profile', 'email']}));
 
 
   router.get('/auth/google/callback', 
@@ -86,7 +86,7 @@ class App {
                         if (restaurant) {
 
                         let obj: IRestaurant = JSON.parse(JSON.stringify(restaurant));
-                        res.redirect('/#/restaurantOwner/'+obj._id);
+                        res.redirect('/#/restaurantOwner/'+obj._id+'?name='+req.user.displayName+'&email='+req.user.emails[0].value);
                         } else {
                             res.json(null);
                         }
